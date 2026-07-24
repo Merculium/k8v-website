@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
   
   <meta charset="UTF-8" />
@@ -14,19 +14,20 @@
 
   <!-- NAV -->
   <nav id="main-nav">
-    <div class="nav-logo">KATARZYNA SZKODZIŃSKA // Validation & Qualification Expert</div>
+    <div class="nav-logo">KATARZYNA SZKODZIŃSKA // <span data-i18n="common.role">Ekspert ds. Walidacji i Kwalifikacji</span></div>
     <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
       <span></span>
       <span></span>
       <span></span>
     </button>
     <ul id="nav-links">
-      <li><a href="index.html"          onclick="closeMenu()">Home</a></li>
-      <li><a href="/about"      onclick="closeMenu()">About</a></li>
-      <li><a href="index.html#Expertise"   onclick="closeMenu()">Expertise</a></li>
-      <li><a href="index.html#experience" onclick="closeMenu()">Experience</a></li>
-      <li><a href="/casestudies"   onclick="closeMenu()">Case Studies</a></li>
-      <li><a href="#contact"    onclick="closeMenu()">Contact</a></li>
+      <li><a href="index.html"          data-i18n="common.nav.home"        onclick="closeMenu()">Strona główna</a></li>
+      <li><a href="/about"              data-i18n="common.nav.about"       onclick="closeMenu()">O mnie</a></li>
+      <li><a href="index.html#Expertise" data-i18n="common.nav.expertise"  onclick="closeMenu()">Kompetencje</a></li>
+      <li><a href="index.html#experience" data-i18n="common.nav.experience" onclick="closeMenu()">Doświadczenie</a></li>
+      <li><a href="/casestudies"        data-i18n="common.nav.casestudies" onclick="closeMenu()">Studia przypadków</a></li>
+      <li><a href="#contact"            data-i18n="common.nav.contact"     onclick="closeMenu()">Kontakt</a></li>
+      <li><button type="button" class="lang-toggle" id="lang-toggle" aria-label="Zmień język / Switch language">EN</button></li>
     </ul>
   </nav>
 
@@ -35,50 +36,50 @@
     <div class="hero-grid-bg"></div>
     <div class="hero-accent-line"></div>
     <div class="hero-content">
-      <div class="hero-tag">GMP • Utilities • Equipment • Facilities</div>
+      <div class="hero-tag" data-i18n="index.hero.tag">GMP • Media techniczne • Urządzenia • Obiekty</div>
       <h1>Katarzyna<br><em>Szkodzińska</em></h1>
-      <p class="hero-sub">
+      <p class="hero-sub" data-i18n-html="index.hero.sub">
 
-        Delivering end-to-end validation and qualification solutions across pharmaceutical and biotech industries — from design to full GMP compliance.
-        <br><br> <strong> 7+ Years experience  |  International projects  |  Risk-based approach </strong>
+        Kompleksowe rozwiązania w zakresie walidacji i kwalifikacji dla przemysłu farmaceutycznego i biotechnologicznego — od projektu po pełną zgodność z GMP.
+        <br><br> <strong> 7+ lat doświadczenia&nbsp;&nbsp;|&nbsp;&nbsp;Projekty międzynarodowe&nbsp;&nbsp;|&nbsp;&nbsp;Podejście oparte na ryzyku </strong>
 
       </p>
       <div class="hero-buttons">
-        <a href="#contact"    class="btn">Get in Touch</a>
-        <a href="#experience" class="btn btn-ghost">View Experience</a>
+        <a href="#contact"    class="btn" data-i18n="index.hero.btnContact">Skontaktuj się</a>
+        <a href="#experience" class="btn btn-ghost" data-i18n="index.hero.btnExperience">Zobacz doświadczenie</a>
       </div>
     </div>
   </section>
 
   <!-- ABOUT -->
   <section id="about">
-    <div class="section-label">About</div>
+    <div class="section-label" data-i18n="index.about.label">O mnie</div>
     <div class="about-layout">
       <div class="about-text fade-in">
-        <h2>Precision in every protocol:</h2>
-        <p>I am a Validation and Qualification Specialist with over 7 years of experience in pharmaceutical and medical device environments.</p>
-        <p>I support companies in ensuring that facilities, utilities, equipment, and processes meet GMP requirements — from early design stages through commissioning, qualification, and requalification.</p>
-        <p>My experience combines hands-on technical validation with a strong understanding of engineering systems, including HVAC, BMS, and critical utilities.</p>
-        <p>I have worked on international projects across Europe, the United States, and Asia, delivering solutions in complex, highly regulated environments.</p>
+        <h2 data-i18n="index.about.title">Precyzja w każdym protokole:</h2>
+        <p data-i18n="index.about.p1">Jestem specjalistką ds. walidacji i kwalifikacji z ponad 7-letnim doświadczeniem w środowisku farmaceutycznym i wyrobów medycznych.</p>
+        <p data-i18n="index.about.p2">Wspieram firmy w zapewnieniu zgodności pomieszczeń, mediów technicznych, urządzeń i procesów z wymaganiami GMP — od wczesnych etapów projektowania, przez uruchomienie i kwalifikację, aż po rekwalifikację.</p>
+        <p data-i18n="index.about.p3">Moje doświadczenie łączy praktyczną walidację techniczną z dogłębną znajomością systemów inżynieryjnych, w tym HVAC, BMS oraz mediów krytycznych.</p>
+        <p data-i18n="index.about.p4">Pracowałam przy międzynarodowych projektach w Europie, Stanach Zjednoczonych i Azji, dostarczając rozwiązania w złożonych, silnie regulowanych środowiskach.</p>
         <br>
-        <a href="/about" class="btn">Learn more</a>
+        <a href="/about" class="btn" data-i18n="index.about.learnMore">Dowiedz się więcej</a>
       </div>
       <div class="about-stats fade-in">
         <div class="stat">
           <div class="stat-number">7+</div>
-          <div class="stat-label">Years Experience</div>
+          <div class="stat-label" data-i18n="index.about.stat1Label">Lat doświadczenia</div>
         </div>
         <div class="stat">
           <div class="stat-number">30+</div>
-          <div class="stat-label">Projects Completed</div>
+          <div class="stat-label" data-i18n="index.about.stat2Label">Zrealizowanych projektów</div>
         </div>
         <div class="stat">
           <div class="stat-number">0</div>
-          <div class="stat-label">Failed Audits</div>
+          <div class="stat-label" data-i18n="index.about.stat3Label">Nieudanych audytów</div>
         </div>
         <div class="stat">
           <div class="stat-number">FDA</div>
-          <div class="stat-label">& GMP Compliant</div>
+          <div class="stat-label" data-i18n="index.about.stat4Label">i zgodność GMP</div>
         </div>
       </div>
     </div>
@@ -86,35 +87,35 @@
 
   <!-- SERVICES -->
   <section id="expertise">
-    <div class="section-label">Expertise</div>
-    <h2 class="fade-in">What I offer:</h2>
+    <div class="section-label" data-i18n="index.expertise.label">Kompetencje</div>
+    <h2 class="fade-in" data-i18n="index.expertise.title">Co oferuję:</h2>
     <br>
   
     <div class="services-grid">
 
         <div class="service-card fade-in">
         <div class="service-icon">🔬</div>
-      <h3>Measurement & Training</h3>
-        <p>
-- Airflow velocity measurements (UDAF / LAF) <br>
-- Air change rate (ACH) measurements - HVAC systems <br>
-- HEPA filter integrity testing (leak testing) <br>
-- Air cleanliness testing (particle counting) <br>
-- Differential pressure measurements (pressure cascade) <br>
-- Temperature & humidity mapping (thermal studies) <br>
-- Airflow visualization (smoke studies) <br> 
-- Cleanroom recovery testing
+      <h3 data-i18n="index.expertise.card1.title">Pomiary i szkolenia</h3>
+        <p data-i18n-html="index.expertise.card1.body">
+- Pomiary prędkości przepływu powietrza (UDAF / LAF) <br>
+- Pomiary krotności wymian powietrza (ACH) – systemy HVAC <br>
+- Testy szczelności filtrów HEPA (testy przecieku) <br>
+- Badania czystości powietrza (zliczanie cząstek) <br>
+- Pomiary różnicy ciśnień (kaskada ciśnień) <br>
+- Mapowanie temperatury i wilgotności (badania termiczne) <br>
+- Wizualizacja przepływu powietrza (testy dymowe) <br> 
+- Testy powrotu do stanu równowagi pomieszczeń czystych
         </p>
       </div>
 
        <div class="service-card fade-in">
         <div class="service-icon">🔍</div>
-        <h3>Workshops</h3>
-        <p>
-- Cleanroom (HVAC) - C&Q and Requalification <br>
-- Laminar airflow systems (UDAF/LAF) - C&Q and Requalification <br>
-- Barrier systems (Isolators, RABS) - PV and Requalification <br>
-- Thermostatic equipment & CRT/CTT areas - C&Q and Requalification
+        <h3 data-i18n="index.expertise.card2.title">Warsztaty</h3>
+        <p data-i18n-html="index.expertise.card2.body">
+- Pomieszczenia czyste (HVAC) - C&Q i rekwalifikacja <br>
+- Systemy przepływu laminarnego (UDAF/LAF) - C&Q i rekwalifikacja <br>
+- Systemy barierowe (izolatory, RABS) - walidacja procesu i rekwalifikacja <br>
+- Urządzenia termostatyczne oraz strefy CRT/CTT - C&Q i rekwalifikacja
           
 </p>
       </div>
@@ -122,41 +123,41 @@
       
       <div class="service-card fade-in">
         <div class="service-icon">🔍</div>
-        <h3>Validation & Qualification</h3>
-        <p>
-- Cleanrooms and UDAF systems qualification <br>
-- Laboratory and process equipment qualification <br>
-- Execution of FAT / SAT / DQ / IQ / OQ / PQ <br>
-- Validation strategy and planning <br>
-- Risk-based approach (ICH Q9) <br>
-- Requalification and lifecycle management <br>
-- Isolators and H₂O₂ bio-decontamination <br>
-- Troubleshooting and system optimization
+        <h3 data-i18n="index.expertise.card3.title">Walidacja i kwalifikacja</h3>
+        <p data-i18n-html="index.expertise.card3.body">
+- Kwalifikacja pomieszczeń czystych i systemów UDAF <br>
+- Kwalifikacja urządzeń laboratoryjnych i procesowych <br>
+- Realizacja FAT / SAT / DQ / IQ / OQ / PQ <br>
+- Strategia i planowanie walidacji <br>
+- Podejście oparte na ryzyku (ICH Q9) <br>
+- Rekwalifikacja i zarządzanie cyklem życia <br>
+- Izolatory i biodekontaminacja H₂O₂ <br>
+- Rozwiązywanie problemów i optymalizacja systemów
           
 </p>
       </div>
     
       <div class="service-card fade-in">
         <div class="service-icon">📋</div>
-        <h3>Documentation & Quality Compliance</h3>
-        <p>
-          - URS, SOPs and validation documentation <br>
-- QMS development and implementation <br>
-- Deviations, CAPA, Change Control <br>
-- Risk & Impact Assessments <br>
-- Audit and inspection readiness
+        <h3 data-i18n="index.expertise.card4.title">Dokumentacja i zgodność jakościowa</h3>
+        <p data-i18n-html="index.expertise.card4.body">
+          - URS, SOP i dokumentacja walidacyjna <br>
+- Opracowanie i wdrażanie systemów zarządzania jakością (QMS) <br>
+- Odchylenia, CAPA, kontrola zmian <br>
+- Oceny ryzyka i wpływu <br>
+- Gotowość do audytów i inspekcji
         </p>
       </div>
 
       <div class="service-card fade-in">
         <div class="service-icon">🧪</div>
-        <h3>Facilities & Utilities Management</h3>
-        <p>
-- Risk and CAPEX management <br>
-- HVAC systems and environmental monitoring <br>
-- BMS / FMS / EMS systems <br>
-- Utility systems (heating, cooling, water, gases)<br>
-- GMP and EU GMP Annex 1 compliance
+        <h3 data-i18n="index.expertise.card5.title">Zarządzanie obiektami i mediami technicznymi</h3>
+        <p data-i18n-html="index.expertise.card5.body">
+- Zarządzanie ryzykiem i budżetem inwestycyjnym (CAPEX) <br>
+- Systemy HVAC i monitoring środowiskowy <br>
+- Systemy BMS / FMS / EMS <br>
+- Systemy mediów technicznych (ogrzewanie, chłodzenie, woda, gazy)<br>
+- Zgodność z GMP i EU GMP Aneks 1
         </p>
       </div>
       
@@ -165,8 +166,8 @@
 
   <!-- EXPERIENCE -->
   <section id="experience">
-    <div class="section-label">Experience</div>
-    <h2 class="fade-in">Completed Projects:</h2>
+    <div class="section-label" data-i18n="index.experience.label">Doświadczenie</div>
+    <h2 class="fade-in" data-i18n="index.experience.title">Zrealizowane projekty:</h2>
     <br>
     <div class="timeline">
 
@@ -174,12 +175,12 @@
         <div class="timeline-date"><br>2024 — Present <br></div>
         <div class="timeline-dot"></div>
         <div class="timeline-body">
-          <h3>Qualification Specialist</h3>
+          <h3 data-i18n="index.experience.item1.role">Specjalistka ds. Kwalifikacji</h3>
           <div class="timeline-company">Polpharma Biologics / Rezon Bio</div>
-          <p>Alongside managing end-to-end qualification lifecycle activities for cleanrooms, 
-            controlled temperature areas and equipment, I lead a cross-site project standardizing 
-            qualification and requalification procedures for HVAC systems,cleanrooms and 
-            thermostatic equipment across Polpharma Biologics sites in Gdańsk and Warsaw.</p>
+          <p data-i18n="index.experience.item1.body">Oprócz zarządzania pełnym cyklem kwalifikacji pomieszczeń czystych, 
+            stref o kontrolowanej temperaturze oraz urządzeń, prowadzę międzyzakładowy projekt standaryzacji 
+            procedur kwalifikacji i rekwalifikacji systemów HVAC, pomieszczeń czystych oraz 
+            urządzeń termostatycznych w zakładach Polpharma Biologics w Gdańsku i Warszawie.</p>
           <div class="tags">
             <span class="tag">HVAC</span>
             <span class="tag">Pharma</span>
@@ -193,12 +194,12 @@
         <div class="timeline-date"><br>2024 <br></div>
         <div class="timeline-dot"></div>
         <div class="timeline-body">
-          <h3>Associate Process Engineer in API Project Facility</h3>
+          <h3 data-i18n="index.experience.item2.role">Inżynierka Procesowa w Projekcie Zakładu API</h3>
           <div class="timeline-company">Novo Nordisk</div>
-          <p>As a Work Package Owner, I was responsible for HVAC, BMS, EMS, FMS, 
-            Cold Storage and cleanroom systems in Recovery project, including design review, 
-            supplier selection, contract negotiations, contractor coordination and VPL 
-            preparation, ensuring compliance with GMP and EU GMP Annex 1 requirements.</p>
+          <p data-i18n="index.experience.item2.body">Jako właścicielka pakietu prac (Work Package Owner) odpowiadałam za HVAC, BMS, EMS, FMS, 
+            magazyny chłodnicze oraz pomieszczenia czyste w projekcie Recovery, w tym za przegląd projektu, 
+            wybór dostawców, negocjacje umów, koordynację wykonawców oraz przygotowanie list VPL, 
+            zapewniając zgodność z wymaganiami GMP i EU GMP Aneks 1.</p>
           <div class="tags">
             <span class="tag">BMS</span>
             <span class="tag">EMS</span>
@@ -212,12 +213,12 @@
         <div class="timeline-date"><br>2022 — 2023 <br></div>
         <div class="timeline-dot"></div>
         <div class="timeline-body">
-          <h3>Process Engineer for Cycle Development</h3>
+          <h3 data-i18n="index.experience.item3.role">Inżynierka Procesowa ds. Rozwoju Cykli</h3>
           <div class="timeline-company">Agap2 Germany</div>
-          <p>As an international consultant during the Optima project, responsible 
-            for developing and performing bio-decontamination cycles validation of 
-            isolator lines and H2O2 systems for cleanroom technologies supporting 
-            pharmaceutical clients in China, Italy, USA, Denmark, Germany and Switzerland.</p>
+          <p data-i18n="index.experience.item3.body">Jako konsultantka międzynarodowa w projekcie Optima, odpowiadałam 
+            za opracowanie i przeprowadzenie walidacji cykli biodekontaminacji 
+            linii izolatorów oraz systemów H2O2 dla technologii pomieszczeń czystych, wspierając 
+            klientów farmaceutycznych w Chinach, Włoszech, USA, Danii, Niemczech i Szwajcarii.</p>
           <div class="tags">
             <span class="tag">Isolator</span>
             <span class="tag">H2O2</span>
@@ -231,11 +232,11 @@
         <div class="timeline-date"><br>2021 — 2022 <br></div>
         <div class="timeline-dot"></div>
         <div class="timeline-body">
-          <h3>Validation Specialist</h3>
+          <h3 data-i18n="index.experience.item4.role">Specjalistka ds. Walidacji</h3>
           <div class="timeline-company">eConsulting</div>
-          <p>Consultant supporting development and implementation of QMS systems 
-            in compliance with ISO standards. Developing qualification documentation 
-            (DQ/IQ/ OQ/PQ) for cleanrooms, cold storage areas and process equipment.</p>
+          <p data-i18n="index.experience.item4.body">Konsultantka wspierająca opracowanie i wdrażanie systemów zarządzania jakością (QMS) 
+            zgodnych z normami ISO. Opracowywanie dokumentacji kwalifikacyjnej 
+            (DQ/IQ/ OQ/PQ) dla pomieszczeń czystych, stref chłodniczych oraz urządzeń procesowych.</p>
           <div class="tags">
             <span class="tag">QMS</span>
             <span class="tag">OQ/PQ</span>
@@ -248,11 +249,11 @@
         <div class="timeline-date"><br>2019 — 2021 <br></div>
         <div class="timeline-dot"></div>
         <div class="timeline-body">
-          <h3>HVAC Systems Specialist</h3>
+          <h3 data-i18n="index.experience.item5.role">Specjalistka ds. Systemów HVAC</h3>
           <div class="timeline-company">Polfa Warszawa</div>
-          <p>Responsible for managing facility systems across 7 buildings including 
-            production areas, laboratories, warehouses and offices. Scope included
-            maintenance supervision, qualification activities and CAPA implementation.</p>
+          <p data-i18n="index.experience.item5.body">Odpowiedzialna za zarządzanie systemami obiektowymi w 7 budynkach, obejmującymi 
+            obszary produkcyjne, laboratoria, magazyny i biura. Zakres obowiązków obejmował
+            nadzór nad utrzymaniem ruchu, działania kwalifikacyjne oraz wdrażanie CAPA.</p>
           <div class="tags">
             <span class="tag">Supervision</span>
             <span class="tag">CAPA</span>
@@ -264,11 +265,11 @@
         <div class="timeline-date"><br>2018 — 2019 <br></div>
         <div class="timeline-dot"></div>
         <div class="timeline-body">
-          <h3>Sanitary Installation Designer</h3>
+          <h3 data-i18n="index.experience.item6.role">Projektantka Instalacji Sanitarnych</h3>
           <div class="timeline-company">Ascoklima</div>
-          <p>Responsible for conceptual, construction and detailed design of HVAC 
-            systems for hospital renovation projects, including airflow measurements 
-            and adjustment of ventilation parameters.</p>
+          <p data-i18n="index.experience.item6.body">Odpowiedzialna za projekty koncepcyjne, budowlane i wykonawcze systemów HVAC 
+            dla projektów remontowych szpitali, w tym pomiary przepływu powietrza 
+            i regulację parametrów wentylacji.</p>
           <div class="tags">
             <span class="tag">Construction Lead</span>
             <span class="tag">Designer</span>
@@ -281,11 +282,10 @@
         <div class="timeline-date"><br>2017 — 2018 <br></div>
         <div class="timeline-dot"></div>
         <div class="timeline-body">
-          <h3>Sales Engineer</h3>
+          <h3 data-i18n="index.experience.item7.role">Inżynierka Sprzedaży</h3>
           <div class="timeline-company">Balticold</div>
-          <p>Sales Engineer responsible for selection of refrigeration equipment 
-            and management of technical communication with international clients 
-            and manufacturers.</p>
+          <p data-i18n="index.experience.item7.body">Inżynierka sprzedaży odpowiedzialna za dobór urządzeń chłodniczych 
+            oraz prowadzenie komunikacji technicznej z klientami i producentami międzynarodowymi.</p>
           <div class="tags">
             <span class="tag">Sales</span>
             <span class="tag">Refrigeration Equipment</span>
@@ -297,10 +297,10 @@
         <div class="timeline-date"><br>2015 — 2017 <br></div>
         <div class="timeline-dot"></div>
         <div class="timeline-body">
-          <h3>Designer Assistant</h3>
+          <h3 data-i18n="index.experience.item8.role">Asystentka Projektanta</h3>
           <div class="timeline-company">Roger Preston Polska</div>
-          <p>Supporting design of HVAC and utilities sytems for major commercial projects: 
-            Bloomberg Palace, London; Norway House, Warsaw; Browary Warszawskie, Warsaw.</p>
+          <p data-i18n="index.experience.item8.body">Wsparcie projektowania systemów HVAC i mediów technicznych dla dużych projektów komercyjnych: 
+            Bloomberg Palace w Londynie, Norway House w Warszawie oraz Browary Warszawskie w Warszawie.</p>
           <div class="tags">
             <span class="tag">HVAC Utilities</span>
             <span class="tag">Designer</span>
@@ -314,47 +314,48 @@
 
   <!-- CONTACT -->
   <section id="contact">
-    <div class="section-label">Contact</div>
+    <div class="section-label" data-i18n="index.contact.label">Kontakt</div>
     <div class="contact-layout">
       <div class="contact-info fade-in">
-        <h2>Let's work together.</h2>
-        <p>Available for project-based engagements, long-term contracts, and ongoing validation support. Get in touch to discuss your facility's needs.</p>
+        <h2 data-i18n="index.contact.title">Pracujmy razem.</h2>
+        <p data-i18n="index.contact.body">Dostępna do projektów czasowych, długoterminowych kontraktów oraz bieżącego wsparcia walidacyjnego. Skontaktuj się, aby omówić potrzeby Twojego obiektu.</p>
         <div class="contact-links">
           <a href="mailto:katarzyna.szkodzinska11@gmail.com" class="contact-link">
             <div class="contact-link-icon">✉</div>
-            Send me an e-mail
+            <span data-i18n="index.contact.emailLink">Napisz do mnie e-mail</span>
           </a>
        
           <a href="https://www.linkedin.com/in/katarzyna-szkodzi%C5%84ska-644b66b4/" class="contact-link" target="_blank">
             <div class="contact-link-icon">in</div>
-            Connect with me on LinkedIn
+            <span data-i18n="index.contact.linkedinLink">Połącz się ze mną na LinkedIn</span>
           </a>
         </div>
       </div>
       <div class="contact-form fade-in">
         <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" id="name" placeholder="Your name" />
+          <label for="name" data-i18n="index.contact.formName">Imię i nazwisko</label>
+          <input type="text" id="name" placeholder="Twoje imię i nazwisko" data-i18n-placeholder="index.contact.formNamePlaceholder" />
         </div>
         <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" placeholder="your@email.com" />
+          <label for="email" data-i18n="index.contact.formEmail">E-mail</label>
+          <input type="email" id="email" placeholder="twoj@email.com" data-i18n-placeholder="index.contact.formEmailPlaceholder" />
         </div>
         <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" placeholder="Tell me about your project..."></textarea>
+          <label for="message" data-i18n="index.contact.formMessage">Wiadomość</label>
+          <textarea id="message" placeholder="Opowiedz mi o swoim projekcie..." data-i18n-placeholder="index.contact.formMessagePlaceholder"></textarea>
         </div>
-        <button class="btn" id="send-btn">Send Message</button>
+        <button class="btn" id="send-btn" data-i18n="index.contact.sendBtn">Wyślij wiadomość</button>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <p>© 2026 Katarzyna Szkodzińska K8 Validate. All rights reserved.</p>
+    <p data-i18n="common.footer">© 2026 Katarzyna Szkodzińska K8 Validate. Wszelkie prawa zastrzeżone.</p>
 
   </footer>
 
+  <script src="assets/i18n.js"></script>
   <script>
     // ── Hamburger menu ──
     const toggle = document.getElementById('nav-toggle');
@@ -376,10 +377,11 @@
       const name    = document.getElementById('name').value.trim();
       const email   = document.getElementById('email').value.trim();
       const message = document.getElementById('message').value.trim();
-      if (!name || !email || !message) { alert('Please fill in all fields.'); return; }
-      const subject = encodeURIComponent('Enquiry from ' + name);
+      const lang    = (document.documentElement.lang === 'en') ? 'en' : 'pl';
+      if (!name || !email || !message) { alert(i18nGet(lang, 'index.contact.alertFill')); return; }
+      const subject = encodeURIComponent(i18nGet(lang, 'index.contact.subjectPrefix') + name);
       const body    = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message);
-      window.location.href = 'mailto:you@email.com?subject=' + subject + '&body=' + body;
+      window.location.href = 'mailto:katarzyna.szkodzinska11@gmail.com?subject=' + subject + '&body=' + body;
     });
 
     // ── Fade-in on scroll ──
