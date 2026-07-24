@@ -1,5 +1,5 @@
 /* ============================================
-   ALEX MORGAN — VALIDATION CONSULTANT
+   KATARZYNA SZKODZINSKA — VALIDATION CONSULTANT
    style.css
    ============================================ */
 
@@ -60,6 +60,7 @@ nav ul {
   list-style: none;
   display: flex;
   gap: 2.5rem;
+  align-items: center;
 }
 
 nav a {
@@ -73,6 +74,25 @@ nav a {
 }
 
 nav a:hover { color: var(--accent); }
+
+/* ── LANGUAGE TOGGLE ── */
+.lang-toggle {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: transparent;
+  border: 1px solid var(--rule);
+  padding: 0.4rem 0.85rem;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.lang-toggle:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
 
 /* Hamburger — hidden on desktop */
 .nav-toggle {
@@ -656,5 +676,10 @@ footer p {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.4rem;
+  }
+
+  /* Language toggle sits with the nav links inside the mobile menu */
+  nav ul li .lang-toggle {
+    font-size: 0.9rem;
   }
 }
