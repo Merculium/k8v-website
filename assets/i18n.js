@@ -18,6 +18,7 @@ const translations = {
       role: "Ekspert ds. Walidacji i Kwalifikacji",
       nav: {
         home: "Strona główna",
+        akademia: "Akademia Walidacji",
         about: "O mnie",
         expertise: "Kompetencje",
         experience: "Doświadczenie",
@@ -106,6 +107,7 @@ const translations = {
       role: "Validation & Qualification Expert",
       nav: {
         home: "Home",
+        akademia: "Validation Academy",
         about: "About",
         expertise: "Expertise",
         experience: "Experience",
