@@ -4,17 +4,20 @@
    Ładuj PO style.css
    ============================================ */
 
+/* --tone = kolor wypełnień; --tone-text = wersja do tekstu, ramek i markerów (czytelna na granacie);
+   --on-tone = kolor tekstu na plakietce; --tint/--tint2 = siła zabarwienia tła paneli */
 body.ak { --tone: var(--accent); }
-[data-tone="teal"]   { --tone: #4fc3c3; }
-[data-tone="purple"] { --tone: #a495ff; }
-[data-tone="blue"]   { --tone: #6fb1ff; }
-[data-tone="orange"] { --tone: #ff9d66; }
+body.ak, [data-tone] { --tone-text: var(--tone); --on-tone: var(--navy); --tint: 5%; --tint2: 10%; }
+[data-tone="teal"] { --tone: #4fc3c3; }
+[data-tone="blue"] { --tone: #6fb1ff; }
+[data-tone="gold"] { --tone: #ffc40c; }
+[data-tone="klein"] { --tone: #002FA7; --tone-text: #5b8cff; --on-tone: #fff; --tint: 18%; --tint2: 32%; }
 
 .ak-main { padding-top: 4.6rem; }
 .ak-block { padding: 5rem 5vw; border-top: 1px solid var(--rule); }
 .ak-main > .ak-block:first-child { border-top: 0; }
 
-a:focus-visible, button:focus-visible { outline: 2px solid var(--tone, var(--accent)); outline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--tone-text, var(--accent)); outline-offset: 3px; }
 
 /* ── Placeholder na zdjęcia (obraz opcjonalny: znika sam, gdy brak pliku) ── */
 .ph {
@@ -47,18 +50,18 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--tone, var(--acc
 .paths { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
 .path-card {
   display: flex; flex-direction: column; color: inherit; text-decoration: none;
-  border: 1px solid color-mix(in srgb, var(--tone) 35%, transparent);
-  background: color-mix(in srgb, var(--tone) 5%, var(--navy));
+  border: 1px solid color-mix(in srgb, var(--tone-text) 35%, transparent);
+  background: color-mix(in srgb, var(--tone) var(--tint), var(--navy));
   transition: border-color 0.2s, transform 0.2s;
 }
-.path-card:hover { border-color: var(--tone); transform: translateY(-3px); }
+.path-card:hover { border-color: var(--tone-text); transform: translateY(-3px); }
 .path-body { padding: 1.8rem; display: flex; flex-direction: column; gap: 0.9rem; flex: 1; }
 .path-body h3 { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 1.7rem; line-height: 1.2; color: var(--offwhite); }
 .path-body p { color: var(--muted); font-size: 0.95rem; }
 .pts { list-style: none; display: grid; gap: 0.35rem; }
 .pts li { position: relative; padding-left: 1.1rem; font-size: 0.88rem; color: var(--muted); line-height: 1.55; }
-.pts li::before { content: ''; position: absolute; left: 0; top: 0.7em; width: 6px; height: 1px; background: var(--tone); }
-.cta { margin-top: auto; padding-top: 0.6rem; font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--tone); }
+.pts li::before { content: ''; position: absolute; left: 0; top: 0.7em; width: 6px; height: 1px; background: var(--tone-text); }
+.cta { margin-top: auto; padding-top: 0.6rem; font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--tone-text); }
 .path-card:hover .cta { text-decoration: underline; text-underline-offset: 6px; }
 
 /* ── O Akademii ── */
@@ -94,10 +97,10 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--tone, var(--acc
 .start span { font-family: 'DM Mono', monospace; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; border: 1px solid var(--accent); color: var(--accent); padding: 0.6rem 1.6rem; }
 .join { width: 1px; height: 2.2rem; margin: 0 auto; background: linear-gradient(var(--rule), var(--accent)); }
 
-.branch { --c: 3; border: 1px solid color-mix(in srgb, var(--tone) 40%, transparent); background: color-mix(in srgb, var(--tone) 5%, var(--navy)); padding: 1.8rem; }
+.branch { --c: 3; border: 1px solid color-mix(in srgb, var(--tone-text) 40%, transparent); background: color-mix(in srgb, var(--tone) var(--tint), var(--navy)); padding: 1.8rem; }
 .branch-head { margin-bottom: 1.4rem; }
 .branch-head h2 { font-size: clamp(1.5rem, 2.6vw, 2rem); margin-bottom: 0.3rem; color: var(--offwhite); }
-.branch-head h2::before { content: ''; display: inline-block; width: 10px; height: 10px; background: var(--tone); margin-right: 0.7rem; }
+.branch-head h2::before { content: ''; display: inline-block; width: 10px; height: 10px; background: var(--tone-text); margin-right: 0.7rem; }
 .branch-head p { color: var(--muted); font-size: 0.92rem; }
 .branch.c4 { --c: 4; }
 .branch.c1 { --c: 1; }
@@ -106,17 +109,17 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--tone, var(--acc
 .fork .branch { --c: 1; }
 
 .tiles { display: grid; grid-template-columns: repeat(var(--c), minmax(0, 1fr)); gap: 1rem; }
-.effect { margin-top: 1.2rem; padding: 0.8rem 1rem; font-size: 0.9rem; color: var(--muted); background: color-mix(in srgb, var(--tone) 10%, transparent); border-left: 2px solid var(--tone); }
+.effect { margin-top: 1.2rem; padding: 0.8rem 1rem; font-size: 0.9rem; color: var(--muted); background: color-mix(in srgb, var(--tone) var(--tint2), transparent); border-left: 2px solid var(--tone-text); }
 .effect strong { color: var(--offwhite); font-weight: 500; margin-right: 0.4rem; }
 .stage-note { color: var(--muted); font-size: 0.95rem; margin: -0.6rem 0 1.4rem; max-width: 560px; }
 
 /* kafelek */
 .tile { position: relative; display: flex; flex-direction: column; gap: 0.8rem; padding: 1rem; background: var(--steel); border: 1px solid var(--rule); transition: border-color 0.2s, transform 0.2s; }
-.tile:hover, .tile:focus-within { border-color: var(--tone); transform: translateY(-3px); }
-.tile-code { align-self: flex-start; font-family: 'DM Mono', monospace; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.06em; background: var(--tone); color: var(--navy); padding: 0.15rem 0.6rem; }
+.tile:hover, .tile:focus-within { border-color: var(--tone-text); transform: translateY(-3px); }
+.tile-code { align-self: flex-start; font-family: 'DM Mono', monospace; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.06em; background: var(--tone); color: var(--on-tone); padding: 0.15rem 0.6rem; }
 .tile .ph { aspect-ratio: 16 / 10; }
 .tile h3 { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 1.2rem; line-height: 1.25; color: var(--offwhite); margin-bottom: 0.5rem; }
-.tile-more { margin-top: auto; align-self: flex-start; background: none; border: 0; padding: 0; cursor: pointer; font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--tone); }
+.tile-more { margin-top: auto; align-self: flex-start; background: none; border: 0; padding: 0; cursor: pointer; font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--tone-text); }
 .tile-more::after { content: ''; position: absolute; inset: 0; } /* cały kafelek jest klikalny */
 .tile-more span { margin-left: 0.4rem; font-size: 0.9rem; }
 .tile-full { display: none; }
@@ -128,13 +131,13 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--tone, var(--acc
 .tile.wide .tile-more { grid-area: more; }
 
 .stages { max-width: 860px; margin: 0 auto; }
-.stage { --c: 1; border: 1px solid color-mix(in srgb, var(--tone) 40%, transparent); background: color-mix(in srgb, var(--tone) 5%, var(--navy)); padding: 1.2rem; }
+.stage { --c: 1; border: 1px solid color-mix(in srgb, var(--tone-text) 40%, transparent); background: color-mix(in srgb, var(--tone) var(--tint), var(--navy)); padding: 1.2rem; }
 .stage .tile { background: var(--steel); }
 .ems { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 2rem; padding: 1.1rem 1.4rem; border: 1px dashed var(--rule); }
 .ems h3 { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 1.2rem; color: var(--offwhite); }
 .ems .pts { grid-auto-flow: column; gap: 1.4rem; }
-.decision { text-align: center; margin: 0 auto; font-family: 'DM Mono', monospace; font-size: 0.78rem; letter-spacing: 0.06em; color: var(--navy); background: #ff9d66; padding: 0.7rem 1.4rem; max-width: max-content; }
-.loop { margin: 1.5rem auto 0; max-width: 860px; border: 1px solid #ff9d66; padding: 1.2rem 1.5rem; }
+.decision { text-align: center; margin: 0 auto; font-family: 'DM Mono', monospace; font-size: 0.78rem; letter-spacing: 0.06em; color: var(--navy); background: #ffc40c; padding: 0.7rem 1.4rem; max-width: max-content; }
+.loop { margin: 1.5rem auto 0; max-width: 860px; border: 1px solid #ffc40c; padding: 1.2rem 1.5rem; }
 .loop strong { color: var(--offwhite); font-weight: 500; }
 .loop ul { margin: 0.5rem 0 0 1.2rem; color: var(--muted); font-size: 0.92rem; }
 
@@ -147,14 +150,14 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--tone, var(--acc
 .goal strong { color: var(--accent); font-family: 'DM Mono', monospace; letter-spacing: 0.1em; margin-right: 0.6rem; font-weight: 500; }
 
 /* ── Okno ze szczegółami kafelka ── */
-#tile-dialog { margin: auto; padding: 0; width: min(780px, 92vw); max-height: 86vh; background: var(--navy); color: var(--text); border: 1px solid var(--tone); flex-direction: column; overflow: hidden; }
+#tile-dialog { margin: auto; padding: 0; width: min(780px, 92vw); max-height: 86vh; background: var(--navy); color: var(--text); border: 1px solid var(--tone-text); flex-direction: column; overflow: hidden; }
 #tile-dialog[open] { display: flex; animation: dlg-in 0.22s ease; }
 #tile-dialog::backdrop { background: rgba(5, 12, 20, 0.82); backdrop-filter: blur(3px); }
 @keyframes dlg-in { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
 .dlg-head { display: flex; align-items: center; gap: 1rem; padding: 1.1rem 1.4rem; border-bottom: 1px solid var(--rule); background: var(--steel); flex-shrink: 0; }
 .dlg-head h3 { flex: 1; font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 1.4rem; line-height: 1.2; color: var(--offwhite); }
 .dlg-close { width: 40px; height: 40px; flex-shrink: 0; background: none; border: 1px solid var(--rule); color: var(--text); font-size: 1.4rem; line-height: 1; cursor: pointer; }
-.dlg-close:hover { border-color: var(--tone); color: var(--tone); }
+.dlg-close:hover { border-color: var(--tone-text); color: var(--tone-text); }
 .dlg-body { overflow-y: auto; overscroll-behavior: contain; padding: 1.6rem 1.4rem 2rem; -webkit-overflow-scrolling: touch; }
 .dlg-body h4 { font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 1.05rem; color: var(--offwhite); margin: 1.6rem 0 0.5rem; }
 .dlg-body h4:first-child { margin-top: 0; }
