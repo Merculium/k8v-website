@@ -165,6 +165,17 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--tone-text, var(
 .dlg-body ul { margin: 0 0 1rem 1.2rem; color: var(--muted); }
 .dlg-body .btn { margin-top: 1rem; }
 
+/* ── Treść kursu: opis na kafelku i w oknie ── */
+.tile-desc { font-size: 0.88rem; color: var(--muted); line-height: 1.6; margin-bottom: 0.8rem; }
+.meta { list-style: none; display: grid; gap: 0.25rem; padding-top: 0.7rem; border-top: 1px solid var(--rule); font-size: 0.8rem; color: var(--muted); line-height: 1.45; }
+.meta b, .facts b { display: inline-block; min-width: 4.6rem; margin-right: 0.4rem; font-family: 'DM Mono', monospace; font-weight: 400; font-size: 0.66rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tone-text); }
+.dlg-body .dlg-sub { font-family: 'DM Mono', monospace; font-size: 0.78rem; letter-spacing: 0.03em; line-height: 1.6; color: var(--tone-text); margin-bottom: 1.1rem; }
+.dlg-body .facts { list-style: none; margin: 0 0 1.5rem; padding: 0.9rem 1rem; display: grid; gap: 0.3rem; font-size: 0.9rem; color: var(--muted); border-left: 2px solid var(--tone-text); background: color-mix(in srgb, var(--tone) var(--tint2), transparent); }
+.dlg-body li { margin-bottom: 0.35rem; line-height: 1.6; }
+.dlg-body .checks { list-style: none; margin-left: 0; }
+.dlg-body .checks li { position: relative; padding-left: 1.5rem; }
+.dlg-body .checks li::before { content: '✓'; position: absolute; left: 0; color: var(--tone-text); }
+
 /* ── Responsive ── */
 @media (max-width: 1000px) {
   .branch, .branch.c4 { --c: 2; }
