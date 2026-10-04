@@ -48,50 +48,32 @@ nav {
 }
 
 .nav-logo {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-  line-height: 1.15;
-  white-space: nowrap;
-  flex-shrink: 0;
-  margin-right: 1.5rem;
-}
-
-.nav-name {
   font-family: 'DM Mono', monospace;
   font-size: 0.8rem;
   letter-spacing: 0.12em;
   color: var(--accent);
   text-transform: uppercase;
-}
-
-.nav-role {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.6rem;
-  letter-spacing: 0.06em;
-  color: var(--muted);
+  white-space: nowrap;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: clamp(0.8rem, 1.5vw, 1.7rem);
+  gap: 2.5rem;
   align-items: center;
 }
 
 nav a {
   font-family: 'DM Mono', monospace;
-  font-size: 0.68rem;
-  letter-spacing: 0.06em;
-  white-space: nowrap;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--muted);
   text-decoration: none;
   transition: color 0.2s;
 }
 
-nav a:hover,
-nav a.active { color: var(--accent); }
+nav a:hover { color: var(--accent); }
 
 /* ── LANGUAGE TOGGLE ── */
 .lang-toggle {
@@ -583,45 +565,6 @@ footer p {
 }
 
 /* ============================================
-   NAV — HAMBURGER (max 1200px)
-   Polish labels are long, so the full menu only fits on wide screens.
-   ============================================ */
-@media (max-width: 1200px) {
-  .nav-toggle {
-    display: flex;
-    position: relative;
-    z-index: 101;
-  }
-
-  nav ul {
-    display: none;
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(13,27,42,0.98);
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1.8rem;
-    z-index: 99;
-  }
-
-  nav ul.open { display: flex; }
-
-  nav ul li a {
-    font-size: 1.05rem;
-    letter-spacing: 0.15em;
-  }
-
-  /* backdrop-filter would trap the fixed menu inside the 60px bar */
-  nav.open { backdrop-filter: none; }
-  nav.open .nav-logo { position: relative; z-index: 101; }
-
-  nav.open .nav-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-  nav.open .nav-toggle span:nth-child(2) { opacity: 0; }
-  nav.open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-}
-
-/* ============================================
    RESPONSIVE — TABLET (max 900px)
    ============================================ */
 @media (max-width: 900px) {
@@ -641,10 +584,42 @@ footer p {
    ============================================ */
 @media (max-width: 640px) {
 
-  nav { padding: 0.9rem 5vw; }
-  .nav-logo { margin-right: 0.8rem; }
-  .nav-name { font-size: 0.72rem; letter-spacing: 0.08em; }
-  .nav-role { font-size: 0.56rem; letter-spacing: 0.03em; }
+  /* Nav: show hamburger, hide links by default */
+  .nav-toggle {
+    display: flex;
+  }
+
+  nav ul {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(13,27,42,0.98);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    z-index: 99;
+  }
+
+  nav ul.open {
+    display: flex;
+  }
+
+  nav ul li a {
+    font-size: 1.1rem;
+    letter-spacing: 0.15em;
+  }
+
+  /* Close icon when open */
+  nav.open .nav-toggle span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  nav.open .nav-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+  nav.open .nav-toggle span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
 
   /* Hero */
   #hero {
