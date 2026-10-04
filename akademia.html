@@ -1,1 +1,104 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Akademia Walidacji | K8 VALIDATE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="akademia.css">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+</head>
+<body class="ak">
+  <nav id="main-nav">
+    <div class="nav-logo"><span class="nav-name">Katarzyna Szkodzińska</span><span class="nav-role" data-i18n="common.role">Ekspert ds. Walidacji i Kwalifikacji</span></div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <ul id="nav-links">
+      <li><a href="index.html" data-i18n="common.nav.home" onclick="closeMenu()">Strona główna</a></li>
+      <li><a href="akademia.html" class="active" data-i18n="common.nav.akademia" onclick="closeMenu()">Akademia Walidacji</a></li>
+      <li><a href="/about" data-i18n="common.nav.about" onclick="closeMenu()">O mnie</a></li>
+      <li><a href="index.html#expertise" data-i18n="common.nav.expertise" onclick="closeMenu()">Kompetencje</a></li>
+      <li><a href="index.html#experience" data-i18n="common.nav.experience" onclick="closeMenu()">Doświadczenie</a></li>
+      <li><a href="/casestudies" data-i18n="common.nav.casestudies" onclick="closeMenu()">Case Studies</a></li>
+      <li><a href="index.html#contact" data-i18n="common.nav.contact" onclick="closeMenu()">Kontakt</a></li>
+      <li><button type="button" class="lang-toggle" id="lang-toggle" aria-label="Zmień język / Switch language">EN</button></li>
+    </ul>
+  </nav>
+  <main class="ak-main">
+    <header class="ak-banner">
+      <div class="hero-grid-bg"></div>
+      <div class="ak-banner-inner">
+        <div class="ak-logo">
+          <img src="assets/akademia/logo-akademia.png" alt="Akademia Walidacji" onerror="this.parentNode.classList.add('no-img');this.remove()">
+          <h1 class="ak-wordmark">Akademia <em>Walidacji</em></h1>
+        </div>
+        <p class="ak-lead" data-en="Practical courses for people who qualify and validate: from a single test to a conscious qualification decision.">Praktyczne kursy dla osób, które kwalifikują i walidują: od pojedynczego testu do świadomej decyzji kwalifikacyjnej.</p>
+      </div>
+    </header>
 
+    <section class="ak-block" id="sciezki">
+      <div class="section-label" data-en="Choose your path">Wybierz ścieżkę</div>
+      <div class="paths">
+      <a class="path-card" href="akademiacleanroom.html" data-tone="teal">
+        <div class="ph" data-ph="Zdjęcie poglądowe"><img src="assets/akademia/sciezka-cleanroom.jpg" alt="" onerror="this.remove()"></div>
+        <div class="path-body">
+          <h3>Cleanroom i komory UDAF/BSC</h3><p>Ochrona produktu, operatora i otoczenia oraz kontrolowane środowisko dla procesu.</p><ul class="pts"><li>Integralność HEPA, downflow i inflow</li><li>Smoke study i technika aseptyczna</li><li>Klasyfikacja cząstek, ACH i kaskada ciśnień</li><li>Rekwalifikacja UDAF i cleanroomu</li></ul>
+          <span class="cta" data-en="Go to path">Przejdź do ścieżki</span>
+        </div>
+      </a>
+      <a class="path-card" href="akademiatermostatyki.html" data-tone="purple">
+        <div class="ph" data-ph="Zdjęcie poglądowe"><img src="assets/akademia/sciezka-termostatyki.jpg" alt="" onerror="this.remove()"></div>
+        <div class="path-body">
+          <h3>Termostatyki – urządzenia i obszary</h3><p>Mapowanie temperatury w obszarach CRT/CCT i urządzeniach termostatycznych.</p><ul class="pts"><li>Rozkład czujników w obszarach i urządzeniach</li><li>Mapowanie temperatury krok po kroku</li><li>Analiza wyników i raport kwalifikacji</li><li>Rekwalifikacja po relokacji i awarii</li></ul>
+          <span class="cta" data-en="Go to path">Przejdź do ścieżki</span>
+        </div>
+      </a>
+      </div>
+    </section>
+
+    <section class="ak-block" id="o-akademii">
+      <div class="about2">
+        <div>
+          <div class="section-label" data-en="About the Academy">O Akademii</div>
+          <h2 data-en="What is the Validation Academy?">Czym jest Akademia Walidacji?</h2>
+          <p>Akademia Walidacji to zbiór praktycznych kursów dla osób, które kwalifikują i walidują pomieszczenia czyste, komory UDAF/BSC oraz urządzenia i obszary termostatyczne w środowisku GMP.</p>
+          <p>Każdy kurs pokazuje, jak wykonać test, jak odczytać wynik i jak na jego podstawie podjąć decyzję kwalifikacyjną. Kursy możesz realizować osobno albo jako całą ścieżkę.</p>
+        </div>
+        <div class="benefits">
+          <div class="benefit"><h3>Praktyka zamiast teorii</h3><p>Przykłady z realnych projektów kwalifikacyjnych.</p></div>
+          <div class="benefit"><h3>Od testu do decyzji</h3><p>Uczysz się łączyć pojedyncze wyniki w jedną decyzję kwalifikacyjną.</p></div>
+          <div class="benefit"><h3>Podejście oparte na ryzyku</h3><p>Zakres rekwalifikacji dobierasz świadomie, a nie z przyzwyczajenia.</p></div>
+          <div class="benefit"><h3>Elastyczna kolejność</h3><p>Kursy możesz realizować osobno lub jako spójną ścieżkę.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ak-block" id="kursy">
+      <div class="section-label" data-en="More courses">Pozostałe kursy</div>
+      <h2 data-en="More from the Academy">Więcej z Akademii</h2>
+      <div class="courses">
+      <a class="course" href="#">
+        <div class="ph" data-ph="Zdjęcie kursu"><img src="assets/akademia/kurs1.jpg" alt="" onerror="this.remove()"></div>
+        <div class="course-body"><h3>Tytuł kursu 1</h3><p>Krótki opis kursu – dwa, trzy zdania o tym, czego dotyczy.</p><span class="tag" data-en="Coming soon">Wkrótce</span></div>
+      </a>
+      <a class="course" href="#">
+        <div class="ph" data-ph="Zdjęcie kursu"><img src="assets/akademia/kurs2.jpg" alt="" onerror="this.remove()"></div>
+        <div class="course-body"><h3>Tytuł kursu 2</h3><p>Krótki opis kursu – dwa, trzy zdania o tym, czego dotyczy.</p><span class="tag" data-en="Coming soon">Wkrótce</span></div>
+      </a>
+      <a class="course" href="#">
+        <div class="ph" data-ph="Zdjęcie kursu"><img src="assets/akademia/kurs3.jpg" alt="" onerror="this.remove()"></div>
+        <div class="course-body"><h3>Tytuł kursu 3</h3><p>Krótki opis kursu – dwa, trzy zdania o tym, czego dotyczy.</p><span class="tag" data-en="Coming soon">Wkrótce</span></div>
+      </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p data-i18n="common.footer">© 2026 Katarzyna Szkodzińska K8 Validate. Wszelkie prawa zastrzeżone.</p>
+  </footer>
+
+  <script src="assets/i18n.js"></script>
+  <script src="akademia.js"></script>
+</body>
+</html>
