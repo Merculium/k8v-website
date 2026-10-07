@@ -14,20 +14,35 @@
   var dlg = document.getElementById('tile-dialog');
   if (dlg) {
     var body = document.getElementById('dlg-body');
-    document.addEventListener('click', function (e) {
-      // klik w dowolne miejsce kafelka (grafika, tekst, przycisk) otwiera okno
-      var tile = e.target.closest('.tile');
-      if (tile) {
-        var tone = tile.closest('[data-tone]');
-        dlg.dataset.tone = tone ? tone.dataset.tone : '';
-        document.getElementById('dlg-code').textContent = tile.querySelector('.tile-code').textContent;
-        document.getElementById('dlg-title').textContent = tile.querySelector('h3').textContent;
-        body.innerHTML = tile.querySelector('.tile-full').innerHTML;
-        body.scrollTop = 0;
+    var findTile = function (code) {
+      return Array.prototype.find.call(document.querySelectorAll('.tile'), function (t) {
+        return t.querySelector('.tile-code').textContent === code;
+      });
+    };
+    var openTile = function (tile) {
+      var tone = tile.closest('[data-tone]');
+      dlg.dataset.tone = tone ? tone.dataset.tone : '';
+      document.getElementById('dlg-code').textContent = tile.querySelector('.tile-code').textContent;
+      document.getElementById('dlg-title').textContent = tile.querySelector('h3').textContent;
+      body.innerHTML = tile.querySelector('.tile-full').innerHTML;
+      body.scrollTop = 0;
+      if (!dlg.hasAttribute('open')) {
         document.body.style.overflow = 'hidden';
         dlg.showModal();
+      }
+    };
+    document.addEventListener('click', function (e) {
+      // link „Powiązane kursy” przełącza okno na inny kafelek
+      var rel = e.target.closest('[data-open]');
+      if (rel) {
+        e.preventDefault();
+        var t = findTile(rel.getAttribute('data-open'));
+        if (t) openTile(t);
         return;
       }
+      // klik w dowolne miejsce kafelka (grafika, tekst, przycisk) otwiera okno
+      var tile = e.target.closest('.tile');
+      if (tile) { openTile(tile); return; }
       // zamknięcie: przycisk × albo kliknięcie w tło
       if (e.target === dlg || e.target.closest('.dlg-close')) dlg.close();
     });
