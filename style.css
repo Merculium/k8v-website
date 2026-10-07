@@ -93,6 +93,66 @@ nav a {
 nav a:hover,
 nav a.active { color: var(--accent); }
 
+/* ── NAV DROPDOWN (Akademia Walidacji) ── */
+nav .has-sub { position: relative; display: flex; align-items: center; gap: 0.1rem; }
+
+.sub-toggle {
+  position: relative;
+  width: 22px; height: 22px;
+  background: none; border: 0;
+  cursor: pointer;
+  color: var(--muted);
+}
+
+.sub-toggle::before {
+  content: '';
+  position: absolute;
+  left: 50%; top: 50%;
+  width: 6px; height: 6px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: translate(-50%, -70%) rotate(45deg);
+  transition: transform 0.2s;
+}
+
+.has-sub:hover .sub-toggle,
+.has-sub:has(:focus-visible) .sub-toggle,
+.has-sub.open .sub-toggle { color: var(--accent); }
+
+.has-sub:hover .sub-toggle::before,
+.has-sub.open .sub-toggle::before { transform: translate(-50%, -30%) rotate(-135deg); }
+
+nav ul.submenu {
+  position: absolute;
+  top: calc(100% + 1.4rem);
+  left: -1rem;
+  min-width: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  padding: 0.4rem 0;
+  background: rgba(13,27,42,0.98);
+  border: 1px solid var(--rule);
+  border-top: 2px solid var(--accent);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.35);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition: opacity 0.18s, transform 0.18s, visibility 0.18s;
+}
+
+/* niewidzialny mostek, żeby menu nie znikało przy zjeżdżaniu myszką */
+nav ul.submenu::before { content: ''; position: absolute; left: 0; right: 0; top: -2rem; height: 2rem; }
+
+.has-sub:hover > ul.submenu,
+.has-sub:has(:focus-visible) > ul.submenu,
+.has-sub.open > ul.submenu { opacity: 1; visibility: visible; transform: none; }
+
+nav ul.submenu a { display: block; padding: 0.75rem 1.2rem; white-space: nowrap; }
+nav ul.submenu a:hover,
+nav ul.submenu a.active { background: rgba(79,195,195,0.08); color: var(--accent); }
+
 /* ── LANGUAGE TOGGLE ── */
 .lang-toggle {
   font-family: 'DM Mono', monospace;
@@ -611,6 +671,41 @@ footer p {
     font-size: 1.05rem;
     letter-spacing: 0.15em;
   }
+
+  /* Akademia: podmenu rozwija się w dół pod linkiem */
+  nav .has-sub { position: static; flex-wrap: wrap; justify-content: center; gap: 0.2rem; }
+  .sub-toggle { width: 36px; height: 36px; }
+
+  nav ul.submenu {
+    position: static;
+    display: none;
+    flex-basis: 100%;
+    min-width: 0;
+    padding: 0.7rem 0 0;
+    align-items: center;
+    gap: 1.1rem;
+    background: none;
+    border: 0;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    z-index: auto;
+  }
+
+  nav ul.submenu::before { display: none; }
+  nav .has-sub.open > ul.submenu { display: flex; }
+
+  nav ul.submenu a {
+    padding: 0;
+    font-size: 0.82rem;
+    letter-spacing: 0.1em;
+    text-align: center;
+    white-space: normal;
+  }
+
+  nav ul.submenu a:hover,
+  nav ul.submenu a.active { background: none; }
 
   /* backdrop-filter would trap the fixed menu inside the 60px bar */
   nav.open { backdrop-filter: none; }

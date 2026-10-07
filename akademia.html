@@ -6,8 +6,8 @@
   <title>Akademia Walidacji | K8 VALIDATE</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=4">
-  <link rel="stylesheet" href="akademia.css?v=4">
+  <link rel="stylesheet" href="style.css?v=5">
+  <link rel="stylesheet" href="akademia.css?v=5">
   <link rel="icon" type="image/png" href="assets/favicon.png">
 </head>
 <body class="ak">
@@ -16,7 +16,14 @@
     <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
     <ul id="nav-links">
       <li><a href="index.html" data-i18n="common.nav.home" onclick="closeMenu()">Strona główna</a></li>
-      <li><a href="akademia.html" class="active" data-i18n="common.nav.akademia" onclick="closeMenu()">Akademia Walidacji</a></li>
+      <li class="has-sub">
+        <a href="akademia.html" class="active" data-i18n="common.nav.akademia" onclick="closeMenu()">Akademia Walidacji</a>
+        <button type="button" class="sub-toggle" aria-label="Rozwiń podstrony Akademii Walidacji" aria-expanded="false"></button>
+        <ul class="submenu">
+          <li><a href="akademiacleanroom.html" data-i18n="common.nav.akademia_cleanroom" onclick="closeMenu()">Cleanroom i komory UDAF/BSC</a></li>
+          <li><a href="akademiatermostatyki.html" data-i18n="common.nav.akademia_termostatyki" onclick="closeMenu()">Termostatyki – urządzenia i obszary</a></li>
+        </ul>
+      </li>
       <li><a href="/about" data-i18n="common.nav.about" onclick="closeMenu()">O mnie</a></li>
       <li><a href="index.html#expertise" data-i18n="common.nav.expertise" onclick="closeMenu()">Kompetencje</a></li>
       <li><a href="index.html#experience" data-i18n="common.nav.experience" onclick="closeMenu()">Doświadczenie</a></li>
@@ -80,15 +87,15 @@
       <div class="courses">
       <a class="course" href="#">
         <div class="ph" data-ph="Zdjęcie kursu"><img src="assets/akademia/kurs1.jpg" alt="" onerror="this.remove()"></div>
-        <div class="course-body"><h3>Tytuł kursu 1</h3><p>Krótki opis kursu – dwa, trzy zdania o tym, czego dotyczy.</p><span class="tag" data-en="Coming soon">Wkrótce</span></div>
+        <div class="course-body"><h3>Tytuł kursu 1</h3><p>Krótki opis kursu – dwa, trzy zdania o tym, czego dotyczy.</p></div>
       </a>
       <a class="course" href="#">
         <div class="ph" data-ph="Zdjęcie kursu"><img src="assets/akademia/kurs2.jpg" alt="" onerror="this.remove()"></div>
-        <div class="course-body"><h3>Tytuł kursu 2</h3><p>Krótki opis kursu – dwa, trzy zdania o tym, czego dotyczy.</p><span class="tag" data-en="Coming soon">Wkrótce</span></div>
+        <div class="course-body"><h3>Tytuł kursu 2</h3><p>Krótki opis kursu – dwa, trzy zdania o tym, czego dotyczy.</p></div>
       </a>
       <a class="course" href="#">
         <div class="ph" data-ph="Zdjęcie kursu"><img src="assets/akademia/kurs3.jpg" alt="" onerror="this.remove()"></div>
-        <div class="course-body"><h3>Tytuł kursu 3</h3><p>Krótki opis kursu – dwa, trzy zdania o tym, czego dotyczy.</p><span class="tag" data-en="Coming soon">Wkrótce</span></div>
+        <div class="course-body"><h3>Tytuł kursu 3</h3><p>Krótki opis kursu – dwa, trzy zdania o tym, czego dotyczy.</p></div>
       </a>
       </div>
     </section>
@@ -99,6 +106,6 @@
   </footer>
 
   <script src="assets/i18n.js"></script>
-  <script src="akademia.js?v=4"></script>
+  <script src="akademia.js?v=5"></script>
 </body>
 </html>

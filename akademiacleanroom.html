@@ -6,8 +6,8 @@
   <title>Cleanroom i komory UDAF / BSC | K8 VALIDATE</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=4">
-  <link rel="stylesheet" href="akademia.css?v=4">
+  <link rel="stylesheet" href="style.css?v=5">
+  <link rel="stylesheet" href="akademia.css?v=5">
   <link rel="icon" type="image/png" href="assets/favicon.png">
 </head>
 <body class="ak">
@@ -16,7 +16,14 @@
     <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
     <ul id="nav-links">
       <li><a href="index.html" data-i18n="common.nav.home" onclick="closeMenu()">Strona główna</a></li>
-      <li><a href="akademia.html" class="active" data-i18n="common.nav.akademia" onclick="closeMenu()">Akademia Walidacji</a></li>
+      <li class="has-sub">
+        <a href="akademia.html" class="active" data-i18n="common.nav.akademia" onclick="closeMenu()">Akademia Walidacji</a>
+        <button type="button" class="sub-toggle" aria-label="Rozwiń podstrony Akademii Walidacji" aria-expanded="false"></button>
+        <ul class="submenu">
+          <li><a href="akademiacleanroom.html" class="active" data-i18n="common.nav.akademia_cleanroom" onclick="closeMenu()">Cleanroom i komory UDAF/BSC</a></li>
+          <li><a href="akademiatermostatyki.html" data-i18n="common.nav.akademia_termostatyki" onclick="closeMenu()">Termostatyki – urządzenia i obszary</a></li>
+        </ul>
+      </li>
       <li><a href="/about" data-i18n="common.nav.about" onclick="closeMenu()">O mnie</a></li>
       <li><a href="index.html#expertise" data-i18n="common.nav.expertise" onclick="closeMenu()">Kompetencje</a></li>
       <li><a href="index.html#experience" data-i18n="common.nav.experience" onclick="closeMenu()">Doświadczenie</a></li>
@@ -41,13 +48,13 @@
   <span class="tile-code">A1</span>
   <div class="ph" data-ph="Miejsce na grafikę"><img src="assets/akademia/a1.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
   <div class="tile-body">
-    <h3>Jak mierzyć integralność filtrów HEPA?</h3>
+    <h3>Integralność filtrów HEPA</h3>
     <ul class=pts><li>przygotowanie fotometru i wyznaczenie upstream</li><li>skanowanie filtra, ramy i uszczelnień</li><li>kryterium 0,01% i interpretacja wyniku</li><li>dokumentacja, wynik negatywny, rekwalifikacja po wymianie filtra</li></ul>
     <ul class="meta"><li><b>Czas</b>ok. 1,5 godziny</li><li><b>Poziom</b>podstawowy / średniozaawansowany</li><li><b>Podstawa</b>ISO 14644-3:2019 · EU GMP Annex 1 · EN 1822 · ISPE</li></ul>
   </div>
   <button type="button" class="tile-more" aria-haspopup="dialog"><b data-en="Details" style="font-weight:inherit">Szczegóły</b><span aria-hidden="true">+</span></button>
   <div class="tile-full">
-<p class="dlg-sub">Skanowanie fotometrem aerozolowym · kryterium 0,01% · interpretacja i dokumentacja wyników</p>
+<p class="dlg-sub">A1 · Jak mierzyć integralność filtrów HEPA?<br>Skanowanie fotometrem aerozolowym · kryterium 0,01% · interpretacja i dokumentacja wyników</p>
 <ul class="facts"><li><b>Czas</b>ok. 1,5 godziny</li><li><b>Poziom</b>podstawowy / średniozaawansowany</li><li><b>Forma</b>szkolenie online + przykłady + ćwiczenia + checklista</li></ul>
 <p>Test integralności filtra HEPA jest jednym z podstawowych badań wykonywanych podczas kwalifikacji i rekwalifikacji pomieszczeń czystych oraz systemów UDAF. Samo jego wykonanie nie sprowadza się jednak do przesunięcia sondy po powierzchni filtra.</p>
 <p>Gdzie powinien być mierzony upstream? Jak szybko prowadzić sondę i jak daleko od filtra? Co właściwie oznacza wskazanie 0,01%? Czy wzrost ΔP świadczy o nieszczelności? Co zrobić, gdy podczas skanowania pojawi się wynik poza kryterium?</p>
@@ -66,7 +73,7 @@
   <div class="tile-body">
     <h3>Pomiar Downflow i Inflow</h3>
     <ul class=pts><li>siatka pomiarowa, płaszczyzna i metoda</li><li>UDAF/LFH, BSC II Downflow i BSC II Inflow to trzy różne przypadki</li><li>Annex 1 (0,36–0,54 m/s) vs nominał producenta wg EN 12469</li><li>velocity ≠ airflow direction</li></ul>
-    <ul class="meta"><li><b>Czas</b>ok. 95 minut</li><li><b>Poziom</b>operacyjny</li><li><b>Podstawa</b>ISO 14644-3 · EU GMP Annex 1 · EN 12469</li><li><b>Status</b>premiera wkrótce</li></ul>
+    <ul class="meta"><li><b>Czas</b>ok. 95 minut</li><li><b>Poziom</b>operacyjny</li><li><b>Podstawa</b>ISO 14644-3 · EU GMP Annex 1 · EN 12469</li></ul>
   </div>
   <button type="button" class="tile-more" aria-haspopup="dialog"><b data-en="Details" style="font-weight:inherit">Szczegóły</b><span aria-hidden="true">+</span></button>
   <div class="tile-full">
@@ -83,7 +90,7 @@
 <h4>Dla kogo?</h4><p>Validation / Qualification / C&amp;Q, HVAC, Cleanroom, Engineering i QA, osoby wykonujące pomiary środowiskowe i kwalifikację urządzeń z przepływem jednokierunkowym lub BSC. Dobry także na start: uczy dobierać metodę do urządzenia, a nie zapamiętywać liczby.</p>
 <h4>Podstawa merytoryczna</h4><p>PN-EN ISO 14644-3, EU GMP Annex 1 oraz aktualna seria EN 12469 dla komór bezpieczeństwa biologicznego, z praktycznym podejściem do kwalifikacji i interpretacji wymagań producenta.</p>
 <h4>Powiązane kursy</h4><ul class="related"><li><a href="#" data-open="A4">A4 · Downflow vs Inflow</a> — naucz się interpretować zmierzone wartości i podejmować decyzje przy odchyleniach.</li><li><a href="#" data-open="A3">A3 · Wizualizacja przepływu</a> — sprawdź, jak zmierzona prędkość przekłada się na rzeczywisty wzorzec przepływu.</li><li><a href="#" data-open="D1">D1 · Rekwalifikacja UDAF</a> — zobacz, gdzie pomiar Downflow znajduje się w okresowej RQ.</li></ul>
-<div class="dlg-soon"><strong>Kurs w przygotowaniu</strong><p>A2 będzie częścią Akademii Walidatora K8 Validate. Zapisz się na listę zainteresowanych i otrzymaj informację o uruchomieniu Akademii.</p><a class="btn" href="index.html#contact" data-en="Join the waiting list">Zapisz się na listę zainteresowanych</a></div>
+<a class="btn" href="index.html#contact" data-en="Ask about this course">Zapytaj o ten kurs</a>
   </div>
 </article>
 <article class="tile">
@@ -92,7 +99,7 @@
   <div class="tile-body">
     <h3>Wizualizacja przepływu</h3>
     <ul class=pts><li>test at rest i in operation, dobór tracera</li><li>worst case z analizy ryzyka</li><li>kryterium 14°: wymaganie czy praktyka zakładowa?</li><li>ocena nagrania i wpływu operatora na first air</li></ul>
-    <ul class="meta"><li><b>Czas</b>ok. 100 minut</li><li><b>Poziom</b>operacyjny</li><li><b>Podstawa</b>EU GMP Annex 1 · ISO 14644-3 · IEST-RP-CC006 · EN 12469</li><li><b>Status</b>premiera wkrótce</li></ul>
+    <ul class="meta"><li><b>Czas</b>ok. 100 minut</li><li><b>Poziom</b>operacyjny</li><li><b>Podstawa</b>EU GMP Annex 1 · ISO 14644-3 · IEST-RP-CC006 · EN 12469</li></ul>
   </div>
   <button type="button" class="tile-more" aria-haspopup="dialog"><b data-en="Details" style="font-weight:inherit">Szczegóły</b><span aria-hidden="true">+</span></button>
   <div class="tile-full">
@@ -112,7 +119,7 @@
 <h4>Dla kogo?</h4><p>Validation / Qualification / C&amp;Q, QA, mikrobiologia i Environmental Monitoring, Engineering / HVAC / Cleanroom, osoby wykonujące kwalifikację UDAF i BSC, oceniające smoke studies, operatorzy i odpowiedzialni za technikę aseptyczną. Dla tych, którzy chcą przejść od „wykonaliśmy smoke study” do „potrafimy uzasadnić, co dokładnie pokazuje nagranie i dlaczego uznajemy przepływ oraz sposób pracy za akceptowalne”.</p>
 <h4>Podstawa merytoryczna</h4><p>EU GMP Annex 1 · ISO 14644-3 · IEST-RP-CC006 · EN 12469 oraz praktyczne podejście do kwalifikacji UDAF i BSC, analizy ryzyka i oceny nagrań.</p>
 <h4>Powiązane kursy</h4><ul class="related"><li><a href="#" data-open="A2">A2 · Pomiar Downflow i Inflow</a> — najpierw potwierdź parametry przepływu, który później obserwujesz na smoke study.</li><li><a href="#" data-open="E3">E3 · Technika aseptyczna</a> — ten sam film z perspektywy ruchów operatora i ochrony first air (A3 patrzy na powietrze, E3 na człowieka).</li><li><a href="#" data-open="D1">D1 · Rekwalifikacja UDAF</a> — kiedy wizualizację należy ponownie wykonać po zmianie.</li></ul>
-<div class="dlg-soon"><strong>Kurs w przygotowaniu</strong><p>A3 będzie częścią Akademii Walidatora K8 Validate. Zapisz się na listę zainteresowanych i otrzymaj informację o uruchomieniu Akademii.</p><a class="btn" href="index.html#contact" data-en="Join the waiting list">Zapisz się na listę zainteresowanych</a></div>
+<a class="btn" href="index.html#contact" data-en="Ask about this course">Zapytaj o ten kurs</a>
   </div>
 </article>
 <article class="tile">
@@ -121,7 +128,7 @@
   <div class="tile-body">
     <h3>Downflow vs Inflow</h3>
     <ul class=pts><li>Downflow chroni produkt, Inflow operatora</li><li>wynik poza kryterium: tabela decyzyjna i impact assessment</li><li>GMP vs EN 12469 vs NSF/ANSI 49: skąd różne liczby</li><li>wyższa prędkość ≠ lepsza ochrona</li></ul>
-    <ul class="meta"><li><b>Czas</b>ok. 60 minut + pytania</li><li><b>Poziom</b>średniozaawansowany</li><li><b>Podstawa</b>EU GMP Annex 1 · ISO 14644-3 · PN-EN 12469-2 · NSF/ANSI 49</li><li><b>Status</b>premiera wkrótce</li></ul>
+    <ul class="meta"><li><b>Czas</b>ok. 60 minut + pytania</li><li><b>Poziom</b>średniozaawansowany</li><li><b>Podstawa</b>EU GMP Annex 1 · ISO 14644-3 · PN-EN 12469-2 · NSF/ANSI 49</li></ul>
   </div>
   <button type="button" class="tile-more" aria-haspopup="dialog"><b data-en="Details" style="font-weight:inherit">Szczegóły</b><span aria-hidden="true">+</span></button>
   <div class="tile-full">
@@ -140,7 +147,7 @@
 <h4>Dla kogo?</h4><p>Validation / Qualification / C&amp;Q, QA, Engineering, osoby odpowiedzialne za kwalifikację UDAF i BSC, pracownicy laboratoriów z BSC, przeglądający wyniki kwalifikacji oraz właściciele systemów podejmujący decyzje o odchyleniach. Czy trzeba wcześniej A2? Nie bezwzględnie, ale A4 jest jego naturalnym rozwinięciem: A2 pokazuje, jak wykonać pomiar, A4 — jak interpretować wynik i jakie decyzje podjąć.</p>
 <h4>Podstawa merytoryczna</h4><p>EU GMP Annex 1 · ISO 14644-3 · PN-EN 12469-2 · NSF/ANSI 49 oraz praktyka kwalifikacji UDAF i komór bezpieczeństwa biologicznego.</p>
 <h4>Powiązane kursy</h4><ul class="related"><li><a href="#" data-open="A2">A2 · Pomiar Downflow i Inflow</a> — poznaj metodę pomiaru przed przejściem do interpretacji wyników.</li><li><a href="#" data-open="A3">A3 · Wizualizacja przepływu</a> — zobacz, czego same wartości velocity nie powiedzą o rzeczywistym zachowaniu strugi.</li><li><a href="#" data-open="E2">E2 · Filtr wyciągowy BSC</a> — rozszerz wiedzę o funkcjonowaniu i kwalifikacji komór BSC.</li></ul>
-<div class="dlg-soon"><strong>Kurs w przygotowaniu</strong><p>A4 będzie częścią Akademii Walidatora K8 Validate. Zapisz się na listę zainteresowanych i otrzymaj informację o uruchomieniu Akademii.</p><a class="btn" href="index.html#contact" data-en="Join the waiting list">Zapisz się na listę zainteresowanych</a></div>
+<a class="btn" href="index.html#contact" data-en="Ask about this course">Zapytaj o ten kurs</a>
   </div>
 </article>
 <article class="tile">
@@ -149,7 +156,7 @@
   <div class="tile-body">
     <h3>Filtr wyciągowy BSC</h3>
     <ul class=pts><li>ΔP ≠ integralność: czego dowodzi, a czego nie</li><li>kolejność: urządzenie → norma → test → dowód → QRM</li><li>FMEA ocenia ryzyko, nie dowodzi szczelności</li><li>odpowiedź na pytanie inspektora</li></ul>
-    <ul class="meta"><li><b>Czas</b>ok. 1,5 godziny</li><li><b>Poziom</b>zaawansowany</li><li><b>Podstawa</b>EN 12469 · NSF/ANSI 49 · ISO 14644-3 · EU GMP Annex 1 · ICH Q9 · ISPE HVAC</li><li><b>Status</b>premiera wkrótce</li></ul>
+    <ul class="meta"><li><b>Czas</b>ok. 1,5 godziny</li><li><b>Poziom</b>zaawansowany</li><li><b>Podstawa</b>EN 12469 · NSF/ANSI 49 · ISO 14644-3 · EU GMP Annex 1 · ICH Q9 · ISPE HVAC</li></ul>
   </div>
   <button type="button" class="tile-more" aria-haspopup="dialog"><b data-en="Details" style="font-weight:inherit">Szczegóły</b><span aria-hidden="true">+</span></button>
   <div class="tile-full">
@@ -170,7 +177,7 @@
 <h4>Dla kogo?</h4><p>Validation / Qualification / C&amp;Q, QA, właściciele BSC, Engineering, Biosafety, osoby odpowiedzialne za certyfikację komór, audytorzy oraz przygotowujący risk assessment, URS i strategie rekwalifikacji. Kurs dla osób, które znają podstawy HEPA i BSC i chcą nauczyć się interpretować wymagania tam, gdzie jedna norma nie daje pełnej odpowiedzi.</p>
 <h4>Podstawa merytoryczna</h4><p>EN 12469 · NSF/ANSI 49 · ISO 14644-3 · EU GMP Annex 1 · ICH Q9(R1) · ISPE HVAC Filters oraz praktyczne podejście do kwalifikacji, certyfikacji i Quality Risk Management.</p>
 <h4>Powiązane kursy</h4><ul class="related"><li><a href="#" data-open="A1">A1 · Jak mierzyć integralność filtrów HEPA?</a> — podstawy testu integralności i różnica między ΔP a leak testem.</li><li><a href="#" data-open="A2">A2 · Pomiar Downflow i Inflow</a> — airflow i balans komory BSC.</li><li><a href="#" data-open="A4">A4 · Downflow vs Inflow</a> — interpretacja wyników i funkcje ochronne BSC.</li><li><a href="#" data-open="D1">D1 · Rekwalifikacja UDAF</a> — dlaczego zakresu zwykłego UDAF i BSC nie kopiuje się 1:1.</li></ul>
-<div class="dlg-soon"><strong>Kurs w przygotowaniu</strong><p>E2 będzie częścią Akademii Walidatora K8 Validate. Zapisz się na listę zainteresowanych i otrzymaj informację o uruchomieniu Akademii.</p><a class="btn" href="index.html#contact" data-en="Join the waiting list">Zapisz się na listę zainteresowanych</a></div>
+<a class="btn" href="index.html#contact" data-en="Ask about this course">Zapytaj o ten kurs</a>
   </div>
 </article>
 <article class="tile">
@@ -179,7 +186,7 @@
   <div class="tile-body">
     <h3>Technika aseptyczna</h3>
     <ul class=pts><li>first air i slow &amp; deliberate movements w praktyce</li><li>obserwacja bezpośrednia: checklista + ocena jakościowa</li><li>dokumentowanie niezgodności i trending</li><li>operator, szkolenie czy konstrukcja procesu?</li></ul>
-    <ul class="meta"><li><b>Czas</b>ok. 1,5 godziny</li><li><b>Poziom</b>średniozaawansowany</li><li><b>Podstawa</b>EU GMP Annex 1 · FDA Aseptic Processing Guidance · obserwacje FDA</li><li><b>Status</b>premiera wkrótce</li></ul>
+    <ul class="meta"><li><b>Czas</b>ok. 1,5 godziny</li><li><b>Poziom</b>średniozaawansowany</li><li><b>Podstawa</b>EU GMP Annex 1 · FDA Aseptic Processing Guidance · obserwacje FDA</li></ul>
   </div>
   <button type="button" class="tile-more" aria-haspopup="dialog"><b data-en="Details" style="font-weight:inherit">Szczegóły</b><span aria-hidden="true">+</span></button>
   <div class="tile-full">
@@ -199,7 +206,7 @@
 <h4>Dla kogo?</h4><p>Operatorzy w obszarach aseptycznych, QA, trenerzy GMP, mikrobiologia, Validation / Qualification, osoby oceniające smoke studies in operation, supervisorzy produkcji, prowadzący obserwacje behawioralne i odpowiedzialni za szkolenie personelu aseptycznego. Także dla tych, którzy chcą rozmawiać o błędach operatorów obiektywnie i w oparciu o ryzyko.</p>
 <h4>Podstawa merytoryczna</h4><p>EU GMP Annex 1 · FDA Guidance for Industry: Sterile Drug Products Produced by Aseptic Processing · rzeczywiste obserwacje FDA oraz praktyczne podejście do obserwacji zachowania operatorów, smoke studies i oceny ryzyka procesu aseptycznego.</p>
 <h4>Powiązane kursy</h4><ul class="related"><li><a href="#" data-open="A3">A3 · Wizualizacja przepływu</a> — zobacz na filmie, jak ruch operatora wpływa na airflow i first air.</li><li><a href="#" data-open="A2">A2 · Pomiar Downflow i Inflow</a> — fizyczne warunki przepływu, w których pracuje operator.</li><li><a href="#" data-open="A4">A4 · Downflow vs Inflow</a> — konsekwencje zaburzenia funkcji ochronnej komory.</li></ul>
-<div class="dlg-soon"><strong>Kurs w przygotowaniu</strong><p>E3 będzie częścią Akademii Walidatora K8 Validate. Zapisz się na listę zainteresowanych i otrzymaj informację o uruchomieniu Akademii.</p><a class="btn" href="index.html#contact" data-en="Join the waiting list">Zapisz się na listę zainteresowanych</a></div>
+<a class="btn" href="index.html#contact" data-en="Ask about this course">Zapytaj o ten kurs</a>
   </div>
 </article>
   </div>
@@ -215,7 +222,7 @@
   <div class="tile-body">
     <h3>Klasyfikacja cząstkowa</h3>
     <ul class=pts><li>liczba lokalizacji NL (pełna Tabela A.1)</li><li>minimalna objętość próbki Vs, zero count check, sonda</li><li>classification ≠ monitoring: Tabela 1 ≠ Tabela 5</li><li>wynik poza limitem: A.5.5 vs A.5.6</li></ul>
-    <ul class="meta"><li><b>Czas</b>ok. 2 godziny</li><li><b>Poziom</b>średniozaawansowany</li><li><b>Podstawa</b>ISO 14644-1 · EU GMP Annex 1 · Annex 15 · ISO 14644-3</li><li><b>Status</b>premiera wkrótce</li></ul>
+    <ul class="meta"><li><b>Czas</b>ok. 2 godziny</li><li><b>Poziom</b>średniozaawansowany</li><li><b>Podstawa</b>ISO 14644-1 · EU GMP Annex 1 · Annex 15 · ISO 14644-3</li></ul>
   </div>
   <button type="button" class="tile-more" aria-haspopup="dialog"><b data-en="Details" style="font-weight:inherit">Szczegóły</b><span aria-hidden="true">+</span></button>
   <div class="tile-full">
@@ -234,7 +241,7 @@
 <h4>Dla kogo?</h4><p>Validation / Qualification / C&amp;Q, QA, QC i mikrobiologia, Environmental Monitoring, Engineering / Cleanroom, osoby wykonujące klasyfikację, przygotowujące i weryfikujące protokoły OQ/RQ oraz oceniające wyniki pomiarów cząstek. Sprawdzi się też dla znających podstawy, którzy chcą samodzielnie zaplanować pomiar, policzyć jego zakres i poprawnie ocenić wyniki.</p>
 <h4>Podstawa merytoryczna</h4><p>ISO 14644-1:2015 · EU GMP Annex 1 · Annex 15 · ISO 14644-3 oraz praktyczne podejście do kwalifikacji i rekwalifikacji pomieszczeń czystych.</p>
 <h4>Powiązane kursy</h4><ul class="related"><li><a href="#" data-open="D1">D1 · Rekwalifikacja UDAF</a> — klasyfikacja cząstkowa jako część cyklicznej RQ urządzenia.</li><li><a href="#" data-open="D2">D2 · Rekwalifikacja cleanroomu</a> — jak particle classification łączy się z HEPA, airflow, ciśnieniami i recovery.</li><li><a href="#" data-open="B3">B3 · Wizualizacja cleanroomu</a> — źródło wiedzy o pomieszczeniu, które wspiera wybór lokalizacji mikrobiologicznych i EM.</li></ul>
-<div class="dlg-soon"><strong>Kurs w przygotowaniu</strong><p>B1 będzie częścią Akademii Walidatora K8 Validate. Zapisz się na listę zainteresowanych i otrzymaj informację o uruchomieniu Akademii.</p><a class="btn" href="index.html#contact" data-en="Join the waiting list">Zapisz się na listę zainteresowanych</a></div>
+<a class="btn" href="index.html#contact" data-en="Ask about this course">Zapytaj o ten kurs</a>
   </div>
 </article>
 <article class="tile">
@@ -243,7 +250,7 @@
   <div class="tile-body">
     <h3>Strumień nawiewu i ACH</h3>
     <ul class=pts><li>capture hood vs anemometr</li><li>Qi, Qtotal i ACH = Qtotal / V (kubatura)</li><li>poprawna suma nawiewu ≠ prawidłowy rozdział powietrza</li><li>norma czy URS: skąd pochodzi kryterium</li></ul>
-    <ul class="meta"><li><b>Czas</b>ok. 1,5 godziny</li><li><b>Poziom</b>średniozaawansowany</li><li><b>Podstawa</b>ISO 14644-3 · EU GMP Annex 1 · ISO 14644-4 · URS zakładu</li><li><b>Status</b>premiera wkrótce</li></ul>
+    <ul class="meta"><li><b>Czas</b>ok. 1,5 godziny</li><li><b>Poziom</b>średniozaawansowany</li><li><b>Podstawa</b>ISO 14644-3 · EU GMP Annex 1 · ISO 14644-4 · URS zakładu</li></ul>
   </div>
   <button type="button" class="tile-more" aria-haspopup="dialog"><b data-en="Details" style="font-weight:inherit">Szczegóły</b><span aria-hidden="true">+</span></button>
   <div class="tile-full">
@@ -262,7 +269,7 @@
 <h4>Dla kogo?</h4><p>Validation / Qualification / C&amp;Q, Engineering i HVAC, technicy HVAC, osoby wykonujące pomiary cleanroomów i przygotowujące protokoły OQ/RQ, QA oraz oceniające zgodność wentylacji z projektem i URS. Dla tych, którzy chcą nie tylko „wyliczyć ACH”, ale zrozumieć, skąd wzięły się dane wejściowe i co mówi wynik.</p>
 <h4>Podstawa merytoryczna</h4><p>ISO 14644-3:2019 · EU GMP Annex 1 · ISO 14644-4:2022 · URS zakładu oraz praktyczne podejście do kwalifikacji systemów HVAC i pomieszczeń czystych.</p>
 <h4>Powiązane kursy</h4><ul class="related"><li><a href="#" data-open="B4">B4 · Nadciśnienie i kaskada ciśnień</a> — jak bilans nawiewu i wyciągu przekłada się na różnice ciśnień między pomieszczeniami.</li><li><a href="#" data-open="B3">B3 · Wizualizacja cleanroomu</a> — sprawdź, czy odpowiednia ilość powietrza jest też właściwie rozprowadzona.</li><li><a href="#" data-open="D2">D2 · Rekwalifikacja cleanroomu</a> — airflow/ACH w pełnym zakresie okresowej RQ.</li></ul>
-<div class="dlg-soon"><strong>Kurs w przygotowaniu</strong><p>B2 będzie częścią Akademii Walidatora K8 Validate. Zapisz się na listę zainteresowanych i otrzymaj informację o uruchomieniu Akademii.</p><a class="btn" href="index.html#contact" data-en="Join the waiting list">Zapisz się na listę zainteresowanych</a></div>
+<a class="btn" href="index.html#contact" data-en="Ask about this course">Zapytaj o ten kurs</a>
   </div>
 </article>
 <article class="tile">
@@ -271,7 +278,7 @@
   <div class="tile-body">
     <h3>Wizualizacja cleanroomu</h3>
     <ul class=pts><li>at rest, in operation i granice stref</li><li>zastoiska, recyrkulacje, ingress</li><li>PASS / FAIL / INVALID — bez automatycznego 14°</li><li>wynik smoke study w kwalifikacji mikrobiologicznej i EM</li></ul>
-    <ul class="meta"><li><b>Czas</b>ok. 1,5 godziny</li><li><b>Poziom</b>średniozaawansowany</li><li><b>Podstawa</b>EU GMP Annex 1 · ISO 14644-3 · IEST-RP-CC006</li><li><b>Status</b>premiera wkrótce</li></ul>
+    <ul class="meta"><li><b>Czas</b>ok. 1,5 godziny</li><li><b>Poziom</b>średniozaawansowany</li><li><b>Podstawa</b>EU GMP Annex 1 · ISO 14644-3 · IEST-RP-CC006</li></ul>
   </div>
   <button type="button" class="tile-more" aria-haspopup="dialog"><b data-en="Details" style="font-weight:inherit">Szczegóły</b><span aria-hidden="true">+</span></button>
   <div class="tile-full">
@@ -292,7 +299,7 @@
 <h4>Dla kogo?</h4><p>Validation / Qualification / C&amp;Q, QA, Environmental Monitoring, mikrobiologia, Engineering / HVAC / Cleanroom, osoby przygotowujące kwalifikację pomieszczeń, odpowiedzialne za lokalizacje punktów monitoringowych i oceniające smoke studies oraz dokumentację OQ/RQ.</p>
 <h4>Podstawa merytoryczna</h4><p>EU GMP Annex 1 · ISO 14644-3:2019 · IEST-RP-CC006.4 oraz praktyczne podejście do kwalifikacji cleanroomów, oceny ryzyka i Environmental Monitoring.</p>
 <h4>Powiązane kursy</h4><ul class="related"><li><a href="#" data-open="A3">A3 · Wizualizacja przepływu</a> — wizualizacja w UDAF/BSC: ochrona obszaru krytycznego i first air — porównaj z cleanroomem non-UDAF.</li><li><a href="#" data-open="B2">B2 · Strumień nawiewu i ACH</a> — ilościowa strona działania HVAC.</li><li><a href="#" data-open="B4">B4 · Nadciśnienie i kaskada ciśnień</a> — połącz rzeczywisty kierunek przepływu z gradientem ciśnienia między strefami.</li><li><a href="#" data-open="D2">D2 · Rekwalifikacja cleanroomu</a> — kiedy smoke study wraca do zakresu po zmianie, remoncie lub impact assessment.</li></ul>
-<div class="dlg-soon"><strong>Kurs w przygotowaniu</strong><p>B3 będzie częścią Akademii Walidatora K8 Validate. Zapisz się na listę zainteresowanych i otrzymaj informację o uruchomieniu Akademii.</p><a class="btn" href="index.html#contact" data-en="Join the waiting list">Zapisz się na listę zainteresowanych</a></div>
+<a class="btn" href="index.html#contact" data-en="Ask about this course">Zapytaj o ten kurs</a>
   </div>
 </article>
 <article class="tile">
@@ -301,7 +308,7 @@
   <div class="tile-body">
     <h3>Nadciśnienie i kaskada ciśnień</h3>
     <ul class=pts><li>kaskada ciśnień i punkt odniesienia</li><li>10 Pa (Annex 1) vs setpointy z URS/CCS</li><li>przyrząd fit-for-purpose</li><li>qualification vs monitoring, trendy EMS i alarmy</li></ul>
-    <ul class="meta"><li><b>Czas</b>ok. 75–80 minut</li><li><b>Poziom</b>podstawowy / średniozaawansowany</li><li><b>Podstawa</b>EU GMP Annex 1 · ISO 14644-3 · ISO 14644-2 · URS / CCS</li><li><b>Status</b>premiera wkrótce</li></ul>
+    <ul class="meta"><li><b>Czas</b>ok. 75–80 minut</li><li><b>Poziom</b>podstawowy / średniozaawansowany</li><li><b>Podstawa</b>EU GMP Annex 1 · ISO 14644-3 · ISO 14644-2 · URS / CCS</li></ul>
   </div>
   <button type="button" class="tile-more" aria-haspopup="dialog"><b data-en="Details" style="font-weight:inherit">Szczegóły</b><span aria-hidden="true">+</span></button>
   <div class="tile-full">
@@ -322,7 +329,7 @@
 <h4>Dla kogo?</h4><p>Validation / Qualification / C&amp;Q, Engineering / HVAC, QA, BMS / EMS, osoby wykonujące kwalifikację cleanroomów, oceniające trendy środowiskowe, właściciele systemów HVAC oraz przygotowujące URS, CCS i protokoły OQ/RQ. Także dla początkujących: mechanizm kaskady tłumaczymy od podstaw, a potem przechodzimy do zaawansowanej interpretacji danych.</p>
 <h4>Podstawa merytoryczna</h4><p>EU GMP Annex 1 · ISO 14644-3:2019 · ISO 14644-2 · URS / CCS oraz praktyczne podejście do kwalifikacji systemów HVAC, monitoringu i oceny danych EMS.</p>
 <h4>Powiązane kursy</h4><ul class="related"><li><a href="#" data-open="B2">B2 · Strumień nawiewu i ACH</a> — jak bilans nawiewu i wyciągu wpływa na kaskadę ciśnień.</li><li><a href="#" data-open="B3">B3 · Wizualizacja cleanroomu</a> — rzeczywisty kierunek przepływu na granicy stref.</li><li><a href="#" data-open="D2">D2 · Rekwalifikacja cleanroomu</a> — pomiar ΔP jako jeden z elementów okresowej RQ.</li></ul>
-<div class="dlg-soon"><strong>Kurs w przygotowaniu</strong><p>B4 będzie częścią Akademii Walidatora K8 Validate. Zapisz się na listę zainteresowanych i otrzymaj informację o uruchomieniu Akademii.</p><a class="btn" href="index.html#contact" data-en="Join the waiting list">Zapisz się na listę zainteresowanych</a></div>
+<a class="btn" href="index.html#contact" data-en="Ask about this course">Zapytaj o ten kurs</a>
   </div>
 </article>
   </div>
@@ -338,7 +345,7 @@
   <div class="tile-body">
     <h3>Rekwalifikacja UDAF</h3>
     <ul class=pts><li>zakres okresowej RQ UDAF: Annex 1 §4.32 i applicability</li><li>periodic RQ vs initial qualification vs verification po zmianie</li><li>wymiana HEPA, awaria, wynik poza kryterium</li><li>łączy A1, A2/A4, A3 i B1 w jeden program RQ</li></ul>
-    <ul class="meta"><li><b>Czas</b>ok. 90 minut</li><li><b>Poziom</b>zaawansowany</li><li><b>Podstawa</b>EU GMP Annex 1 · Annex 15 · ISO 14644-1 · ISO 14644-3 · IEST-RP-CC006 · IEST-RP-CC002</li><li><b>Status</b>premiera wkrótce</li></ul>
+    <ul class="meta"><li><b>Czas</b>ok. 90 minut</li><li><b>Poziom</b>zaawansowany</li><li><b>Podstawa</b>EU GMP Annex 1 · Annex 15 · ISO 14644-1 · ISO 14644-3 · IEST-RP-CC006 · IEST-RP-CC002</li></ul>
   </div>
   <button type="button" class="tile-more" aria-haspopup="dialog"><b data-en="Details" style="font-weight:inherit">Szczegóły</b><span aria-hidden="true">+</span></button>
   <div class="tile-full">
@@ -359,7 +366,7 @@
 <h4>Dla kogo?</h4><p>Validation / Qualification / C&amp;Q, QA, Engineering, właściciele systemów UDAF, przygotowujący protokoły RQ i zatwierdzający zakres rekwalifikacji, prowadzący change control i impact assessment, audytorzy. Szczególnie dla znających poszczególne testy, którzy chcą zbudować z nich spójny i uzasadniony program RQ.</p>
 <h4>Podstawa merytoryczna</h4><p>EU GMP Annex 1 · Annex 15 · ISO 14644-1 · ISO 14644-3 · IEST-RP-CC006 · IEST-RP-CC002 oraz praktyczne podejście do lifecycle qualification, change control i impact assessment.</p>
 <h4>Powiązane kursy</h4><ul class="related"><li><a href="#" data-open="A1">A1 · Jak mierzyć integralność filtrów HEPA?</a> — technika wykonania jednego z podstawowych testów RQ.</li><li><a href="#" data-open="A2">A2 · Pomiar Downflow i Inflow</a> — pomiar airflow wykorzystywany w RQ UDAF.</li><li><a href="#" data-open="A3">A3 · Wizualizacja przepływu</a> — jak wykonać i ocenić smoke study; D1 mówi, kiedy trzeba go powtórzyć.</li><li><a href="#" data-open="B1">B1 · Klasyfikacja cząstkowa</a> — trzeci kluczowy element cyklicznej RQ.</li><li><a href="#" data-open="D2">D2 · Rekwalifikacja cleanroomu</a> — kolejny krok: jak zmienia się zakres, gdy kwalifikujesz całe pomieszczenie.</li></ul>
-<div class="dlg-soon"><strong>Kurs w przygotowaniu</strong><p>D1 będzie częścią Akademii Walidatora K8 Validate. Zapisz się na listę zainteresowanych i otrzymaj informację o uruchomieniu Akademii.</p><a class="btn" href="index.html#contact" data-en="Join the waiting list">Zapisz się na listę zainteresowanych</a></div>
+<a class="btn" href="index.html#contact" data-en="Ask about this course">Zapytaj o ten kurs</a>
   </div>
 </article>
 <article class="tile">
@@ -368,7 +375,7 @@
   <div class="tile-body">
     <h3>Rekwalifikacja cleanroomu</h3>
     <ul class=pts><li>zakres okresowej RQ wg Annex 1 §4.32</li><li>recovery zamiast velocity dla non-UDAF</li><li>HEPA + airflow/ACH + ΔP + cząstki w jednym programie RQ</li><li>niezgodności, trendy i struktura raportu RQ</li></ul>
-    <ul class="meta"><li><b>Czas</b>ok. 90 minut</li><li><b>Poziom</b>zaawansowany</li><li><b>Podstawa</b>EU GMP Annex 1 · Annex 15 · ISO 14644-1 · ISO 14644-3</li><li><b>Status</b>premiera wkrótce</li></ul>
+    <ul class="meta"><li><b>Czas</b>ok. 90 minut</li><li><b>Poziom</b>zaawansowany</li><li><b>Podstawa</b>EU GMP Annex 1 · Annex 15 · ISO 14644-1 · ISO 14644-3</li></ul>
   </div>
   <button type="button" class="tile-more" aria-haspopup="dialog"><b data-en="Details" style="font-weight:inherit">Szczegóły</b><span aria-hidden="true">+</span></button>
   <div class="tile-full">
@@ -390,7 +397,7 @@
 <h4>Dla kogo?</h4><p>Validation / Qualification / C&amp;Q, QA, Engineering / HVAC, właściciele cleanroomów, przygotowujący protokoły i raporty RQ, prowadzący change control i impact assessment oraz wszyscy, którzy oceniają, czy pomieszczenie nadal pozostaje w stanie kwalifikowanym. Szczególnie po B1, B2, B4 i D1.</p>
 <h4>Podstawa merytoryczna</h4><p>EU GMP Annex 1 · Annex 15 · ISO 14644-1 · ISO 14644-3 oraz praktyczne podejście do rekwalifikacji HVAC, analizy trendów, odchyleń i lifecycle qualification.</p>
 <h4>Powiązane kursy</h4><ul class="related"><li><a href="#" data-open="B1">B1 · Klasyfikacja cząstkowa</a> — planowanie i ocena particle classification.</li><li><a href="#" data-open="B2">B2 · Strumień nawiewu i ACH</a> — ocena ilości powietrza w cleanroomie.</li><li><a href="#" data-open="B4">B4 · Nadciśnienie i kaskada ciśnień</a> — jeden z kluczowych parametrów RQ pomieszczenia.</li><li><a href="#" data-open="D1">D1 · Rekwalifikacja UDAF</a> — porównaj dwa zakresy i nie mieszaj testów urządzenia z testami cleanroomu.</li></ul>
-<div class="dlg-soon"><strong>Kurs w przygotowaniu</strong><p>D2 będzie częścią Akademii Walidatora K8 Validate. Zapisz się na listę zainteresowanych i otrzymaj informację o uruchomieniu Akademii.</p><a class="btn" href="index.html#contact" data-en="Join the waiting list">Zapisz się na listę zainteresowanych</a></div>
+<a class="btn" href="index.html#contact" data-en="Ask about this course">Zapytaj o ten kurs</a>
   </div>
 </article>
   </div>
@@ -418,6 +425,6 @@
   </footer>
 
   <script src="assets/i18n.js"></script>
-  <script src="akademia.js?v=4"></script>
+  <script src="akademia.js?v=5"></script>
 </body>
 </html>

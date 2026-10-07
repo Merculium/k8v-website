@@ -5,7 +5,29 @@
   var toggle = document.getElementById('nav-toggle');
 
   // Menu mobilne (to samo zachowanie co na index.html)
-  window.closeMenu = function () { nav.classList.remove('open'); links.classList.remove('open'); };
+  var subs = document.querySelectorAll('.has-sub');
+  function closeSubmenus() {
+    subs.forEach(function (li) {
+      li.classList.remove('open');
+      li.querySelector('.sub-toggle').setAttribute('aria-expanded', 'false');
+    });
+  }
+  window.closeMenu = function () { nav.classList.remove('open'); links.classList.remove('open'); closeSubmenus(); };
+  // Rozwijane menu Akademii (ikona strzałki; na komputerze działa też hover)
+  subs.forEach(function (li) {
+    var btn = li.querySelector('.sub-toggle');
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var open = !li.classList.contains('open');
+      closeSubmenus();
+      li.classList.toggle('open', open);
+      btn.setAttribute('aria-expanded', open);
+    });
+  });
+  document.addEventListener('click', function (e) {
+    subs.forEach(function (li) { if (!li.contains(e.target)) closeSubmenus(); });
+  });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeSubmenus(); });
   toggle.addEventListener('click', function () {
     nav.classList.toggle('open'); links.classList.toggle('open');
   });
