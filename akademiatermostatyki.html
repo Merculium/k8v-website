@@ -3,165 +3,333 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Termostatyki – urządzenia i obszary | K8 VALIDATE</title>
+  <title data-en="Temperature mapping of warehouses, equipment and vehicles — qualification and requalification | K8 Validate">Mapowanie temperatury magazynu, urządzeń i pojazdów — kwalifikacja i rekwalifikacja | K8 Validate</title>
+  <meta name="description" content="Ścieżka walidatora: mapowanie temperatury krok po kroku, rozmieszczenie czujników w magazynach, urządzeniach i pojazdach, analiza wyników, raport i rekwalifikacja po awarii lub relokacji." data-en="Validator path: temperature mapping step by step, sensor placement in warehouses, equipment and vehicles, data analysis, report and requalification after a failure or relocation.">
+  <link rel="canonical" href="https://k8validate.com/akademiatermostatyki.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="K8 Validate">
+  <meta property="og:title" content="Mapowanie temperatury magazynu, urządzeń i pojazdów — kwalifikacja i rekwalifikacja | K8 Validate">
+  <meta property="og:description" content="Ścieżka walidatora: mapowanie temperatury krok po kroku, rozmieszczenie czujników w magazynach, urządzeniach i pojazdach, analiza wyników, raport i rekwalifikacja po awarii lub relokacji.">
+  <meta property="og:url" content="https://k8validate.com/akademiatermostatyki.html">
+  <meta property="og:image" content="https://k8validate.com/assets/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=5">
-  <link rel="stylesheet" href="akademia.css?v=5">
+  <link rel="stylesheet" href="style.css?v=6">
+  <link rel="stylesheet" href="akademia.css?v=6">
   <link rel="icon" type="image/png" href="assets/favicon.png">
 </head>
 <body class="ak">
   <nav id="main-nav">
-    <div class="nav-logo"><span class="nav-name">Katarzyna Szkodzińska</span><span class="nav-role" data-i18n="common.role">Ekspert ds. Walidacji i Kwalifikacji</span></div>
-    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <a class="nav-logo" href="index.html" aria-label="K8 Validate"><span class="nav-name">K8 VALIDATE</span><span class="nav-role" data-i18n="common.brand_sub">Akademia Walidacji · walidacja i kwalifikacja GMP</span></a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
     <ul id="nav-links">
-      <li><a href="index.html" data-i18n="common.nav.home" onclick="closeMenu()">Strona główna</a></li>
       <li class="has-sub">
-        <a href="akademia.html" class="active" data-i18n="common.nav.akademia" onclick="closeMenu()">Akademia Walidacji</a>
+        <a href="akademia.html" class="nav-accent active" data-i18n="common.nav.akademia" onclick="closeMenu()">Akademia Walidacji</a>
         <button type="button" class="sub-toggle" aria-label="Rozwiń podstrony Akademii Walidacji" aria-expanded="false"></button>
         <ul class="submenu">
-          <li><a href="akademiacleanroom.html" data-i18n="common.nav.akademia_cleanroom" onclick="closeMenu()">Cleanroom i komory UDAF/BSC</a></li>
-          <li><a href="akademiatermostatyki.html" class="active" data-i18n="common.nav.akademia_termostatyki" onclick="closeMenu()">Termostatyki – urządzenia i obszary</a></li>
+          <li><a href="akademiacleanroom.html" data-i18n="common.nav.akademia_cleanroom" onclick="closeMenu()">Cleanroom i komory UDAF / BSC</a></li>
+          <li><a href="akademiatermostatyki.html" class="active" data-i18n="common.nav.akademia_mapping" onclick="closeMenu()">Mapowanie temperatury</a></li>
         </ul>
       </li>
-      <li><a href="/about" data-i18n="common.nav.about" onclick="closeMenu()">O mnie</a></li>
-      <li><a href="index.html#expertise" data-i18n="common.nav.expertise" onclick="closeMenu()">Kompetencje</a></li>
-      <li><a href="index.html#experience" data-i18n="common.nav.experience" onclick="closeMenu()">Doświadczenie</a></li>
       <li><a href="/casestudies" data-i18n="common.nav.casestudies" onclick="closeMenu()">Case Studies</a></li>
+      <li><a href="/about" data-i18n="common.nav.about" onclick="closeMenu()">O mnie</a></li>
+      <li><a href="index.html#experience" data-i18n="common.nav.experience" onclick="closeMenu()">Doświadczenie</a></li>
       <li><a href="index.html#contact" data-i18n="common.nav.contact" onclick="closeMenu()">Kontakt</a></li>
       <li><button type="button" class="lang-toggle" id="lang-toggle" aria-label="Zmień język / Switch language">EN</button></li>
     </ul>
   </nav>
   <main class="ak-main">
     <div class="pw-head">
-      <a class="crumb" href="akademia.html" data-en="Validation Academy">Akademia Walidacji</a>
-      <h1 class="pw-title">Rekomendowana ścieżka Akademii Walidacji – urządzenia i obszary termostatyczne</h1>
-      <p class="pw-sub">Od projektowania punktów pomiarowych do analizy wyników, monitoringu i rekwalifikacji po zmianie.</p>
-      <div class="pw-note"><strong data-en="This path joins two areas of knowledge:">Ta ścieżka łączy dwa obszary wiedzy:</strong><ul><li>obszary CRT / CCT</li><li>urządzenia termostatyczne</li></ul>Kursy można realizować osobno, ale razem tworzą spójny system mapowania temperatury i decyzji kwalifikacyjnych.</div>
+      <a class="crumb" data-en="Validation Academy" href="akademia.html">Akademia Walidacji</a>
+      <h1 class="pw-title" data-en="Validator path — temperature mapping">Ścieżka walidatora — mapowanie temperatury</h1>
+      <p class="pw-sub" data-en="Equipment, areas and vehicles · initial qualification and requalification">Urządzenia, obszary i pojazdy · kwalifikacja pierwotna i rekwalifikacja</p>
+      <p class="pw-lead" data-en="From the first mapping of a new system to deciding what to repeat after a failure or relocation.">Od pierwszego mapowania nowego systemu po decyzję, co powtórzyć po awarii lub relokacji.</p>
+      <div class="pw-note" data-en="This path covers initial qualification (QUAL) and requalification (RQ). Each course shows which stage it supports.&lt;ul&gt;&lt;li&gt;CRT / CCT areas&lt;/li&gt;&lt;li&gt;equipment&lt;/li&gt;&lt;li&gt;vehicles&lt;/li&gt;&lt;/ul&gt;">Ścieżka obejmuje kwalifikację pierwotną (QUAL) i rekwalifikację (RQ). Przy każdym kursie zobaczysz, do którego etapu się odnosi.<ul><li>obszary CRT / CCT</li><li>urządzenia</li><li>pojazdy</li></ul></div>
+      <p class="legend" data-en="&lt;span class=&quot;qr&quot;&gt;QUAL&lt;/span&gt; — initial qualification · &lt;span class=&quot;qr&quot;&gt;RQ&lt;/span&gt; — requalification · &lt;span class=&quot;qr opt&quot;&gt;RQ&lt;/span&gt; — also when the sensor layout is in doubt"><span class="qr">QUAL</span> — kwalifikacja pierwotna · <span class="qr">RQ</span> — rekwalifikacja · <span class="qr opt">RQ</span> — także, gdy masz wątpliwość co do schematu czujników</p>
     </div>
     <div class="pw-body">
-      <div class="start"><span data-en="Start: what are you mapping?">Start: co mapujesz?</span></div>
-      <div class="fork">
-<div class="branch " data-tone="teal">
-  <div class="branch-head"><h2>Obszary CRT / CCT</h2><p>Magazyny, chłodnie i inne obszary o kontrolowanej temperaturze.</p></div>
+      <a class="start" href="#mk-start"><span data-en="Start: initial qualification or requalification">Start: kwalifikacja pierwotna albo rekwalifikacja</span></a>
+      <div class="join" aria-hidden="true" id="mk-start"></div>
+<div class="branch c1" data-tone="blue">
+  <div class="branch-head"><h2 data-en="Mapping step by step">Mapowanie krok po kroku</h2><p data-en="The foundation: protocol, calibration, OQ / PQ, study duration, seasonality.">Fundament: protokół, kalibracja, OQ / PQ, czas badania, sezonowość.</p></div>
   <div class="tiles">
-<article class="tile">
-  <span class="tile-code">MK7a</span>
-  <div class="ph" data-ph="Miejsce na grafikę"><img src="assets/akademia/mk7a.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
-  <div class="tile-body"><h3>Rozkład czujników w obszarach CRT / CCT</h3><ul class="pts"><li>analiza ryzyka</li><li>regały, drzwi, HVAC</li><li>poziomy składowania</li><li>gdzie mierzyć?</li></ul></div>
+<article class="tile wide" id="t-mk1" data-tone="blue">
+  <div class="tile-top"><span class="tile-code">MK1</span><span class="qr">QUAL</span><span class="qr">RQ</span></div>
+  <div class="ph" data-ph="Grafika · Image"><img src="assets/akademia/mk1.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+  <div class="tile-body" data-en="&lt;h3&gt;Temperature Mapping Step by Step&lt;/h3&gt;&lt;ul class=pts&gt;&lt;li&gt;unloaded OQ, loaded PQ&lt;/li&gt;&lt;li&gt;logger calibration and accuracy&lt;/li&gt;&lt;li&gt;seasonality and offset&lt;/li&gt;&lt;/ul&gt;&lt;ul class=&quot;meta&quot;&gt;&lt;li&gt;&lt;b&gt;Duration&lt;/b&gt;approx. 90 min&lt;/li&gt;&lt;li&gt;&lt;b&gt;Level&lt;/b&gt;Basic / Intermediate&lt;/li&gt;&lt;li&gt;&lt;b&gt;Based on&lt;/b&gt;ISPE GPG Controlled Temperature Chambers · WHO TRS 961, Supplement 8 · EU GMP Annex 15 · ICH Q9(R1) / Q10&lt;/li&gt;&lt;/ul&gt;">
+<h3>Jak wykonać mapowanie temperatury krok po kroku?</h3>
+<ul class="pts"><li>przygotowanie, weryfikacja czujników i ich rozmieszczenie</li><li>OQ bez wsadu, PQ z wsadem, czas i sezonowość</li><li>kwalifikacja pierwotna vs rekwalifikacja, rola EMS</li><li>offset wskazań, dokumentacja i komplet danych</li></ul>
+<ul class="meta"><li><b>Czas</b>ok. 90 minut</li><li><b>Poziom</b>podstawowy / średniozaawansowany</li><li><b>Podstawa</b>ISPE GPG Controlled Temperature Chambers · WHO TRS 961 Supplement 8 · EU GMP Annex 15 · ICH Q9/Q10</li></ul>
+</div>
   <button type="button" class="tile-more" aria-haspopup="dialog"><b data-en="Details" style="font-weight:inherit">Szczegóły</b><span aria-hidden="true">+</span></button>
-  <div class="tile-full"><h4 data-en="Scope">Zakres</h4>
-<ul class="pts"><li>analiza ryzyka</li><li>regały, drzwi, HVAC</li><li>poziomy składowania</li><li>gdzie mierzyć?</li></ul>
-<h4 data-en="Full description">Pełny opis</h4>
-<!-- ▼▼ TU WKLEJ PEŁNY OPIS KAFELKA MK7a (dowolna długość – okno samo się przewija) ▼▼ -->
-<p>Tutaj pojawi się pełny opis: o czym jest ten moduł, jak wygląda w praktyce i co z niego wynosisz.</p>
-<p>Możesz używać akapitów, nagłówków &lt;h4&gt; i list &lt;ul&gt;.</p>
-<h4 data-en="Who is it for">Dla kogo</h4>
-<p>Tutaj opisz, dla kogo jest ten moduł.</p>
-<!-- ▲▲ KONIEC OPISU ▲▲ -->
-<a class="btn" href="index.html#contact" data-en="Ask about this course">Zapytaj o ten kurs</a></div>
+  <div class="tile-full" data-en="&lt;p class=&quot;dlg-sub&quot;&gt;MK1 · How to Perform Temperature Mapping Step by Step&lt;br&gt;From an approved protocol to a complete data set&lt;/p&gt;
+&lt;ul class=&quot;facts&quot;&gt;&lt;li&gt;&lt;b&gt;Duration&lt;/b&gt;approx. 90 min&lt;/li&gt;&lt;li&gt;&lt;b&gt;Level&lt;/b&gt;Basic / Intermediate&lt;/li&gt;&lt;li&gt;&lt;b&gt;Format&lt;/b&gt;Online course · examples · checklists · step-by-step methodology&lt;/li&gt;&lt;li&gt;&lt;b&gt;Based on&lt;/b&gt;ISPE GPG Controlled Temperature Chambers · WHO TRS 961, Supplement 8 · EU GMP Annex 15 · ICH Q9(R1) / Q10&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;Mapping looks simple: place the loggers → start → wait → download. But the biggest mistakes happen before the first logger starts recording: the wrong calibration range, accuracy left out of the criterion, a layout that misses the worst case, a study that is too short.&lt;/p&gt;
+&lt;p&gt;Applies to refrigerators, freezers, ULT freezers, incubators, climatic chambers, CRT warehouses and CCT cold rooms.&lt;/p&gt;
+&lt;div class=&quot;dlg-box&quot;&gt;&lt;strong&gt;Mapping is not just placing loggers&lt;/strong&gt;&lt;p&gt;The result is reliable only if the whole study was planned — from calibration and placement through load and recording time to documentation.&lt;/p&gt;&lt;/div&gt;
+&lt;h4&gt;What you will learn&lt;/h4&gt;
+&lt;ul&gt;&lt;li&gt;what mapping must prove — conditions across the whole product space, not just at the thermostat or EMS sensor&lt;/li&gt;&lt;li&gt;how mapping in initial qualification differs from requalification&lt;/li&gt;&lt;li&gt;how to check logger calibration status and range, and include accuracy in the criterion&lt;/li&gt;&lt;li&gt;how to plan the number and placement of sensors&lt;/li&gt;&lt;li&gt;how to run unloaded OQ and loaded PQ — and check that the file really covers the whole period&lt;/li&gt;&lt;li&gt;how to choose recording time and justify seasonal conditions (“in summer” is not enough)&lt;/li&gt;&lt;li&gt;why the EMS does not replace mapping&lt;/li&gt;&lt;li&gt;display offset: when it corrects a reading and when it only hides a problem&lt;/li&gt;&lt;/ul&gt;
+&lt;h4&gt;What’s inside&lt;/h4&gt;
+&lt;ul class=checks&gt;&lt;li&gt;step-by-step methodology&lt;/li&gt;&lt;li&gt;checklists&lt;/li&gt;&lt;li&gt;examples from real qualification projects&lt;/li&gt;&lt;/ul&gt;
+&lt;h4&gt;Who is it for?&lt;/h4&gt;
+&lt;p&gt;Validation / Qualification / C&amp;amp;Q, Engineering, QA, owners of temperature-controlled equipment and areas, laboratories and anyone new to temperature mapping. The best first course in this path.&lt;/p&gt;
+&lt;h4&gt;Related courses&lt;/h4&gt;
+&lt;ul class=&quot;related&quot;&gt;&lt;li&gt;&lt;a href=&quot;#mk7a&quot; data-open=&quot;MK7a&quot;&gt;MK7a · Mapping Warehouses and Cold Rooms&lt;/a&gt; — how to design logger placement in areas.&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#mk7b&quot; data-open=&quot;MK7b&quot;&gt;MK7b · Equipment Mapping&lt;/a&gt; — layouts for refrigerators, freezers, ULT freezers and incubators.&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#mk6&quot; data-open=&quot;MK6&quot;&gt;MK6 · Data Analysis and Report&lt;/a&gt; — you have the data, find hot/cold spots and write the report.&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#mk5&quot; data-open=&quot;MK5&quot;&gt;MK5 · Requalification After Change&lt;/a&gt; — the same methodology after relocation, repair or failure.&lt;/li&gt;&lt;/ul&gt;
+&lt;a class=&quot;btn&quot; href=&quot;index.html?kurs=MK1#contact&quot;&gt;Ask about this course&lt;/a&gt;">
+<p class="dlg-sub">Od zatwierdzonego protokołu do kompletnych danych z mapowania</p>
+<ul class="facts"><li><b>Czas</b>ok. 90 minut</li><li><b>Poziom</b>podstawowy / średniozaawansowany</li><li><b>Forma</b>kurs online + przykłady + checklisty + metodologia krok po kroku</li></ul>
+<p>Mapowanie temperatury często wygląda prosto: rozwieś czujniki → uruchom rejestrację → poczekaj → pobierz dane. Ale największe błędy powstają, zanim pierwszy logger zacznie rejestrować. Czy czujniki mają właściwy zakres kalibracji i czy ich dokładność uwzględniono w kryterium? Czy rozmieszczenie obejmuje potencjalne miejsca worst case? Czy wykonujemy OQ czy PQ, kwalifikację pierwotną czy rekwalifikację? Czy EMS powinien już być zainstalowany? Czy badanie trwa wystarczająco długo?</p>
+<p>MK1 prowadzi przez te decyzje w kolejności, w jakiej pojawiają się podczas mapowania. Mapowanie ma odpowiedzieć na praktyczne pytanie: czy w całej przestrzeni, w której może znajdować się produkt, utrzymywane są wymagane warunki — nie tylko obok termostatu, nie tylko w miejscu czujnika EMS i nie tylko przez kilka wybranych godzin.</p>
+<div class="dlg-box"><strong>Mapowanie to nie rozwieszenie loggerów.</strong><p>Wynik jest wiarygodny tylko wtedy, gdy właściwie zaplanowano cały test — od kalibracji i rozmieszczenia czujników po wsad, czas rejestracji i dokumentację. MK1 pokazuje cały proces krok po kroku, tak jak wykonuje się go w rzeczywistej kwalifikacji.</p></div>
+<h4>Czego nauczysz się podczas kursu?</h4><p>Po ukończeniu kursu będziesz wiedzieć:</p><ul><li>jak przygotować się do mapowania i co ustalić w zatwierdzonym protokole,</li><li>jak sprawdzić status i zakres kalibracji loggerów i uwzględnić dokładność pomiaru przy ocenie kryterium,</li><li>czym różni się mapowanie w kwalifikacji pierwotnej od rekwalifikacji i jaka jest rola czujnika EMS,</li><li>jak zaplanować rozmieszczenie czujników i podejść do liczby punktów,</li><li>jak przeprowadzić mapowanie bez wsadu i z wsadem,</li><li>jak dobrać czas rejestracji i podejść do sezonowości,</li><li>jak dokumentować rzeczywiste warunki badania,</li><li>czym jest offset wskazania urządzenia i kiedy ma sens, a kiedy jedynie maskuje problem,</li><li>jakie dane i załączniki zachować, aby wynik można było później wiarygodnie przeanalizować.</li></ul>
+<h4>Wybrane zagadnienia</h4>
+<details><summary>Najpierw ustal, gdzie jesteś w cyklu kwalifikacji</summary><p>Kwalifikacja pierwotna ≠ rekwalifikacja. W nowym systemie dopiero poznajemy jego zachowanie i wyznaczamy reprezentatywne lokalizacje. Przy rekwalifikacji mamy już historię, ustawienia, zainstalowany monitoring i wcześniejsze wyniki — ten sam fizyczny test może mieć więc inny cel i dokumentację, zależnie od etapu lifecycle.</p></details>
+<details><summary>EMS nie zastępuje mapowania</summary><p>Czujnik monitoringu pokazuje temperaturę w jednej lokalizacji, mapowanie — zachowanie całej użytkowanej przestrzeni. W kwalifikacji pierwotnej wyniki mogą posłużyć do wyboru reprezentatywnej lokalizacji EMS; podczas rekwalifikacji istniejący EMS jest dodatkowym źródłem informacji, a jego trend można porównać z zachowaniem przestrzeni. To przygotowuje do pytania: czy czujnik monitoringu nadal jest w odpowiednim miejscu, jeśli hot spot się zmienił?</p></details>
+<details><summary>Ile czujników rozmieścić?</summary><p>MK1 pokazuje logikę doboru, a nie mechaniczne „zawsze dziewięć”. Uwzględniamy wielkość i geometrię przestrzeni, poziomy składowania, źródła ciepła/chłodu, drzwi i nawiewy, sondę sterującą, charakter urządzenia i potencjalne worst case. Szczegóły rozwijają MK7a (obszary CRT/CCT) i MK7b (urządzenia termostatyczne).</p></details>
+<details><summary>Bez wsadu — OQ</summary><p>Przebieg: stabilizacja → uruchomienie loggerów → właściwy interwał zapisu → wymagany okres obserwacji → zakończenie testu → pobranie i kontrola kompletności danych. Sprawdzamy, czy pierwszy i ostatni rekord obejmują cały wymagany okres — test może trwać 24 godziny „na zegarku”, a plik nie musi zawierać pełnych 24 godzin danych.</p></details>
+<details><summary>Z wsadem — PQ</summary><p>Pusta przestrzeń nie zawsze zachowuje się jak użytkowana: ładunek ma masę termiczną i wpływa na przepływ oraz dynamikę temperatury. Rozdzielamy OQ (zachowanie systemu bez wsadu) od PQ (zachowanie w reprezentatywnych warunkach użytkowania) oraz wsad stosowany w kwalifikacji pierwotnej od warunków możliwych do wykorzystania w rekwalifikacji.</p></details>
+<details><summary>Sezonowość — „latem” to za mało</summary><p>Wytyczne odnoszą się do warunków reprezentujących najcieplejszy i najzimniejszy okres, ale nie wyznaczają jednej daty kalendarzowej dla każdej lokalizacji. Organizacja powinna umieć uzasadnić, że badanie reprezentowało właściwy worst case środowiskowy, zamiast polegać na nazwie miesiąca.</p></details>
+<details><summary>Offset — korekta czy ukrywanie problemu?</summary><p>Jeśli wyświetlacz różni się od wartości reprezentatywnej dla wnętrza komory, określona korekta może być uzasadniona. Ale offset może korygować wskazanie — nie może naprawić niesprawnego urządzenia. Gdy system nie utrzymuje warunków, właściwą ścieżką jest znalezienie przyczyny i naprawa, a nie „przesuwanie liczby na ekranie”, aż wygląda poprawnie.</p></details>
+<details><summary>Od wykonania testu do analizy</summary><p>MK1 kończy etap wykonania: poprawnie przygotowany test, rozmieszczone czujniki, udokumentowany wsad, pełny zakres czasowy i komplet danych. Dalej jest MK6 — analiza wyników i raport kwalifikacji. MK1 uczy poprawnie wygenerować dane, MK6 — poprawnie je zinterpretować.</p></details>
+<h4>Dla kogo?</h4><p>Validation / Qualification, C&amp;Q, Engineering, QA, właściciele urządzeń i obszarów termostatycznych, osoby wykonujące mapowania, przygotowujące i zatwierdzające protokoły oraz pracownicy laboratoriów korzystających z lodówek, zamrażarek, inkubatorów i komór klimatycznych. Dobry pierwszy kurs w ścieżce termostatycznej, także dla zaczynających pracę z kwalifikacją. Wiedza z MK1 dotyczy m.in. lodówek farmaceutycznych, zamrażarek, ULT, inkubatorów, komór klimatycznych, magazynów CRT i chłodni CCT.</p>
+<h4>Podstawa merytoryczna</h4><p>ISPE Good Practice Guide: Controlled Temperature Chambers · WHO TRS 961 Supplement 8 · EU GMP Annex 15 · ICH Q9/Q10 oraz praktyczne doświadczenia z wykonywania kwalifikacji i mapowań systemów o kontrolowanej temperaturze.</p>
+<h4>Powiązane kursy</h4><ul class="related"><li><a data-open="MK7a" href="#mk7a">MK7a · Rozkład czujników w obszarach CRT / CCT</a> — rozwiń temat i naucz się projektować rozmieszczenie loggerów w magazynach i chłodniach.</li><li><a data-open="MK7b" href="#mk7b">MK7b · Rozkład czujników w urządzeniach termostatycznych</a> — szczegółowe schematy dla lodówek, zamrażarek, ULT, inkubatorów i komór klimatycznych.</li><li><a data-open="MK6" href="#mk6">MK6 · Analiza wyników mapowania i raport kwalifikacji</a> — masz już dane z MK1 — naucz się wyznaczać hot/cold spot, interpretować wyniki i przygotować raport.</li><li><a data-open="MK5" href="#mk5">MK5 · Rekwalifikacja po relokacji i po awarii</a> — wykorzystaj tę samą metodologię, gdy system został przeniesiony, naprawiony albo uległ awarii.</li></ul>
+<a class="btn" href="index.html?kurs=MK1#contact">Zapytaj o ten kurs</a>
+</div>
+</article>
+  </div>
+</div>
+      <div class="join" aria-hidden="true"></div>
+      <div class="forkbar" id="mk-wybor"><strong data-en="Choose what you map">Wybierz, co mapujesz</strong><span data-en="sensor layout design — for initial qualification, or when you doubt the layout in RQ">projekt rozmieszczenia czujników — przy kwalifikacji pierwotnej albo gdy w RQ masz wątpliwość co do schematu</span></div>
+      <div class="join" aria-hidden="true"></div>
+      <div class="fork fork3">
+<div class="branch " data-tone="teal">
+  <div class="branch-head"><h2 data-en="CRT / CCT areas">Obszary CRT / CCT</h2><p data-en="Warehouses, cold rooms and other temperature-controlled areas.">Magazyny, chłodnie i inne obszary o kontrolowanej temperaturze.</p></div>
+  <div class="tiles">
+<article class="tile" id="t-mk7a" data-tone="teal">
+  <div class="tile-top"><span class="tile-code">MK7a</span><span class="qr">QUAL</span><span class="qr opt">RQ</span></div>
+  <div class="ph" data-ph="Grafika · Image"><img src="assets/akademia/mk7a.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+  <div class="tile-body" data-en="&lt;h3&gt;Mapping Warehouses and Cold Rooms: Where to Place the Sensors&lt;/h3&gt;&lt;ul class=pts&gt;&lt;li&gt;doors, supply air, racks, windows&lt;/li&gt;&lt;li&gt;L / M / H levels&lt;/li&gt;&lt;li&gt;storage volume vs whole room&lt;/li&gt;&lt;/ul&gt;&lt;ul class=&quot;meta&quot;&gt;&lt;li&gt;&lt;b&gt;Duration&lt;/b&gt;approx. 60 min&lt;/li&gt;&lt;li&gt;&lt;b&gt;Level&lt;/b&gt;Intermediate&lt;/li&gt;&lt;li&gt;&lt;b&gt;Based on&lt;/b&gt;ISPE GPG Controlled Temperature Chambers · WHO TRS 961, Supplement 8 · USP &amp;lt;1079&amp;gt; · EN 60068 (general principles)&lt;/li&gt;&lt;/ul&gt;">
+<h3>Rozkład czujników w obszarach CRT / CCT</h3>
+<ul class="pts"><li>analiza ryzyka zamiast samej geometrii pomieszczenia</li><li>ile czujników: zasada normy vs metodologia organizacji</li><li>poziomy H / M / L i punkt T przy termostacie</li><li>drzwi, nawiewy, regały, EMS i dokumentacja rozmieszczenia</li></ul>
+<ul class="meta"><li><b>Czas</b>ok. 60 minut</li><li><b>Poziom</b>średniozaawansowany</li><li><b>Podstawa</b>ISPE GPG Controlled Temperature Chambers · WHO TRS 961 Supplement 8 · USP &lt;1079&gt; · EN 60068 – zasady ogólne</li></ul>
+</div>
+  <button type="button" class="tile-more" aria-haspopup="dialog"><b data-en="Details" style="font-weight:inherit">Szczegóły</b><span aria-hidden="true">+</span></button>
+  <div class="tile-full" data-en="&lt;p class=&quot;dlg-sub&quot;&gt;MK7a · Sensor Placement in CRT/CCT Areas&lt;br&gt;Warehouses, cold rooms and other controlled-temperature areas&lt;/p&gt;
+&lt;ul class=&quot;facts&quot;&gt;&lt;li&gt;&lt;b&gt;Duration&lt;/b&gt;approx. 60 min&lt;/li&gt;&lt;li&gt;&lt;b&gt;Level&lt;/b&gt;Intermediate&lt;/li&gt;&lt;li&gt;&lt;b&gt;Format&lt;/b&gt;Online course · diagrams · calculation examples · risk assessment&lt;/li&gt;&lt;li&gt;&lt;b&gt;Based on&lt;/b&gt;ISPE GPG Controlled Temperature Chambers · WHO TRS 961, Supplement 8 · USP &amp;lt;1079&amp;gt; · EN 60068 (general principles)&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;Evenly along the walls? One per rack? Next to the supply diffusers? Or just like last time? If no sensor sits where the worst case actually occurs, you get nice charts and a PASS report — but no evidence that the highest-risk location was ever assessed.&lt;/p&gt;
+&lt;div class=&quot;dlg-box&quot;&gt;&lt;strong&gt;Don’t just ask: “How many loggers?”&lt;/strong&gt;&lt;p&gt;Ask: does my layout cover the places where the worst case may occur? Thirty poorly placed loggers can still miss the critical spot. Fewer, well-justified sensors give stronger evidence.&lt;/p&gt;&lt;/div&gt;
+&lt;h4&gt;What you will learn&lt;/h4&gt;
+&lt;ul&gt;&lt;li&gt;how to build the layout from risk assessment: supply and extract air, doors, external walls and windows, racks, heat and cold sources, EMS&lt;/li&gt;&lt;li&gt;why both a corner and the centre of a room can be worst case — for different reasons&lt;/li&gt;&lt;li&gt;where sensor numbers come from: guidance principles vs company methodology (e.g. 10 / 16 / 28 probes) — and why not to say “WHO requires 28” in an audit&lt;/li&gt;&lt;li&gt;when to count the storage volume instead of the whole room, and how to justify it&lt;/li&gt;&lt;li&gt;how to describe vertical positions (L / M / H) and why a point next to the control thermostat matters&lt;/li&gt;&lt;li&gt;why two rooms connected by a door are not automatically one area&lt;/li&gt;&lt;li&gt;how to combine systematic coverage with risk-based points and document placement (photos, second-person check)&lt;/li&gt;&lt;/ul&gt;
+&lt;h4&gt;What’s inside&lt;/h4&gt;
+&lt;ul class=checks&gt;&lt;li&gt;placement diagrams&lt;/li&gt;&lt;li&gt;calculation examples&lt;/li&gt;&lt;li&gt;list of locations to consider in risk assessment&lt;/li&gt;&lt;/ul&gt;
+&lt;h4&gt;Who is it for?&lt;/h4&gt;
+&lt;p&gt;Validation / Qualification / C&amp;amp;Q, Engineering / HVAC, QA, owners of CRT warehouses and CCT cold rooms, people performing mapping and designing sensor layouts, EMS owners, and anyone assessing changes to racks, layout or HVAC.&lt;/p&gt;
+&lt;h4&gt;Related courses&lt;/h4&gt;
+&lt;ul class=&quot;related&quot;&gt;&lt;li&gt;&lt;a href=&quot;#mk1&quot; data-open=&quot;MK1&quot;&gt;MK1 · Temperature Mapping Step by Step&lt;/a&gt; — you have the layout, now run the full OQ/PQ study.&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#mk6&quot; data-open=&quot;MK6&quot;&gt;MK6 · Data Analysis and Report&lt;/a&gt; — how to derive hot/cold spots and the EMS strategy from results.&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#mk7b&quot; data-open=&quot;MK7b&quot;&gt;MK7b · Equipment Mapping&lt;/a&gt; — the same worst-case logic in a refrigerator, freezer or incubator.&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#mk5&quot; data-open=&quot;MK5&quot;&gt;MK5 · Requalification After Change&lt;/a&gt; — when changes to racks, HVAC or location call for a new layout.&lt;/li&gt;&lt;/ul&gt;
+&lt;a class=&quot;btn&quot; href=&quot;index.html?kurs=MK7a#contact&quot;&gt;Ask about this course&lt;/a&gt;">
+<p class="dlg-sub">Jak zdecydować ile czujników potrzebujesz i gdzie naprawdę powinny się znaleźć?</p>
+<ul class="facts"><li><b>Czas</b>ok. 60 minut</li><li><b>Poziom</b>średniozaawansowany</li><li><b>Forma</b>kurs online + schematy + przykłady obliczeniowe + analiza ryzyka</li></ul>
+<p>Wyobraź sobie magazyn i 16 loggerów. Gdzie je położyć? Równo przy ścianach, po jednym na regale, przy nawiewnikach, w narożnikach, przy drzwiach — a może wystarczy schemat z poprzedniej kwalifikacji? Tu można przesądzić o jakości całego mapowania: bez czujnika w miejscu worst case dostaniemy ładne wykresy, prawidłową tabelę i raport PASS, a mimo to nie będziemy mieć dowodu, że najbardziej ryzykowna lokalizacja została oceniona.</p>
+<p>Celem mapowania nie jest estetyczna siatka, lecz znalezienie lokalizacji reprezentujących najgorsze warunki tam, gdzie znajduje się produkt. Dlatego MK7a zaczyna się od analizy ryzyka.</p>
+<div class="dlg-box"><strong>Nie pytaj tylko: „ile loggerów mam użyć?”</strong><p>Zapytaj: „czy mój schemat naprawdę obejmuje miejsca, w których może wystąpić worst case?”. MK7a uczy budować rozmieszczenie czujników z analizy ryzyka, geometrii i rzeczywistego sposobu użytkowania obszaru — zamiast kopiować poprzedni schemat bez zrozumienia.</p></div>
+<h4>Czego nauczysz się podczas kursu?</h4><p>Po ukończeniu kursu będziesz wiedzieć:</p><ul><li>jak wyznaczyć liczbę i lokalizację punktów na podstawie analizy ryzyka, a nie samej geometrii pomieszczenia,</li><li>jak uwzględnić drzwi, nawiewy, wyciągi, regały, okna, źródła ciepła i chłodu oraz przeszkody,</li><li>dlaczego narożnik i środek mogą być worst case z różnych powodów,</li><li>czym różni się zasada normy od firmowej metodologii liczby sond,</li><li>kiedy liczyć rzeczywiście wykorzystywaną objętość składowania, a nie całą kubaturę,</li><li>jak opisać pozycję czujnika w pionie (H / M / L) i po co punkt T przy termostacie,</li><li>jak połączyć systematyczne pokrycie przestrzeni z punktami dodatkowymi,</li><li>jak dokumentować rzeczywiste rozmieszczenie i ocenić aktualność schematu po zmianie.</li></ul>
+<h4>Wybrane zagadnienia</h4>
+<details><summary>Gdzie szukać potencjalnych problemów?</summary><p>Lista wejściowa do analizy ryzyka (nie obowiązkowy zestaw punktów): w pobliżu EMS, przy zewnętrznych ścianach, oknach, suficie i podłodze, w rejonie nawiewników i wyciągów, naprzeciw źródeł ciepła lub chłodu, na regałach, przy przeszkodach tworzących martwe strefy oraz na różnych wysokościach składowania.</p></details>
+<details><summary>Narożnik i środek — worst case z różnych powodów</summary><p>Narożnik łączy wpływ kilku przegród zewnętrznych i często ma słabszą cyrkulację. Środek jest najdalej od ścian zewnętrznych, ale może mieć zupełnie inne warunki. Nie zakładamy, że „narożnik zawsze jest hot spotem” — identyfikujemy lokalizacje potencjalnego ryzyka i sprawdzamy je pomiarem.</p></details>
+<details><summary>Ile czujników? Norma daje zasadę, organizacja buduje metodologię</summary><p>Nie istnieje jedna uniwersalna liczba czujników. ISPE, WHO i inne źródła dają zasady (worst case, systematyczne pokrycie, poziomy, rozstaw sond), a tabela 10 / 16 / 28 sond to przykład przyjętej metodologii organizacji, nie zapis normy — nie mówimy na audycie „WHO wymaga 28 czujników”. Metoda ma być spójna, udokumentowana i stosowana konsekwentnie, najlepiej w procedurze, a nie wymyślana przy każdym protokole (żeby nie było: 2024 — 16 czujników, 2025 — 11, 2026 — „tyle, ile mieliśmy”).</p></details>
+<details><summary>Cała kubatura czy objętość składowania?</summary><p>Duża pusta przestrzeń nad regałami, korytarze i miejsca techniczne nie muszą być objęte tak samo jak przestrzeń składowania, co może zmienić liczbę loggerów. Redukcja musi jednak wynikać z analizy ryzyka — nie wykreślamy strefy, w której stoją agregaty, jest duże okno albo powstaje obszar oddziałujący na przestrzeń przechowywania. Mniej czujników nie znaczy gorzej: 30 źle rozmieszczonych loggerów może ominąć miejsce krytyczne, a mniejsza liczba oparta na analizie ryzyka daje silniejszy dowód. Pytanie brzmi: „czy każdy punkt ma uzasadnienie?”.</p></details>
+<details><summary>H / M / L i punkt T</summary><p>Schemat nie jest dwuwymiarową mapą: L — low, M — middle, H — high opisują lokalizacje także w pionie, więc zamiast „czujnik przy regale 3” mamy „przy regale 3 na konkretnej wysokości składowania”. Punkt T przy termostacie sterującym pozwala porównać to, co „widzi” sterowanie HVAC, z tym, czego doświadcza produkt w innych miejscach.</p></details>
+<details><summary>Granice mapowania i regularne pokrycie</summary><p>Pomieszczenia rozdzielone ścianą i drzwiami albo o istotnie różnej geometrii mogą wymagać odrębnego podejścia — wspólna instalacja HVAC nie czyni ich jednym obszarem. W dużym magazynie potrzebujemy dwóch warstw: systematycznego pokrycia całej używanej przestrzeni oraz punktów dodatkowych w miejscach ryzyka (podstawa metodyczna + risk-based additions), żeby nie zostawić dużych części przestrzeni bez dowodu.</p></details>
+<details><summary>Dokumentacja rozmieszczenia</summary><p>Sam schemat sprzed mapowania nie wystarczy: trzeba wykazać, że logger znalazł się tam, gdzie zakładał protokół — np. przez weryfikację drugiej osoby lub dokumentację fotograficzną. Po kwalifikacji pierwotnej schemat staje się dokumentem referencyjnym dla RQ, a po zmianie regałów, HVAC lub lokalizacji obszaru pozwala ocenić, czy nadal jest aktualny (MK5).</p></details>
+<h4>Dla kogo?</h4><p>Validation / Qualification, C&amp;Q, Engineering / HVAC, QA, właściciele magazynów CRT i chłodni CCT, osoby wykonujące temperature mapping, przygotowujące protokoły i projektujące schematy punktów pomiarowych, właściciele EMS oraz oceniający zmiany regałów, layoutu lub HVAC. Dla tych, którzy nie chcą już rozmieszczać loggerów według zasady „tak było w poprzednim protokole”. Kolejność: MK7a — GDZIE mierzyć, MK1 — JAK wykonać test, MK6 — CO oznaczają wyniki, MK5 — CO powtórzyć po zmianie.</p>
+<h4>Podstawa merytoryczna</h4><p>ISPE Good Practice Guide: Controlled Temperature Chambers · WHO TRS 961 Supplement 8 · USP &lt;1079&gt; · EN 60068 – zasady ogólne, z rozróżnieniem pomiędzy wymaganiami/guidance a wewnętrzną, uzasadnioną metodologią organizacji.</p>
+<h4>Powiązane kursy</h4><ul class="related"><li><span class="rel-tag">NASTĘPNY KROK</span><a data-open="MK1" href="#mk1">MK1 · Jak wykonać mapowanie temperatury krok po kroku?</a> — masz już poprawny schemat czujników — przeprowadź całe mapowanie OQ/PQ zgodnie z metodologią.</li><li><span class="rel-tag">NASTĘPNY KROK</span><a data-open="MK6" href="#mk6">MK6 · Analiza wyników mapowania i raport kwalifikacji</a> — z wyników rozmieszczonych punktów wyznacz reprezentatywny hot/cold spot i strategię EMS.</li><li><span class="rel-tag">PORÓWNAJ</span><a data-open="MK7b" href="#mk7b">MK7b · Rozkład czujników w urządzeniach termostatycznych</a> — ta sama logika worst case, gdy zamiast magazynu mapujesz lodówkę, zamrażarkę, ULT, inkubator lub komorę klimatyczną.</li><li><span class="rel-tag">ZASTOSUJ PO ZMIANIE</span><a data-open="MK5" href="#mk5">MK5 · Rekwalifikacja po relokacji i po awarii</a> — kiedy zmiana regałów, HVAC lub lokalizacji systemu wymaga nowego schematu i ponownego mapowania.</li></ul>
+<a class="btn" href="index.html?kurs=MK7a#contact">Zapytaj o ten kurs</a>
+</div>
 </article>
   </div>
 </div>
 <div class="branch " data-tone="klein">
-  <div class="branch-head"><h2>Urządzenia termostatyczne</h2><p>Lodówki, zamrażarki, ULT, inkubatory i komory klimatyczne.</p></div>
+  <div class="branch-head"><h2 data-en="Equipment">Urządzenia</h2><p data-en="Refrigerators, freezers, ULT freezers, incubators and climatic chambers.">Lodówki, zamrażarki, ULT, inkubatory i komory klimatyczne.</p></div>
   <div class="tiles">
-<article class="tile">
-  <span class="tile-code">MK7b</span>
-  <div class="ph" data-ph="Miejsce na grafikę"><img src="assets/akademia/mk7b.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
-  <div class="tile-body"><h3>Rozkład czujników w urządzeniach termostatycznych</h3><ul class="pts"><li>schemat 3D</li><li>sonda sterująca</li><li>geometria urządzenia</li><li>gdzie mierzyć?</li></ul></div>
+<article class="tile" id="t-mk7b" data-tone="klein">
+  <div class="tile-top"><span class="tile-code">MK7b</span><span class="qr">QUAL</span><span class="qr opt">RQ</span></div>
+  <div class="ph" data-ph="Grafika · Image"><img src="assets/akademia/mk7b.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+  <div class="tile-body" data-en="&lt;h3&gt;Mapping Refrigerators, Freezers and Incubators: Where to Place the Sensors&lt;/h3&gt;&lt;ul class=pts&gt;&lt;li&gt;3D layout (e.g. 9 + 1)&lt;/li&gt;&lt;li&gt;ULT freezers, shaking and CO₂ incubators&lt;/li&gt;&lt;li&gt;when the EMS sensor is not the worst case&lt;/li&gt;&lt;/ul&gt;&lt;ul class=&quot;meta&quot;&gt;&lt;li&gt;&lt;b&gt;Duration&lt;/b&gt;approx. 60 min&lt;/li&gt;&lt;li&gt;&lt;b&gt;Level&lt;/b&gt;Intermediate&lt;/li&gt;&lt;li&gt;&lt;b&gt;Based on&lt;/b&gt;ISPE GPG Controlled Temperature Chambers (incl. Appendix 3 — Measurement Uncertainty) · ISO/IEC 17025 (metrological principles)&lt;/li&gt;&lt;/ul&gt;">
+<h3>Rozkład czujników w urządzeniach termostatycznych</h3>
+<ul class="pts"><li>schemat 3D: standardowy układ 9 + 1 jako punkt wyjścia</li><li>sonda sterująca, niestandardowa geometria, aktywne źródła ciepła</li><li>wytrząsarki, inkubatory CO₂, ULT</li><li>co zrobić, gdy EMS nie reprezentuje worst case</li></ul>
+<ul class="meta"><li><b>Czas</b>ok. 60 minut</li><li><b>Poziom</b>średniozaawansowany</li><li><b>Podstawa</b>ISPE GPG Controlled Temperature Chambers · Appendix 3 Measurement Uncertainty · ISO/IEC 17025 (zasady metrologiczne i kalibracyjne)</li></ul>
+</div>
   <button type="button" class="tile-more" aria-haspopup="dialog"><b data-en="Details" style="font-weight:inherit">Szczegóły</b><span aria-hidden="true">+</span></button>
-  <div class="tile-full"><h4 data-en="Scope">Zakres</h4>
-<ul class="pts"><li>schemat 3D</li><li>sonda sterująca</li><li>geometria urządzenia</li><li>gdzie mierzyć?</li></ul>
-<h4 data-en="Full description">Pełny opis</h4>
-<!-- ▼▼ TU WKLEJ PEŁNY OPIS KAFELKA MK7b (dowolna długość – okno samo się przewija) ▼▼ -->
-<p>Tutaj pojawi się pełny opis: o czym jest ten moduł, jak wygląda w praktyce i co z niego wynosisz.</p>
-<p>Możesz używać akapitów, nagłówków &lt;h4&gt; i list &lt;ul&gt;.</p>
-<h4 data-en="Who is it for">Dla kogo</h4>
-<p>Tutaj opisz, dla kogo jest ten moduł.</p>
-<!-- ▲▲ KONIEC OPISU ▲▲ -->
-<a class="btn" href="index.html#contact" data-en="Ask about this course">Zapytaj o ten kurs</a></div>
+  <div class="tile-full" data-en="&lt;p class=&quot;dlg-sub&quot;&gt;MK7b · Sensor Placement in Temperature-Controlled Equipment&lt;br&gt;Refrigerators · freezers · ULT freezers · incubators · climatic chambers · shaking incubators&lt;/p&gt;
+&lt;ul class=&quot;facts&quot;&gt;&lt;li&gt;&lt;b&gt;Duration&lt;/b&gt;approx. 60 min&lt;/li&gt;&lt;li&gt;&lt;b&gt;Level&lt;/b&gt;Intermediate&lt;/li&gt;&lt;li&gt;&lt;b&gt;Format&lt;/b&gt;Online course · 3D layouts · case study · risk assessment&lt;/li&gt;&lt;li&gt;&lt;b&gt;Based on&lt;/b&gt;ISPE GPG Controlled Temperature Chambers (incl. Appendix 3 — Measurement Uncertainty) · ISO/IEC 17025 (metrological principles)&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;A small chamber brings problems a warehouse doesn’t have: the control probe, evaporator, fan, shelves, defrost cycles, irregular geometry and only a few centimetres between product and technical components. A warehouse layout cannot simply be “scaled down”.&lt;/p&gt;
+&lt;div class=&quot;dlg-box&quot;&gt;&lt;strong&gt;There is no magic number of sensors&lt;/strong&gt;&lt;p&gt;A 9 + 1 layout for a chamber up to 2 m³ is a starting point, not a rule that “every refrigerator needs 10 loggers”. It has to be challenged against equipment geometry, intended use and risk.&lt;/p&gt;&lt;/div&gt;
+&lt;h4&gt;What you will learn&lt;/h4&gt;
+&lt;ul&gt;&lt;li&gt;how sensor placement in equipment differs from mapping a CRT/CCT area&lt;/li&gt;&lt;li&gt;how to build 3D coverage of the usable space and where to put the reference point next to the control probe&lt;/li&gt;&lt;li&gt;how to adapt the layout to partial shelves, drawers and recesses&lt;/li&gt;&lt;li&gt;shaking incubators: map the process platform, not the empty enclosure&lt;/li&gt;&lt;li&gt;CO₂ incubators: when temperature mapping alone is not enough&lt;/li&gt;&lt;li&gt;ULT freezers with an active heat source: an extra point, and whether a higher reading means FAIL&lt;/li&gt;&lt;li&gt;when to add points and when (carefully) to reduce them — justified before the study&lt;/li&gt;&lt;li&gt;what to do when mapping shows the existing EMS sensor is not the worst case — and why an offset is not a universal fix&lt;/li&gt;&lt;/ul&gt;
+&lt;h4&gt;What’s inside&lt;/h4&gt;
+&lt;ul class=checks&gt;&lt;li&gt;3D layouts&lt;/li&gt;&lt;li&gt;case study: an EMS with no prior mapping&lt;/li&gt;&lt;li&gt;photographic documentation of placement&lt;/li&gt;&lt;/ul&gt;
+&lt;h4&gt;Who is it for?&lt;/h4&gt;
+&lt;p&gt;Validation / Qualification / C&amp;amp;Q, QA, laboratories, owners of refrigerators, freezers, ULT freezers, incubators and climatic chambers, people performing mapping and writing protocols, and EMS owners. For anyone ready to stop placing sensors “one per shelf”.&lt;/p&gt;
+&lt;h4&gt;Related courses&lt;/h4&gt;
+&lt;ul class=&quot;related&quot;&gt;&lt;li&gt;&lt;a href=&quot;#mk7a&quot; data-open=&quot;MK7a&quot;&gt;MK7a · Mapping Warehouses and Cold Rooms&lt;/a&gt; — the other branch, same logic, different geometry.&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#mk1&quot; data-open=&quot;MK1&quot;&gt;MK1 · Temperature Mapping Step by Step&lt;/a&gt; — you have the layout, run OQ/PQ and collect reliable data.&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#mk6&quot; data-open=&quot;MK6&quot;&gt;MK6 · Data Analysis and Report&lt;/a&gt; — hot/cold spots, the existing EMS, location offset and the decision.&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#mk5&quot; data-open=&quot;MK5&quot;&gt;MK5 · Requalification After Change&lt;/a&gt; — when to repeat mapping after relocation or repair.&lt;/li&gt;&lt;/ul&gt;
+&lt;a class=&quot;btn&quot; href=&quot;index.html?kurs=MK7b#contact&quot;&gt;Ask about this course&lt;/a&gt;">
+<p class="dlg-sub">Lodówki · zamrażarki · ULT · inkubatory · komory klimatyczne · wytrząsarki</p>
+<ul class="facts"><li><b>Czas</b>ok. 60 minut</li><li><b>Poziom</b>średniozaawansowany</li><li><b>Forma</b>kurs online + schematy 3D + case study + analiza ryzyka</li></ul>
+<p>W MK7a patrzyliśmy na magazyn: duża przestrzeń, regały, drzwi, HVAC. W MK7b zamykamy się w znacznie mniejszej komorze i pojawiają się inne problemy: sonda sterująca, parownik, wentylator, półki, lokalne źródła ciepła, automatyczne odszranianie, nieregularna geometria i bardzo małe odległości między produktem a elementami technicznymi.</p>
+<p>Schematu z magazynu nie można więc „pomniejszyć” — trzeba zbudować go od nowa na podstawie konstrukcji konkretnego urządzenia. Logika jest ta sama (worst case, reprezentatywne pokrycie, analiza ryzyka), ale źródła ryzyka inne; uczysz się adaptować schemat do rzeczywistego sprzętu.</p>
+<div class="dlg-box"><strong>Lodówka to nie mały magazyn.</strong><p>Sonda sterująca, półki, parownik, lokalne źródła ciepła i niewielka geometria sprawiają, że rozmieszczenie czujników wymaga osobnej logiki. MK7b uczy zaprojektować schemat 3D tak, żeby mapowanie rzeczywiście znalazło worst case — a nie tylko wypełniło komorę loggerami.</p></div>
+<h4>Czego nauczysz się podczas kursu?</h4><p>Po ukończeniu kursu będziesz wiedzieć:</p><ul><li>jak różni się rozmieszczenie czujników w urządzeniu od mapowania obszaru CRT/CCT,</li><li>jak budować trójwymiarowe pokrycie przestrzeni roboczej i gdzie umieścić punkt referencyjny względem sondy sterującej,</li><li>jak zmodyfikować schemat przy niestandardowych półkach lub komorze,</li><li>jak mapować wytrząsarki z inkubacją i podejść do dodatkowych parametrów w inkubatorach CO₂,</li><li>jak uwzględnić aktywne źródło ciepła w ULT,</li><li>kiedy można zwiększyć lub zmniejszyć liczbę punktów i jak udokumentować uzasadnienie risk-based,</li><li>jak dokumentować rozmieszczenie fotograficznie,</li><li>co zrobić, gdy kwalifikacja pokaże, że obecny EMS nie reprezentuje worst case, i jak połączyć to z MK6.</li></ul>
+<h4>Wybrane zagadnienia</h4>
+<details><summary>Standardowy układ 3D — punkt wyjścia, nie odpowiedź na wszystko</summary><p>Dla małych, regularnych komór dobrze sprawdza się logika: narożniki + środek przestrzeni + punkt odniesienia związany z układem sterowania; dla typowej komory do 2 m³ stosuje się schemat 9 + 1. To metodologia wyjściowa, którą trzeba skonfrontować z geometrią, intended use i ryzykiem — nie „każda lodówka = dokładnie 10 loggerów”. Czujniki obejmują przestrzeń użytkową (nie samą ścianę, półkę czy element konstrukcyjny, jeśli produkt tam nie trafi), a schemat 3D jest tak jednoznaczny, że osoba, która nie widziała urządzenia, odtworzy punkty z dokumentacji.</p></details>
+<details><summary>Urządzenie nie jest prostopadłościanem</summary><p>Niepełne półki, kanały powietrzne, szuflady, wnęki i konstrukcje ograniczające cyrkulację: nie wciskamy mechanicznie standardowego schematu, tylko zachowujemy jego cel — pokrycie rzeczywistej przestrzeni roboczej i miejsc potencjalnego worst case. To różnica między „stosuję metodę” a „kopiuję obrazek z procedury”.</p></details>
+<details><summary>Wytrząsarka z inkubacją</summary><p>Jeśli proces odbywa się na platformie, to ona jest najważniejszą przestrzenią do oceny: punkty odzwierciedlają rzeczywistą powierzchnię procesową i warunki materiału, a nie całą pustą objętość obudowy. Kwalifikujemy funkcję systemu, nie tylko jego kształt.</p></details>
+<details><summary>Inkubator CO₂</summary><p>Jeśli kontrolowanym parametrem jest też CO₂, potrzebna jest strategia weryfikacji tego parametru i odniesienie do czujnika sterującego lub lokalizacji zalecanej przez producenta. Temperatura, wilgotność i CO₂ mogą wymagać różnych czujników, zakresów kalibracji i częstotliwości rejestracji zgodnie z zatwierdzoną metodą.</p></details>
+<details><summary>ULT — małe urządzenie, trudne środowisko</summary><p>W niektórych konstrukcjach występują lokalne aktywne źródła ciepła (np. ogrzewane elementy przeciw zamarzaniu). Jeśli konstrukcja na to wskazuje i analiza ryzyka uznaje je za istotne, obejmujemy je dodatkowym punktem. Wyższa temperatura w takim punkcie nie oznacza automatycznie awarii — oceniamy, gdzie jest produkt, jaki obszar pozostaje użytkowy i czy punkt jest elementem oceny użytkowej czy diagnostycznej. Nie „jeden logger przekroczył → FAIL”.</p></details>
+<details><summary>Więcej lub mniej czujników?</summary><p>Rozszerzenie schematu przy wykryciu potencjalnego problemu łatwo uzasadnić. Redukcję liczby punktów traktujemy ostrożniej: uzasadnienie powinno powstać przed testem i wykazać, że nie traci się pokrycia worst case. Analiza ryzyka służy do projektowania testu, a nie do usprawiedliwiania po fakcie wykonanego schematu.</p></details>
+<details><summary>Dokumentacja fotograficzna</summary><p>W małych urządzeniach kilka centymetrów ma znaczenie. Zdjęcia potwierdzają, gdzie był każdy logger i sonda sterująca oraz jakie elementy konstrukcyjne uwzględniono — i stają się punktem odniesienia przy RQ: czy odtworzyliśmy ten sam układ, czy konstrukcja lub sposób użytkowania się zmieniły.</p></details>
+<details><summary>EMS już jest, ale nikt nie zmapował</summary><p>Urządzenie działa od lat, EMS jest zamontowany, ale nie ma mapowania potwierdzającego, że to worst case. „Czujnik zawsze tu był” nie jest dowodem. Gdy nowe dane wskażą inną lokalizację, możliwe działania to zmiana lokalizacji EMS, ograniczenie użytkowania strefy, dodatkowa weryfikacja lub uzasadniona korekta strategii alarmowej — na podstawie rzeczywistego ryzyka i analizy z MK6, a nie samej różnicy temperatur. Offset nie jest uniwersalnym rozwiązaniem: najpierw przyczyna różnicy, measurement uncertainty, relacja lokalizacji i strategia alarmowa.</p></details>
+<h4>Dla kogo?</h4><p>Validation / Qualification, C&amp;Q, QA, laboratoria, właściciele urządzeń termostatycznych i EMS, osoby wykonujące temperature mapping i przygotowujące protokoły oraz odpowiedzialne za lodówki, zamrażarki, ULT, inkubatory i komory klimatyczne. Dla znających ogólną metodologię mapowania, którzy chcą przestać rozmieszczać czujniki według zasady „po jednym na każdej półce”. MK7a i MK7b to jedna metodologia, dwie gałęzie: wspólne jest worst case → analiza ryzyka → systematyczne pokrycie → dokumentacja, różne są geometria i źródła ryzyka.</p>
+<h4>Podstawa merytoryczna</h4><p>ISPE Good Practice Guide: Controlled Temperature Chambers · Appendix 3 dotyczący measurement uncertainty · zasady metrologiczne ISO/IEC 17025 oraz praktyczne podejście do mapowania urządzeń, dokumentacji, QRM i strategii monitoringu.</p>
+<h4>Powiązane kursy</h4><ul class="related"><li><span class="rel-tag">PORÓWNAJ</span><a data-open="MK7a" href="#mk7a">MK7a · Rozkład czujników w obszarach CRT / CCT</a> — druga gałąź metodologii: jak rozmieszczenie zmienia się w magazynach oraz chłodniach.</li><li><span class="rel-tag">NASTĘPNY KROK</span><a data-open="MK1" href="#mk1">MK1 · Jak wykonać mapowanie temperatury krok po kroku?</a> — masz już zaprojektowany schemat — przeprowadź OQ/PQ i zbierz wiarygodne dane.</li><li><span class="rel-tag">NASTĘPNY KROK</span><a data-open="MK6" href="#mk6">MK6 · Analiza wyników mapowania i raport kwalifikacji</a> — ocena hot/cold spot, istniejącego EMS, location offset i końcowej decyzji kwalifikacyjnej.</li><li><span class="rel-tag">ZASTOSUJ PO ZMIANIE</span><a data-open="MK5" href="#mk5">MK5 · Rekwalifikacja po relokacji i po awarii</a> — kiedy po przeniesieniu, naprawie lub zmianie urządzenia trzeba ponownie zweryfikować schemat i wykonać mapowanie.</li></ul>
+<a class="btn" href="index.html?kurs=MK7b#contact">Zapytaj o ten kurs</a>
+</div>
+</article>
+  </div>
+</div>
+<div class="branch " data-tone="green">
+  <div class="branch-head"><h2 data-en="Vehicles">Pojazdy</h2><p data-en="Temperature-controlled transport.">Transport w kontrolowanej temperaturze.</p></div>
+  <div class="tiles">
+<article class="tile" id="t-mk7c" data-tone="green">
+  <div class="tile-top"><span class="tile-code">MK7c</span><span class="qr">QUAL</span><span class="qr opt">RQ</span></div>
+  <div class="ph" data-ph="Grafika · Image"><img src="assets/akademia/mk7c.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+  <div class="tile-body" data-en="&lt;h3&gt;Vehicle mapping — where to place the sensors?&lt;/h3&gt;&lt;ul class=pts&gt;&lt;li&gt;cargo space: risk zones, doors, floor, ceiling and walls&lt;/li&gt;&lt;li&gt;refrigeration unit and airflow: effect of evaporator position and air circulation&lt;/li&gt;&lt;li&gt;doors and loading: openings, full and empty load&lt;/li&gt;&lt;li&gt;route profile: summer / winter, journey time, stops&lt;/li&gt;&lt;/ul&gt;"><h3>Mapowanie pojazdów — gdzie rozmieścić czujniki?</h3><ul class=pts><li>przestrzeń ładunkowa: strefy ryzyka, drzwi, podłoga, sufit i ściany</li><li>agregat i nawiew: wpływ parownika i cyrkulacji powietrza</li><li>drzwi i załadunek: otwarcia, ładunek pełny i pusty</li><li>profil trasy: lato / zima, czas przejazdu, postoje</li></ul></div>
+  <button type="button" class="tile-more" aria-haspopup="dialog"><b data-en="Details" style="font-weight:inherit">Szczegóły</b><span aria-hidden="true">+</span></button>
+  <div class="tile-full" data-en="&lt;p class=&quot;dlg-sub&quot;&gt;MK7c · Vehicle Mapping&lt;br&gt;Where to place the sensors in a temperature-controlled transport vehicle?&lt;/p&gt;&lt;ul class=&quot;facts&quot;&gt;&lt;li&gt;&lt;b&gt;Format&lt;/b&gt;online course&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;The third course in the “where to place the sensors?” family, next to MK7a (CRT / CCT areas) and MK7b (equipment). A temperature-controlled vehicle is not a mobile warehouse: it has its own refrigeration unit, doors opened en route and changing ambient conditions — so sensor placement has to be planned from a risk assessment, not copied from the previous protocol.&lt;/p&gt;&lt;h4&gt;Course scope&lt;/h4&gt;&lt;ul&gt;&lt;li&gt;Cargo space — risk zones, points at the doors, floor, ceiling and walls&lt;/li&gt;&lt;li&gt;Refrigeration unit and airflow — how evaporator position and air circulation affect the temperature distribution&lt;/li&gt;&lt;li&gt;Doors and loading — openings, loading time, full and empty load&lt;/li&gt;&lt;li&gt;Route profile — summer / winter conditions, journey time, stops&lt;/li&gt;&lt;li&gt;Vehicle qualification vs route validation — what is what and when you need both&lt;/li&gt;&lt;/ul&gt;&lt;h4&gt;Related courses&lt;/h4&gt;&lt;ul class=&quot;related&quot;&gt;&lt;li&gt;&lt;a href=&quot;#mk1&quot; data-open=&quot;MK1&quot;&gt;MK1 · Temperature Mapping Step by Step&lt;/a&gt; — the OQ / PQ methodology you also apply to a vehicle.&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#mk7a&quot; data-open=&quot;MK7a&quot;&gt;MK7a · Mapping Warehouses and Cold Rooms&lt;/a&gt; — the same placement logic, different geometry.&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#mk7b&quot; data-open=&quot;MK7b&quot;&gt;MK7b · Equipment Mapping&lt;/a&gt; — the same placement logic, different geometry.&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#mk6&quot; data-open=&quot;MK6&quot;&gt;MK6 · Data Analysis and Report&lt;/a&gt; — from vehicle data to a qualification decision.&lt;/li&gt;&lt;/ul&gt;&lt;a class=&quot;btn&quot; href=&quot;index.html?kurs=MK7c#contact&quot;&gt;Ask about this course&lt;/a&gt;"><p class="dlg-sub">MK7c · Mapowanie pojazdów<br>Gdzie rozmieścić czujniki w pojeździe do transportu w kontrolowanej temperaturze?</p><ul class="facts"><li><b>Forma</b>kurs online</li></ul><p>Trzeci kurs z rodziny „gdzie rozmieścić czujniki?”, obok MK7a (obszary CRT / CCT) i MK7b (urządzenia). Pojazd z kontrolowaną temperaturą to nie ruchomy magazyn: ma własny agregat, drzwi otwierane w trasie i zmienne warunki zewnętrzne — dlatego rozmieszczenie czujników trzeba zaplanować na podstawie analizy ryzyka, a nie schematu z poprzedniego protokołu.</p><h4>Zakres kursu</h4><ul><li>Przestrzeń ładunkowa — strefy ryzyka, punkty przy drzwiach, podłodze, suficie i ścianach</li><li>Agregat i nawiew — wpływ położenia parownika i cyrkulacji powietrza na rozkład temperatury</li><li>Drzwi i załadunek — otwarcia, czas załadunku, ładunek pełny i pusty</li><li>Profil trasy — warunki lato / zima, czas przejazdu, postoje</li><li>Kwalifikacja pojazdu a walidacja trasy — co jest czym i kiedy potrzebujesz obu</li></ul><h4>Powiązane kursy</h4><ul class="related"><li><a href="#mk1" data-open="MK1">MK1 · Mapowanie temperatury krok po kroku</a> — metodologia OQ / PQ, którą stosujesz także w pojeździe.</li><li><a href="#mk7a" data-open="MK7a">MK7a · Rozkład czujników w obszarach CRT / CCT</a> — ta sama logika rozmieszczenia, inna geometria.</li><li><a href="#mk7b" data-open="MK7b">MK7b · Rozkład czujników w urządzeniach termostatycznych</a> — ta sama logika rozmieszczenia, inna geometria.</li><li><a href="#mk6" data-open="MK6">MK6 · Analiza wyników mapowania i raport kwalifikacji</a> — od danych z pojazdu do decyzji kwalifikacyjnej.</li></ul><a class="btn" href="index.html?kurs=MK7c#contact">Zapytaj o ten kurs</a></div>
 </article>
   </div>
 </div>
       </div>
       <div class="join" aria-hidden="true"></div>
-<div class="branch c2" data-tone="blue">
-  <div class="branch-head"><h2>Mapowanie i analiza wyników</h2><p>Od wykonania mapowania do decyzji kwalifikacyjnej.</p></div>
+<div class="branch c1" data-tone="blue">
+  <div class="branch-head"><h2 data-en="Data analysis and report">Analiza wyników i raport</h2><p data-en="From data to a qualification decision.">Od danych do decyzji kwalifikacyjnej.</p></div>
   <div class="tiles">
-<article class="tile">
-  <span class="tile-code">MK1</span>
-  <div class="ph" data-ph="Miejsce na grafikę"><img src="assets/akademia/mk1.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
-  <div class="tile-body"><h3>Jak wykonać mapowanie temperatury krok po kroku?</h3><ul class="pts"><li>OQ i PQ</li><li>kalibracja loggerów</li><li>wsad i czas badania</li><li>jak wykonać test?</li></ul></div>
+<article class="tile wide" id="t-mk6" data-tone="blue">
+  <div class="tile-top"><span class="tile-code">MK6</span><span class="qr">QUAL</span><span class="qr">RQ</span></div>
+  <div class="ph" data-ph="Grafika · Image"><img src="assets/akademia/mk6.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+  <div class="tile-body" data-en="&lt;h3&gt;From Data to Decision: Mapping Analysis and Report&lt;/h3&gt;&lt;ul class=pts&gt;&lt;li&gt;hot / cold spots without picking a “winner”&lt;/li&gt;&lt;li&gt;MKT — a tool, not an excursion eraser&lt;/li&gt;&lt;li&gt;EMS: relocate or not?&lt;/li&gt;&lt;/ul&gt;&lt;ul class=&quot;meta&quot;&gt;&lt;li&gt;&lt;b&gt;Duration&lt;/b&gt;approx. 75–90 min&lt;/li&gt;&lt;li&gt;&lt;b&gt;Level&lt;/b&gt;Advanced&lt;/li&gt;&lt;li&gt;&lt;b&gt;Based on&lt;/b&gt;ISPE GPG Controlled Temperature Chambers · WHO TRS 961, Supplement 8 · EU GMP Annex 15 · USP &amp;lt;659&amp;gt; / &amp;lt;1079&amp;gt;&lt;/li&gt;&lt;/ul&gt;">
+<h3>Analiza wyników mapowania i raport kwalifikacji</h3>
+<ul class="pts"><li>kompletność danych i tabela wynikowa (nie tylko min/max/średnia)</li><li>hot / cold spot i interpretacja MKT</li><li>lokalizacja EMS: kwalifikacja pierwotna vs rekwalifikacja</li><li>raport QR/RQR i postępowanie przy wyniku negatywnym</li></ul>
+<ul class="meta"><li><b>Czas</b>ok. 75–90 minut</li><li><b>Poziom</b>zaawansowany</li><li><b>Podstawa</b>ISPE GPG Controlled Temperature Chambers · WHO Technical Supplements · EU GMP Annex 15 · USP &lt;659&gt; / &lt;1079&gt;</li></ul>
+</div>
   <button type="button" class="tile-more" aria-haspopup="dialog"><b data-en="Details" style="font-weight:inherit">Szczegóły</b><span aria-hidden="true">+</span></button>
-  <div class="tile-full"><h4 data-en="Scope">Zakres</h4>
-<ul class="pts"><li>OQ i PQ</li><li>kalibracja loggerów</li><li>wsad i czas badania</li><li>jak wykonać test?</li></ul>
-<h4 data-en="Full description">Pełny opis</h4>
-<!-- ▼▼ TU WKLEJ PEŁNY OPIS KAFELKA MK1 (dowolna długość – okno samo się przewija) ▼▼ -->
-<p>Tutaj pojawi się pełny opis: o czym jest ten moduł, jak wygląda w praktyce i co z niego wynosisz.</p>
-<p>Możesz używać akapitów, nagłówków &lt;h4&gt; i list &lt;ul&gt;.</p>
-<h4 data-en="Who is it for">Dla kogo</h4>
-<p>Tutaj opisz, dla kogo jest ten moduł.</p>
-<!-- ▲▲ KONIEC OPISU ▲▲ -->
-<a class="btn" href="index.html#contact" data-en="Ask about this course">Zapytaj o ten kurs</a></div>
-</article>
-<article class="tile">
-  <span class="tile-code">MK6</span>
-  <div class="ph" data-ph="Miejsce na grafikę"><img src="assets/akademia/mk6.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
-  <div class="tile-body"><h3>Analiza wyników mapowania i raport kwalifikacji</h3><ul class="pts"><li>hot / cold spot</li><li>MKT i interpretacja</li><li>EMS i lokalizacja czujnika</li><li>co oznaczają wyniki?</li></ul></div>
-  <button type="button" class="tile-more" aria-haspopup="dialog"><b data-en="Details" style="font-weight:inherit">Szczegóły</b><span aria-hidden="true">+</span></button>
-  <div class="tile-full"><h4 data-en="Scope">Zakres</h4>
-<ul class="pts"><li>hot / cold spot</li><li>MKT i interpretacja</li><li>EMS i lokalizacja czujnika</li><li>co oznaczają wyniki?</li></ul>
-<h4 data-en="Full description">Pełny opis</h4>
-<!-- ▼▼ TU WKLEJ PEŁNY OPIS KAFELKA MK6 (dowolna długość – okno samo się przewija) ▼▼ -->
-<p>Tutaj pojawi się pełny opis: o czym jest ten moduł, jak wygląda w praktyce i co z niego wynosisz.</p>
-<p>Możesz używać akapitów, nagłówków &lt;h4&gt; i list &lt;ul&gt;.</p>
-<h4 data-en="Who is it for">Dla kogo</h4>
-<p>Tutaj opisz, dla kogo jest ten moduł.</p>
-<!-- ▲▲ KONIEC OPISU ▲▲ -->
-<a class="btn" href="index.html#contact" data-en="Ask about this course">Zapytaj o ten kurs</a></div>
+  <div class="tile-full" data-en="&lt;p class=&quot;dlg-sub&quot;&gt;MK6 · Temperature Mapping Data Analysis and Qualification Report&lt;br&gt;From thousands of records to a decision: PASS, monitoring, EMS and the report&lt;/p&gt;
+&lt;ul class=&quot;facts&quot;&gt;&lt;li&gt;&lt;b&gt;Duration&lt;/b&gt;approx. 75–90 min&lt;/li&gt;&lt;li&gt;&lt;b&gt;Level&lt;/b&gt;Advanced&lt;/li&gt;&lt;li&gt;&lt;b&gt;Format&lt;/b&gt;Online course · examples · data analysis · decision scenarios&lt;/li&gt;&lt;li&gt;&lt;b&gt;Based on&lt;/b&gt;ISPE GPG Controlled Temperature Chambers · WHO TRS 961, Supplement 8 · EU GMP Annex 15 · USP &amp;lt;659&amp;gt; / &amp;lt;1079&amp;gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;Mapping is done: a dozen sensors, a reading every few minutes, several days of testing — and tens of thousands of records. Is min, max and mean enough? Is the highest peak the hot spot? Can MKT “rescue” an out-of-range result? And if the hot spot moved one rack over during RQ — do you relocate the EMS sensor?&lt;/p&gt;
+&lt;div class=&quot;dlg-box&quot;&gt;&lt;strong&gt;Data ≠ interpretation ≠ decision&lt;/strong&gt;&lt;p&gt;Thousands of correctly recorded points do not guarantee a correct report. MK6 takes you from raw data through hot/cold spots and EMS assessment to a justified qualification decision.&lt;/p&gt;&lt;/div&gt;
+&lt;h4&gt;What you will learn&lt;/h4&gt;
+&lt;ul&gt;&lt;li&gt;5 data checks: time span, interval, continuity, metrological status, acceptance criterion&lt;/li&gt;&lt;li&gt;why a min/max/mean table does not replace the time trend&lt;/li&gt;&lt;li&gt;how to identify hot and cold spots from full analysis, not from a single peak&lt;/li&gt;&lt;li&gt;what MKT is and why it does not erase an excursion&lt;/li&gt;&lt;li&gt;how to choose the EMS location in initial qualification — considering product sensitivity&lt;/li&gt;&lt;li&gt;how to assess location offset, measurement uncertainty and alarm strategy in RQ before deciding to relocate&lt;/li&gt;&lt;li&gt;what happens to historical data after an EMS sensor is moved&lt;/li&gt;&lt;li&gt;how to build the QR/RQR report and handle a negative result&lt;/li&gt;&lt;/ul&gt;
+&lt;h4&gt;What’s inside&lt;/h4&gt;
+&lt;ul class=checks&gt;&lt;li&gt;data analysis examples&lt;/li&gt;&lt;li&gt;decision scenarios: initial qualification and requalification&lt;/li&gt;&lt;li&gt;QR/RQR report structure&lt;/li&gt;&lt;/ul&gt;
+&lt;h4&gt;Who is it for?&lt;/h4&gt;
+&lt;p&gt;Validation / Qualification / C&amp;amp;Q, QA, authors of QR and RQR, people analysing mapping results, owners of EMS and alarm limits, and anyone deciding after out-of-limit results. For those who can already perform mapping and want to defend the final decision.&lt;/p&gt;
+&lt;h4&gt;Related courses&lt;/h4&gt;
+&lt;ul class=&quot;related&quot;&gt;&lt;li&gt;&lt;a href=&quot;#mk1&quot; data-open=&quot;MK1&quot;&gt;MK1 · Temperature Mapping Step by Step&lt;/a&gt; — collect reliable data first.&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#mk5&quot; data-open=&quot;MK5&quot;&gt;MK5 · Requalification After Change&lt;/a&gt; — how data interpretation drives decisions after change and repair.&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#mk7a&quot; data-open=&quot;MK7a&quot;&gt;MK7a · Mapping Warehouses and Cold Rooms&lt;/a&gt; — sensor and EMS locations in areas.&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#mk7b&quot; data-open=&quot;MK7b&quot;&gt;MK7b · Equipment Mapping&lt;/a&gt; — how equipment geometry shapes the worst case.&lt;/li&gt;&lt;/ul&gt;
+&lt;a class=&quot;btn&quot; href=&quot;index.html?kurs=MK6#contact&quot;&gt;Ask about this course&lt;/a&gt;">
+<p class="dlg-sub">Jak przejść od tysięcy rekordów do decyzji: PASS, monitoring, EMS i raport?</p>
+<ul class="facts"><li><b>Czas</b>ok. 75–90 minut</li><li><b>Poziom</b>zaawansowany</li><li><b>Forma</b>kurs online + przykłady + analiza danych + scenariusze decyzyjne</li></ul>
+<p>Mapowanie zostało zakończone: kilkanaście czujników, zapis co kilka minut, test trwał kilka dni — i zamiast prostego wyniku masz kilkanaście lub kilkadziesiąt tysięcy rekordów. Czy wystarczy wyciągnąć minimum, maksimum i średnią? Który punkt jest hot spotem? Czy najwyższe chwilowe maksimum oznacza miejsce stałego monitoringu? Czy MKT może „uratować” wynik poza zakresem? A jeśli przy rekwalifikacji hot spot przesunął się o jeden regał — czy trzeba od razu przenieść czujnik EMS?</p>
+<p>MK1 pokazuje, jak wygenerować dane, MK6 — jak ich nie zepsuć błędną interpretacją. Przez cały kurs oddzielamy trzy poziomy: dane → interpretacja → decyzja kwalifikacyjna.</p>
+<div class="dlg-box"><strong>Dane pomiarowe ≠ interpretacja danych ≠ decyzja kwalifikacyjna.</strong><p>Tysiące poprawnie zarejestrowanych punktów nie gwarantują poprawnego raportu. MK6 pokazuje, jak przejść od surowych danych przez hot/cold spot i analizę EMS aż do uzasadnionej decyzji kwalifikacyjnej — to coś więcej niż szkolenie „jak zrobić tabelę z mapowania”.</p></div>
+<h4>Czego nauczysz się podczas kursu?</h4><p>Po ukończeniu kursu będziesz wiedzieć:</p><ul><li>jak zweryfikować kompletność i jakość danych przed analizą,</li><li>jak przygotować tabelę wynikową i wrócić do przebiegu w czasie,</li><li>jak wyznaczyć hot spot i cold spot,</li><li>jak interpretować MKT i dlaczego nie „wymazuje” excursion,</li><li>jak ocenić lokalizację EMS w kwalifikacji pierwotnej i w rekwalifikacji,</li><li>kiedy relokacja czujnika jest naprawdę potrzebna (location offset, niepewność pomiaru, strategia alarmowa),</li><li>jak rozstrzygnąć, czy krytyczny jest hot spot, cold spot czy oba,</li><li>jak zamknąć proces raportem QR / RQR i postąpić przy wyniku negatywnym.</li></ul>
+<h4>Wybrane zagadnienia</h4>
+<details><summary>Najpierw sprawdź, czy dane nadają się do analizy</summary><p>Pięć kontroli: zakres czasowy, interwał zapisu, ciągłość danych, status metrologiczny czujników i zgodność z kryterium akceptacji. Luka w danych nie zawsze oznacza nieważny test, ale nie wolno jej ignorować — inaczej oceniamy krótką przerwę w stabilnym punkcie, a inaczej kilka godzin braków w lokalizacji potencjalnego worst case.</p></details>
+<details><summary>Tabela wynikowa nie zastępuje trendu</summary><p>Przy min. 3,1°C, max. 5,8°C i średniej 4,5°C nadal nie wiemy, czy temperatura była stabilna, czy występowały cykle, czy maksimum trwało dwie minuty czy trzy godziny i co działo się w momencie zmiany. Dlatego wracamy do przebiegu temperatury w czasie.</p></details>
+<details><summary>Hot spot i cold spot — nie szukamy „zwycięzcy”</summary><p>Nie wybieramy hot spotu tylko dlatego, że jeden czujnik zanotował najwyższy pik, ale nie opieramy się też na samej średniej. Średnia wskazuje lokalizację konsekwentnie cieplejszą lub chłodniejszą, maksimum i minimum — rzeczywiste ekstremum, trend — jak długo i w jakich okolicznościach występowało. Dopiero razem budują interpretację.</p></details>
+<details><summary>MKT — narzędzie pomocnicze, nie gumka do excursion</summary><p>MKT może być przydatna do oceny ekspozycji cieplnej w odpowiednim kontekście, ale nie zastępuje twardych limitów i nie wymazuje excursion. Stwierdzenie „temperatura wyszła poza zakres, ale MKT jest dobra” nie czyni wyniku akceptowalnym — rzeczywiste przekroczenie miało miejsce. Ważne także w MK5 przy ocenie wpływu awarii na produkt.</p></details>
+<details><summary>EMS w kwalifikacji pierwotnej</summary><p>Po PQ mamy przestrzenny obraz temperatury i dopiero wtedy budujemy strategię stałego monitoringu. Hot i cold spot są ważne, ale uwzględniamy też charakter produktu, rzeczywiste miejsca składowania, reprezentatywność warunków oraz możliwość montażu i ochrony czujnika (temat MK7a i MK7b).</p></details>
+<details><summary>Rekwalifikacja — nowy hot spot ≠ „przenieś EMS”</summary><p>Czujnik EMS już istnieje i mamy lata danych historycznych. Nowe mapowanie może wskazać inne ekstremum, ale sama różnica temperatur nie jest decyzją o relokacji. Analizujemy location offset, measurement uncertainty, strategię alarmową, stan techniczny systemu i ryzyko dla materiału. Znana, udokumentowana różnica lokalizacyjna może być uwzględniona w limitach ostrzegawczych lub alarmowych — pod warunkiem formalnej analizy ryzyka i uzasadnienia, a nie jako „sztuczka” pozwalająca uniknąć relokacji.</p></details>
+<details><summary>Hot, cold czy oba — decyduje produkt</summary><p>Produkt może być wrażliwszy na temperaturę wysoką, niską albo obie granice, więc decyzja nie wynika wyłącznie z matematyki mapowania: uwzględnia specyfikację, dane stabilnościowe i konsekwencje przekroczenia konkretnej granicy. To przejście od „gdzie jest najcieplej?” do „który worst case ma znaczenie dla tego materiału?”.</p></details>
+<details><summary>QR i RQR, dane historyczne, wynik negatywny</summary><p>Raport ma pokazać ciąg: dane kompletne → wyniki ocenione → warunki skrajne zidentyfikowane → monitoring oceniony → defekty rozpatrzone → decyzja o statusie systemu. Przy przeniesieniu EMS RQR dokumentuje też wpływ na interpretację dotychczasowego monitoringu (nowy punkt może być systematycznie cieplejszy lub chłodniejszy). Przy wyniku negatywnym: odchylenie → analiza przyczyny → ocena wpływu → działania → ocena możliwości dalszego procedowania → wniosek protokołu. Nie każda niezgodność kończy kwalifikację, ale nie wolno iść dalej, jakby nic się nie wydarzyło.</p></details>
+<h4>Dla kogo?</h4><p>Validation / Qualification, C&amp;Q, QA, właściciele urządzeń i obszarów termostatycznych oraz systemów EMS, osoby przygotowujące QR i RQR, analizujące wyniki temperature mapping, odpowiedzialne za limity alarmowe, wykonujące rekwalifikację i podejmujące decyzje po wynikach poza kryterium. Szczególnie dla kogoś, kto potrafi wykonać mapowanie, ale chce poprawnie interpretować dane i bronić decyzji kwalifikacyjnej. MK1 i MK6 tworzą jeden proces: MK1 — wygeneruj wiarygodne dane, MK6 — wyciągnij z nich wiarygodny wniosek.</p>
+<h4>Podstawa merytoryczna</h4><p>ISPE Good Practice Guide: Controlled Temperature Chambers — Mapping and Monitoring · WHO Technical Supplements · EU GMP Annex 15 · USP &lt;659&gt; / &lt;1079&gt;, z wyraźnym rozdzieleniem wymagań/guidance od praktycznej metodologii i osądu inżynierskiego.</p>
+<h4>Powiązane kursy</h4><ul class="related"><li><span class="rel-tag">NAJPIERW</span><a data-open="MK1" href="#mk1">MK1 · Jak wykonać mapowanie temperatury krok po kroku?</a> — naucz się poprawnie wykonać test i zebrać dane, które później analizujesz w MK6.</li><li><span class="rel-tag">ZASTOSUJ W PRAKTYCE</span><a data-open="MK5" href="#mk5">MK5 · Rekwalifikacja po relokacji i po awarii</a> — zobacz, jak interpretacja wyników wpływa na decyzje po zmianie, naprawie i ponownym dopuszczeniu systemu.</li><li><span class="rel-tag">ROZWIŃ TEMAT</span><a data-open="MK7a" href="#mk7a">MK7a · Rozkład czujników w obszarach CRT / CCT</a> — lokalizacja punktów kwalifikacyjnych i EMS w magazynach oraz chłodniach.</li><li><span class="rel-tag">ROZWIŃ TEMAT</span><a data-open="MK7b" href="#mk7b">MK7b · Rozkład czujników w urządzeniach termostatycznych</a> — jak geometria lodówki, zamrażarki, ULT czy inkubatora wpływa na rozmieszczenie czujników i interpretację worst case.</li></ul>
+<a class="btn" href="index.html?kurs=MK6#contact">Zapytaj o ten kurs</a>
+</div>
 </article>
   </div>
-  <div class="effect"><strong>Efekt MK1:</strong>potrafisz poprawnie zaplanować i wykonać mapowanie.</div>
-  <div class="effect"><strong>Efekt MK6:</strong>potrafisz przejść od danych do decyzji kwalifikacyjnej.</div>
 </div>
       <div class="join" aria-hidden="true"></div>
-      <div class="ems"><h3>Użytkowanie / EMS</h3><ul class="pts"><li>monitoring ciągły</li><li>alarmy i trendy</li><li>praca rutynowa systemu</li></ul></div>
+      <div class="rq-block" data-tone="gold">
+        <h3 data-en="Requalification (RQ)">Rekwalifikacja (RQ)</h3><p data-en="RQ on schedule — you repeat the mapping, and between requalifications the EMS keeps watch.">RQ wg harmonogramu — powtarzasz mapowanie, a między rekwalifikacjami system pilnuje EMS.</p>
+        <div class="rq-btns"><a class="rq-btn" href="#mk1" data-open="MK1"><span data-en="MK1 · Mapping step by step">MK1 · Mapowanie krok po kroku</span></a><a class="rq-btn" href="#mk-wybor"><span data-en="MK7a / MK7b / MK7c · Sensor placement">MK7a / MK7b / MK7c · Rozkład czujników</span></a><a class="rq-btn" href="akademia.html#kurs-4"><span data-en="Course 4 · Temperature Mapping — full course">Kurs 4 · Mapowanie temperatury — kurs pełny</span></a></div>
+      </div>
       <div class="join" aria-hidden="true"></div>
-      <div class="decision" data-en="Was there a relocation, failure or significant change?">Czy wystąpiła relokacja, awaria lub istotna zmiana?</div>
+      <div class="decision" data-en="Failure or relocation?">Awaria lub relokacja?</div>
       <div class="join" aria-hidden="true"></div>
 <div class="branch c2" data-tone="gold">
-  <div class="branch-head"><h2>Rekwalifikacja po zmianie</h2><p>Co powtórzyć po relokacji, awarii lub naprawie.</p></div>
+  <div class="branch-head"><h2 data-en="Requalification after a change">Rekwalifikacja po zmianie</h2><p data-en="What to repeat after a relocation, failure or repair.">Co powtórzyć po relokacji, awarii lub naprawie.</p></div>
   <div class="tiles">
-<article class="tile">
-  <span class="tile-code">MK5</span>
-  <div class="ph" data-ph="Miejsce na grafikę"><img src="assets/akademia/mk5.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
-  <div class="tile-body"><h3>Rekwalifikacja po relokacji i po awarii</h3><ul class="pts"><li>change control i deviation</li><li>impact assessment</li><li>targeted vs full RQ</li><li>co trzeba powtórzyć?</li></ul></div>
-  <button type="button" class="tile-more" aria-haspopup="dialog"><b data-en="Details" style="font-weight:inherit">Szczegóły</b><span aria-hidden="true">+</span></button>
-  <div class="tile-full"><h4 data-en="Scope">Zakres</h4>
-<ul class="pts"><li>change control i deviation</li><li>impact assessment</li><li>targeted vs full RQ</li><li>co trzeba powtórzyć?</li></ul>
-<h4 data-en="Full description">Pełny opis</h4>
-<!-- ▼▼ TU WKLEJ PEŁNY OPIS KAFELKA MK5 (dowolna długość – okno samo się przewija) ▼▼ -->
-<p>Tutaj pojawi się pełny opis: o czym jest ten moduł, jak wygląda w praktyce i co z niego wynosisz.</p>
-<p>Możesz używać akapitów, nagłówków &lt;h4&gt; i list &lt;ul&gt;.</p>
-<h4 data-en="Who is it for">Dla kogo</h4>
-<p>Tutaj opisz, dla kogo jest ten moduł.</p>
-<!-- ▲▲ KONIEC OPISU ▲▲ -->
-<a class="btn" href="index.html#contact" data-en="Ask about this course">Zapytaj o ten kurs</a></div>
-</article>
-<div class="loop"><strong data-en="When something changes, go back to:">W razie zmiany wracasz do:</strong><ul><li>doboru punktów (MK7a / MK7b)</li><li>wykonania mapowania (MK1)</li><li>analizy i decyzji (MK6)</li></ul></div>
-  </div>
-  <div class="effect"><strong>Efekt MK5:</strong>dobierasz właściwy zakres po zmianie, awarii lub naprawie.</div>
+<article class="tile" id="t-mk5" data-tone="gold">
+  <div class="tile-top"><span class="tile-code">MK5</span><span class="qr">RQ</span></div>
+  <div class="ph" data-ph="Grafika · Image"><img src="assets/akademia/mk5.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+  <div class="tile-body" data-en="&lt;h3&gt;Requalification After Relocation, Failure or Repair&lt;/h3&gt;&lt;ul class=pts&gt;&lt;li&gt;change control, deviation, impact assessment&lt;/li&gt;&lt;li&gt;full RQ or targeted verification?&lt;/li&gt;&lt;li&gt;system failure ≠ product excursion&lt;/li&gt;&lt;/ul&gt;&lt;ul class=&quot;meta&quot;&gt;&lt;li&gt;&lt;b&gt;Duration&lt;/b&gt;approx. 90 min&lt;/li&gt;&lt;li&gt;&lt;b&gt;Level&lt;/b&gt;Advanced&lt;/li&gt;&lt;li&gt;&lt;b&gt;Based on&lt;/b&gt;EU GMP Annex 15 · ICH Q9(R1) / Q10 · ISPE GPG Controlled Temperature Chambers · WHO TRS 961, Supplement 8&lt;/li&gt;&lt;/ul&gt;">
+<h3>Rekwalifikacja po relokacji i po awarii</h3>
+<ul class="pts"><li>change control / deviation → impact assessment → zakres</li><li>pełna RQ vs targeted verification</li><li>relokacja, awaria urządzenia, zmiana HVAC</li><li>wpływ na produkt i raport z ponownym dopuszczeniem</li></ul>
+<ul class="meta"><li><b>Czas</b>ok. 90 minut</li><li><b>Poziom</b>zaawansowany</li><li><b>Podstawa</b>EU GMP Annex 15 · ICH Q9/Q10 · ISPE GPG Controlled Temperature Chambers · WHO TRS 961 Supplement 8</li></ul>
 </div>
-
+  <button type="button" class="tile-more" aria-haspopup="dialog"><b data-en="Details" style="font-weight:inherit">Szczegóły</b><span aria-hidden="true">+</span></button>
+  <div class="tile-full" data-en="&lt;p class=&quot;dlg-sub&quot;&gt;MK5 · Requalification After Relocation and Failure&lt;br&gt;How to set the scope after a change, repair or loss of conditions&lt;/p&gt;
+&lt;ul class=&quot;facts&quot;&gt;&lt;li&gt;&lt;b&gt;Duration&lt;/b&gt;approx. 90 min&lt;/li&gt;&lt;li&gt;&lt;b&gt;Level&lt;/b&gt;Advanced&lt;/li&gt;&lt;li&gt;&lt;b&gt;Format&lt;/b&gt;Online course · case studies · risk assessment · decision scenarios&lt;/li&gt;&lt;li&gt;&lt;b&gt;Based on&lt;/b&gt;EU GMP Annex 15 · ICH Q9(R1) / Q10 · ISPE GPG Controlled Temperature Chambers · WHO TRS 961, Supplement 8&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;After a change, the hardest question is not “how do we perform mapping?” but “what do we need to confirm again to have evidence that the system is still qualified?”. And the answer is not always “let’s repeat everything”.&lt;/p&gt;
+&lt;div class=&quot;dlg-box&quot;&gt;&lt;strong&gt;“It works after the move” ≠ “we proved it works”&lt;/strong&gt;&lt;p&gt;After a failure, don’t jump to “do we need full RQ?”. First ask: what could have changed, and what evidence do we need before we can trust the system again?&lt;/p&gt;&lt;/div&gt;
+&lt;h4&gt;What you will learn&lt;/h4&gt;
+&lt;ul&gt;&lt;li&gt;how to move from change control / deviation and impact assessment to a test scope&lt;/li&gt;&lt;li&gt;how to treat relocation, compressor replacement, controller change, HVAC modification, a new rack, minor repair, a false EMS alarm or a power cut differently&lt;/li&gt;&lt;li&gt;relocation as a process — and why “before” data matters&lt;/li&gt;&lt;li&gt;why the hot spot can move after a change and the EMS sensor may no longer represent the worst case&lt;/li&gt;&lt;li&gt;failure: secure the product first, then repair and decide on return to service&lt;/li&gt;&lt;li&gt;why equipment failure and product excursion are two separate decision streams&lt;/li&gt;&lt;li&gt;how to base impact assessment on data, not on “the product probably wasn’t affected”&lt;/li&gt;&lt;li&gt;what the report must close after a change or failure&lt;/li&gt;&lt;/ul&gt;
+&lt;h4&gt;What’s inside&lt;/h4&gt;
+&lt;ul class=checks&gt;&lt;li&gt;case study: relocation without change assessment&lt;/li&gt;&lt;li&gt;decision scenarios&lt;/li&gt;&lt;li&gt;risk assessment&lt;/li&gt;&lt;/ul&gt;
+&lt;h4&gt;Who is it for?&lt;/h4&gt;
+&lt;p&gt;Validation / Qualification / C&amp;amp;Q, QA, Engineering / Maintenance, owners of equipment and CRT/CCT warehouses, people running change control, deviations and impact assessments, those approving return to service after repair, and EMS owners.&lt;/p&gt;
+&lt;h4&gt;Related courses&lt;/h4&gt;
+&lt;ul class=&quot;related&quot;&gt;&lt;li&gt;&lt;a href=&quot;#mk1&quot; data-open=&quot;MK1&quot;&gt;MK1 · Temperature Mapping Step by Step&lt;/a&gt; — the OQ/PQ methodology you apply after a change.&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#mk6&quot; data-open=&quot;MK6&quot;&gt;MK6 · Data Analysis and Report&lt;/a&gt; — assess new hot/cold spots and close with a formal report.&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#mk7a&quot; data-open=&quot;MK7a&quot;&gt;MK7a · Mapping Warehouses and Cold Rooms&lt;/a&gt; — after HVAC changes, warehouse reorganisation or EMS relocation.&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#mk7b&quot; data-open=&quot;MK7b&quot;&gt;MK7b · Equipment Mapping&lt;/a&gt; — when relocating refrigerators, freezers, ULT freezers and incubators.&lt;/li&gt;&lt;/ul&gt;
+&lt;a class=&quot;btn&quot; href=&quot;index.html?kurs=MK5#contact&quot;&gt;Ask about this course&lt;/a&gt;">
+<p class="dlg-sub">Jak ustalić właściwy zakres po zmianie, naprawie lub utracie warunków?</p>
+<ul class="facts"><li><b>Czas</b>ok. 90 minut</li><li><b>Poziom</b>zaawansowany</li><li><b>Forma</b>kurs online + case studies + analiza ryzyka + scenariusze decyzyjne</li></ul>
+<p>Lodówka działała poprawnie przez trzy lata, została przeniesiona do innego pokoju — to nadal ta sama lodówka. Czy trzeba ją ponownie kwalifikować? Albo: zamrażarka miała awarię agregatu, została naprawiona i znów osiąga prawidłową temperaturę — czy można od razu włożyć do niej produkt?</p>
+<p>Po zmianie lub awarii najtrudniejsze pytanie nie brzmi „jak wykonać mapowanie?” (to MK1), lecz: co musimy ponownie potwierdzić, żeby mieć wystarczający dowód, że system nadal jest w stanie kwalifikowanym? Nie zawsze odpowiedzią jest „zróbmy wszystko jeszcze raz”.</p>
+<div class="dlg-box"><strong>Po awarii nie pytaj od razu: „czy robimy pełną RQ?”</strong><p>Najpierw zapytaj: co mogło zostać zmienione i jaki dowód jest potrzebny, żeby ponownie zaufać systemowi? MK5 uczy dobrać zakres rekwalifikacji do rzeczywistego wpływu relokacji, naprawy lub awarii — zamiast automatycznie powtarzać wszystkie testy albo zrobić ich za mało.</p></div>
+<h4>Czego nauczysz się podczas kursu?</h4><p>Po ukończeniu kursu będziesz wiedzieć:</p><ul><li>jak przejść od change control / deviation i impact assessment do właściwego zakresu weryfikacji,</li><li>kiedy potrzebna jest pełna rekwalifikacja, a kiedy wystarczy podejście targeted,</li><li>jak przeprowadzić relokację jako proces — od oceny nowej lokalizacji po decyzję o ponownym dopuszczeniu,</li><li>dlaczego warto mieć dane „przed” zmianą jako punkt odniesienia,</li><li>jak ocenić, czy hot spot się zmienił i czy EMS nadal reprezentuje worst case,</li><li>jak postępować po awarii: zabezpieczenie produktu, deviation, naprawa, testy, decyzja,</li><li>jak rozdzielić problem kwalifikacyjny urządzenia od jakościowego problemu produktu,</li><li>jak ocenić wpływ zmiany HVAC w obszarze CRT/CCT i co powinien zamykać raport rekwalifikacji.</li></ul>
+<h4>Wybrane zagadnienia</h4>
+<details><summary>Najpierw decyzja, potem test</summary><p>Zakres testów wynika z oceny wpływu zdarzenia. Przy zmianie planowanej (relokacja, modyfikacja instalacji) ocena powinna zacząć się przed wykonaniem zmiany. Przy nieplanowanej (awaria) najpierw jest deviation, zabezpieczenie produktu i ocena sytuacji, a dopiero potem ustalamy działania techniczne i kwalifikacyjne. Nie zaczynamy od gotowej listy testów, tylko od pytania: co mogło zostać zmienione lub utracone?</p></details>
+<details><summary>Pełna RQ czy targeted verification?</summary><p>Inaczej potraktujemy relokację, wymianę agregatu, zmianę kontrolera, modyfikację HVAC, nowy regał wpływający na cyrkulację, drobną naprawę, fałszywy alarm EMS czy krótką przerwę zasilania. MK5 pokazuje, jak przejść od rodzaju zmiany do uzasadnionego zakresu — zakres ma odpowiadać wpływowi zmiany, a nie przyzwyczajeniu.</p></details>
+<details><summary>Relokacja — „to samo urządzenie” ≠ „te same warunki”</summary><p>Nowa lokalizacja może oznaczać inne nasłonecznienie, temperaturę otoczenia, klimatyzator skierowany na urządzenie, wentylację, źródła ciepła, zasilanie lub organizację przestrzeni. Proces: ocena nowej lokalizacji → formalna ocena zmiany → stan urządzenia przed przeniesieniem → przeniesienie i instalacja → mapowanie w nowych warunkach → analiza wyników → decyzja o ponownym dopuszczeniu.</p></details>
+<details><summary>Dane „przed” i zmiana hot spotu</summary><p>Wiedza o zachowaniu systemu przed relokacją tworzy punkt odniesienia: jeśli po przeniesieniu zmienia się hot spot, pojawia się nowa chłodniejsza strefa albo zmienia się relacja do EMS, możemy porównać przed vs po — to silniejszy dowód niż ocena nowej lokalizacji bez stanu wyjściowego. Nie zakładamy, że EMS „wisiał tu wcześniej, więc ma tu zostać” — po mapowaniu oceniamy, czy punkt monitoringu nadal reprezentuje worst case (MK6, MK7a/MK7b).</p></details>
+<details><summary>Awaria — najpierw zabezpiecz produkt</summary><p>Tok działania: alarm / excursion → zabezpieczenie materiału → dokumentacja czasu i temperatury → deviation → naprawa → ocena wpływu naprawy → wymagane testy → decyzja o ponownym użyciu systemu. Dopiero potem ustalamy, czy potrzebna jest pełna rekwalifikacja, czy ograniczona weryfikacja konkretnego elementu.</p></details>
+<details><summary>Awaria urządzenia ≠ excursion produktu</summary><p>Dwa równoległe pytania: czy SYSTEM nadal działa prawidłowo (problem kwalifikacyjny) i czy PRODUKT został narażony na nieakceptowalne warunki (problem jakościowy). Naprawione urządzenie może działać poprawnie, a ocena wpływu na materiał nadal być otwarta — i odwrotnie. Impact assessment wymaga danych: czasu excursion, temperatury, historii EMS, charakteru materiału, danych stabilnościowych i wymagań jakościowych. MKT może wspierać analizę, ale nie „kasuje” rzeczywistego przekroczenia (MK6).</p></details>
+<details><summary>Zmiana HVAC w obszarze CRT/CCT</summary><p>Oceniamy, które strefy mogły zostać dotknięte, czy rozkład temperatury może się zmienić, czy układ EMS nadal reprezentuje właściwe punkty, czy zmiana wpływa na sezonowość i worst case oraz jaki zakres mapowania jest potrzebny (połączenie z MK7a).</p></details>
+<details><summary>Raport rekwalifikacji — nie tylko PASS/FAIL</summary><p>Raport powinien pozwolić odtworzyć: co się wydarzyło, dlaczego wykonano taki zakres testów, jakie były wyniki, czy zmienił się hot/cold spot, czy trzeba zmienić monitoring i dlaczego system został ponownie dopuszczony. Cały lifecycle: zdarzenie → ocena → test → wynik → decyzja.</p></details>
+<details><summary>Case study — relokacja bez oceny zmiany</summary><p>Lodówka 2–8°C przeniesiona do nowego pokoju bez wcześniejszej oceny przez kilkanaście dni wygląda na sprawną, a dopiero później EMS pokazuje lokalny problem związany z nowym otoczeniem. „Działa po przeniesieniu” to nie to samo co „udowodniliśmy, że działa prawidłowo po przeniesieniu”.</p></details>
+<h4>Dla kogo?</h4><p>Validation / Qualification, C&amp;Q, QA, Engineering / Maintenance, właściciele urządzeń termostatycznych i magazynów CRT/CCT, osoby prowadzące change control, deviation i impact assessment, zatwierdzające ponowne użycie urządzeń po naprawach oraz odpowiedzialne za EMS. Kurs dla tych, którzy potrafią już wykonać mapowanie, ale chcą podejmować decyzje o jego zakresie po realnych zdarzeniach. Naturalna mikrościeżka: MK1 → MK5 → MK6.</p>
+<h4>Podstawa merytoryczna</h4><p>EU GMP Annex 15 · ICH Q9/Q10 · ISPE Good Practice Guide: Controlled Temperature Chambers · WHO TRS 961 Supplement 8 oraz praktyczne podejście do change control, deviation management, impact assessment i lifecycle qualification.</p>
+<h4>Powiązane kursy</h4><ul class="related"><li><span class="rel-tag">NAJPIERW</span><a data-open="MK1" href="#mk1">MK1 · Jak wykonać mapowanie temperatury krok po kroku?</a> — poznaj metodologię OQ/PQ, którą później wykorzystujesz podczas rekwalifikacji po zmianie.</li><li><span class="rel-tag">NASTĘPNY KROK</span><a data-open="MK6" href="#mk6">MK6 · Analiza wyników mapowania i raport kwalifikacji</a> — naucz się ocenić nowe hot/cold spoty, dane po zmianie i zamknąć proces formalnym raportem.</li><li><span class="rel-tag">ROZWIŃ TEMAT</span><a data-open="MK7a" href="#mk7a">MK7a · Rozkład czujników w obszarach CRT / CCT</a> — szczególnie przydatny przy zmianie HVAC, reorganizacji magazynu lub zmianie lokalizacji EMS.</li><li><span class="rel-tag">ROZWIŃ TEMAT</span><a data-open="MK7b" href="#mk7b">MK7b · Rozkład czujników w urządzeniach termostatycznych</a> — przydatny przy relokacji lodówek, zamrażarek, ULT, inkubatorów i innych komór.</li></ul>
+<a class="btn" href="index.html?kurs=MK5#contact">Zapytaj o ten kurs</a>
+</div>
+</article>
+<div class="loop"><strong data-en="When something changes, go back to:">W razie zmiany wracasz do:</strong><ul data-en="&lt;li&gt;sensor placement (MK7a / MK7b / MK7c)&lt;/li&gt;&lt;li&gt;mapping (MK1)&lt;/li&gt;&lt;li&gt;analysis (MK6)&lt;/li&gt;"><li>rozmieszczenia czujników (MK7a / MK7b / MK7c)</li><li>mapowania (MK1)</li><li>analizy (MK6)</li></ul></div>
+  </div>
+</div>
+      <div class="join" aria-hidden="true"></div>
+      <a class="endcard" href="akademia.html#kurs-4">
+        <strong data-en="Want to go through everything at once?">Chcesz przejść całość naraz?</strong><span data-en="Course 4 · Temperature Mapping →">Kurs 4 · Mapowanie temperatury →</span>
+      </a>
       <div class="pw-links">
         <h2 data-en="Links between courses">Powiązania między kursami</h2>
-        <div class="chips"><div class="chip"><strong>MK7a → MK7b</strong>ta sama logika, inna geometria</div><div class="chip"><strong>MK1 → MK6</strong>wykonanie → analiza i raport</div><div class="chip"><strong>MK6 → MK5</strong>decyzja po zmianie / awarii</div></div>
-        <div class="goal"><strong data-en="GOAL">CEL</strong>Świadome mapowanie temperatury, trafny dobór EMS i właściwa decyzja kwalifikacyjna po zmianie.</div>
+        <div class="chips"><div class="chip" data-en="&lt;strong&gt;MK7a / MK7b / MK7c&lt;/strong&gt;same logic, different geometry"><strong>MK7a / MK7b / MK7c</strong>ta sama logika, inna geometria</div><div class="chip" data-en="&lt;strong&gt;MK1 → MK6&lt;/strong&gt;performing → analysis and report"><strong>MK1 → MK6</strong>wykonanie → analiza i raport</div><div class="chip" data-en="&lt;strong&gt;MK6 → MK5&lt;/strong&gt;decision after a change / failure"><strong>MK6 → MK5</strong>decyzja po zmianie / awarii</div></div>
+        <div class="goal" data-en="&lt;strong&gt;GOAL&lt;/strong&gt;Deliberate temperature mapping, well-chosen EMS locations and the right qualification decision after a change."><strong>CEL</strong>Świadome mapowanie temperatury, trafny dobór EMS i właściwa decyzja kwalifikacyjna po zmianie.</div>
       </div>
     </div>
   </main>
-
   <dialog id="tile-dialog" aria-labelledby="dlg-title">
     <div class="dlg-head">
       <span class="tile-code" id="dlg-code"></span>
@@ -172,10 +340,11 @@
   </dialog>
 
   <footer>
-    <p data-i18n="common.footer">© 2026 Katarzyna Szkodzińska K8 Validate. Wszelkie prawa zastrzeżone.</p>
+    <p data-i18n="common.footer">© 2026 K8 Validate · Katarzyna Szkodzińska. Wszelkie prawa zastrzeżone.</p>
+    <p class="foot-links"><a href="akademia.html" data-i18n="common.nav.akademia">Akademia Walidacji</a><a href="https://www.linkedin.com/in/katarzyna-szkodzi%C5%84ska-644b66b4/" target="_blank" rel="noopener">LinkedIn</a><a href="polityka-prywatnosci.html" data-i18n="common.privacy">Polityka prywatności</a><a href="index.html#contact" data-i18n="common.nav.contact">Kontakt</a></p>
   </footer>
 
-  <script src="assets/i18n.js"></script>
-  <script src="akademia.js?v=5"></script>
+  <script src="assets/i18n.js?v=6"></script>
+  <script src="akademia.js?v=6"></script>
 </body>
 </html>
