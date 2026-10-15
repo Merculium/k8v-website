@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About — K8 Validate</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-   <link rel="icon" type="image/png" href="assets/favicon.png">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title data-en="About — K8 Validate">O mnie — K8 Validate</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=DM+Mono:wght@300;400;500&amp;family=DM+Sans:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="style.css?v=6" rel="stylesheet"/>
+<link href="assets/favicon.png" rel="icon" type="image/png"/>
+<style>
     /* ── PAGE HERO (smaller than homepage) ── */
     .page-hero {
       padding: 10rem 5vw 5rem;
@@ -349,321 +349,259 @@
   </style>
 </head>
 <body>
+<!-- NAV -->
+ <nav id="main-nav">
+<a aria-label="K8 Validate" class="nav-logo" href="index.html"><span class="nav-name">K8 VALIDATE</span><span class="nav-role" data-i18n="common.brand_sub">Akademia Walidacji · walidacja i kwalifikacja GMP</span></a>
+<button aria-label="Menu" class="nav-toggle" id="nav-toggle"><span></span><span></span><span></span></button>
+<ul id="nav-links">
+<li class="has-sub">
+<a class="nav-accent" data-i18n="common.nav.akademia" href="akademia.html" onclick="closeMenu()">Akademia Walidacji</a>
+<button aria-expanded="false" aria-label="Rozwiń podstrony Akademii Walidacji" class="sub-toggle" type="button"></button>
+<ul class="submenu">
+<li><a data-i18n="common.nav.akademia_cleanroom" href="akademiacleanroom.html" onclick="closeMenu()">Cleanroom i komory UDAF / BSC</a></li>
+<li><a data-i18n="common.nav.akademia_mapping" href="akademiatermostatyki.html" onclick="closeMenu()">Mapowanie temperatury</a></li>
+</ul>
+</li>
+<li><a data-i18n="common.nav.casestudies" href="/casestudies" onclick="closeMenu()">Case Studies</a></li>
+<li><a class="active" data-i18n="common.nav.about" href="/about" onclick="closeMenu()">O mnie</a></li>
+<li><a data-i18n="common.nav.experience" href="index.html#experience" onclick="closeMenu()">Doświadczenie</a></li>
+<li><a data-i18n="common.nav.contact" href="index.html#contact" onclick="closeMenu()">Kontakt</a></li>
+<li><button aria-label="Zmień język / Switch language" class="lang-toggle" id="lang-toggle" type="button">EN</button></li>
+</ul>
+</nav>
+<!-- PAGE HERO -->
+<div class="page-hero">
+<div class="hero-grid-bg"></div>
+<div class="page-hero-content">
+<a class="back-link" data-en="Back to Home" href="index.html">Wróć na stronę główną</a>
+<div class="hero-tag" data-en="About Me">O mnie</div>
+<h1 data-en="The woman&lt;br/&gt;behind the &lt;em&gt;protocols.&lt;/em&gt;">Kobieta<br/>stojąca za <em>protokołami.</em></h1>
+</div>
+</div>
+<!-- BIO -->
+<section id="bio">
+<div class="section-label" data-en="Background">Tło zawodowe</div>
+<div class="bio-layout">
+<div class="bio-sidebar fade-in">
+<div class="bio-photo">
+<div class="bio-photo-placeholder">
+<img alt="Portret Katarzyny Szkodzińskiej" data-en-alt="Portrait of Katarzyna Szkodzińska" src="assets/k8_portrait.jpg" style="max-width: 100%; height: auto;"/>
+</div>
+</div>
+<div class="bio-sidebar-info">
+<div class="bio-info-item">
+<span class="bio-info-label" data-en="Based in">Lokalizacja</span>
+<span class="bio-info-value" data-en="Warsaw, Poland">Warszawa, Polska</span>
+</div>
+<div class="bio-info-item">
+<span class="bio-info-label" data-en="Available for">Dostępna do</span>
+<span class="bio-info-value" data-en="Hybrid &amp;amp; Remote">Pracy hybrydowej i zdalnej</span>
+</div>
+<div class="bio-info-item">
+<span class="bio-info-label" data-en="Languages">Języki</span>
+<span class="bio-info-value" data-en="English, Polish">angielski, polski</span>
+</div>
+<div class="bio-info-item">
+<span class="bio-info-label" data-en="Experience">Doświadczenie</span>
+<span class="bio-info-value" data-en="9+ Years">9+ lat</span>
+</div>
+<div class="bio-info-item">
+<span class="bio-info-label" data-en="Contact">Kontakt</span>
+<span class="bio-info-value">katarzyna.szkodzinska11@gmail.com</span>
+</div>
+</div>
+</div>
+<div class="bio-body fade-in">
+<h2 data-en="A career built on getting it right the first time.">Kariera zbudowana na robieniu rzeczy dobrze za pierwszym razem.</h2>
+<p data-en="I am a validation and qualification expert with more than 9 years of experience in GMP environments — in the pharmaceutical, biotechnology and medical device industries — supporting projects across Europe, the United States, and Asia.">Jestem ekspertką ds. walidacji i kwalifikacji z ponad 9-letnim doświadczeniem w środowisku GMP — w przemyśle farmaceutycznym, biotechnologicznym i wyrobów medycznych — wspierającą projekty w Europie, Stanach Zjednoczonych i Azji.</p>
+<p data-en="I specialize in the full lifecycle of validation and qualification activities — from system design and commissioning through DQ, IQ, OQ, PQ, and requalification — ensuring compliance with GMP requirements and industry standards.">Specjalizuję się w pełnym cyklu walidacji i kwalifikacji — od projektu systemu i uruchomienia, przez DQ, IQ, OQ, PQ, po rekwalifikację — zapewniając zgodność z wymaganiami GMP i normami branżowymi.</p>
+<p data-en="My expertise includes facility utilities (HVAC, BMS, FMS), equipment qualification, and advanced process validation, particularly in isolator systems and H₂O₂ bio-decontamination. I apply a risk-based approach (ICH Q9) to develop robust and efficient validation strategies.">Moje kompetencje obejmują media obiektowe (HVAC, BMS, FMS), kwalifikację urządzeń oraz zaawansowaną walidację procesów, w szczególności systemów izolatorowych i biodekontaminacji H₂O₂. Stosuję podejście oparte na ryzyku (ICH Q9), aby budować solidne i efektywne strategie walidacji.</p><p data-en="I also validate computerised systems (CSV) in line with GAMP 5, EU GMP Annex 11 and 21 CFR Part 11 — from risk assessment and URS, through the requirements traceability matrix, to IQ / OQ / PQ protocols and data integrity.">Zajmuję się również walidacją systemów skomputeryzowanych (CSV) zgodnie z GAMP 5, EU GMP Annex 11 i 21 CFR Part 11 — od oceny ryzyka i URS, przez macierz śledzenia wymagań, po protokoły IQ / OQ / PQ i integralność danych.</p>
+<p data-en="I have worked with leading organizations such as Thermo Fisher Scientific, Novo Nordisk, Lonza, and Polpharma, delivering projects in complex, highly regulated environments.">Pracowałam dla czołowych organizacji, takich jak Thermo Fisher Scientific, Novo Nordisk, Lonza i Polpharma, realizując projekty w złożonych, silnie regulowanych środowiskach.</p>
+<p data-en="My background also includes design and construction engineering, giving me a strong understanding of the full system lifecycle — from concept and installation to commissioning and qualification.">Moje doświadczenie obejmuje także projektowanie i budownictwo, dzięki czemu dobrze rozumiem cały cykl życia systemu — od koncepcji i montażu po uruchomienie i kwalifikację.</p>
+<p data-en="I am passionate about delivering practical, compliant, and risk-based solutions that ensure systems are not only validated, but also reliable and audit-ready.">Zależy mi na praktycznych, zgodnych z wymaganiami i opartych na ryzyku rozwiązaniach, dzięki którym systemy są nie tylko zwalidowane, ale też niezawodne i gotowe na audyt.</p><p data-en="In the Validation Academy I share this experience: not just how to perform a test, but how to make a decision and defend it in front of an inspector.">W Akademii Walidacji dzielę się tym doświadczeniem: uczę nie tylko, jak wykonać test, ale jak podjąć decyzję i obronić ją przed inspektorem.</p>
+<br/>
+<img alt="Wizualizacja przepływu powietrza — test dymowy" data-en-alt="Airflow visualisation — smoke study" src="assets/k8_dym.jpg" style="max-width: 100%; height: auto;"/>
+<a class="btn" data-en="Work with me" href="index.html#contact">Współpracujmy</a><br/>
+</div>
+</div>
+</section>
+<!-- SKILLS -->
+<section id="skills">
+<div class="section-label" data-en="Key Competencies">Kluczowe kompetencje</div>
+<h2 class="fade-in" data-en="What I bring to the table.">Co wnoszę do projektu.</h2>
+<br/>
+<div class="skills-grid">
+<div class="skill-group fade-in">
+<h3 data-en="Validation Strategy &amp;amp; Lifecycle (CQV)">Strategia walidacji i cykl życia (CQV)</h3>
+<ul class="skill-list">
+<li data-en="FAT / SAT / DQ / IQ / OQ / PQ execution &amp;amp; coordination">Realizacja i koordynacja FAT / SAT / DQ / IQ / OQ / PQ</li>
+<li data-en="Validation strategy development &amp;amp; planning">Opracowanie strategii i planowanie walidacji</li>
+<li data-en="Risk-based approach (ICH Q9)">Podejście oparte na ryzyku (ICH Q9)</li>
+<li data-en="Requalification &amp;amp; lifecycle management">Rekwalifikacja i zarządzanie cyklem życia</li>
+<li data-en="Validation Master Plan (VMP) authoring">Opracowywanie Validation Master Plan (VMP)</li>
+<li data-en="Process Performance Qualification (PPQ)">Kwalifikacja procesu (PPQ)</li>
+</ul>
+</div>
+<div class="skill-group fade-in">
+<h3 data-en="HVAC &amp;amp; Utilities">HVAC i media techniczne</h3>
+<ul class="skill-list">
+<li data-en="ISO 14644 Cleanroom qualification">Kwalifikacja pomieszczeń czystych wg ISO 14644</li>
+<li data-en="HVAC qualification &amp;amp; performance testing">Kwalifikacja HVAC i testy wydajnościowe</li>
+<li data-en="Cleanroom classification &amp;amp; environmental monitoring">Klasyfikacja pomieszczeń czystych i monitoring środowiskowy</li>
+<li data-en="Pressure differential mapping">Mapowanie różnic ciśnień</li>
+<li data-en="Airflow visualisation (smoke studies)">Wizualizacja przepływu powietrza (testy dymowe)</li>
+<li data-en="UDAF qualification">Kwalifikacja UDAF</li>
+<li data-en="HEPA filter integrity testing">Testy integralności filtrów HEPA</li>
+<li data-en="Temperature &amp;amp; humidity mapping (uniformity qualification)">Mapowanie temperatury i wilgotności (kwalifikacja jednorodności)</li>
+<li data-en="Warehouse &amp;amp; Storage qualification">Kwalifikacja magazynów i obszarów składowania</li>
+</ul>
+</div>
+<div class="skill-group fade-in">
+<h3 data-en="GMP Compliance &amp;amp; Risk Management">Zgodność z GMP i zarządzanie ryzykiem</h3>
+<ul class="skill-list">
+<li data-en="FDA 21 CFR Parts 210, 211, 820">FDA 21 CFR Part 210, 211, 820</li>
+<li data-en="EU GMP Annex 1, 11, 15">EU GMP Aneks 1, 11, 15</li>
+<li data-en="ICH Q8, Q9, Q10 guidelines">Wytyczne ICH Q8, Q9, Q10</li>
+<li data-en="Risk Assessment (ICH Q9, FMEA)">Ocena ryzyka (ICH Q9, FMEA)</li>
+<li data-en="Pre-inspection gap assessments">Analizy luk przed inspekcją</li>
+<li data-en="Deviation management &amp;amp; CAPA">Zarządzanie odchyleniami i CAPA</li>
+<li data-en="Change control &amp;amp; Impact Assessment">Kontrola zmian i ocena wpływu</li>
+</ul>
+</div>
+<div class="skill-group fade-in">
+<h3 data-en="Validation Documentation &amp;amp; QMS">Dokumentacja walidacyjna i QMS</h3>
+<ul class="skill-list">
+<li data-en="Validation Protocol &amp;amp; report authoring">Opracowywanie protokołów i raportów walidacyjnych</li>
+<li data-en="SOP development &amp;amp; lifecycle management">Opracowywanie SOP i zarządzanie ich cyklem życia</li>
+<li data-en="Risk assessment (FMEA, HACCP)">Ocena ryzyka (FMEA, HACCP)</li>
+<li data-en="Electronic quality management systems (eQMS)">Elektroniczne systemy zarządzania jakością (eQMS)</li>
+<li data-en="Change control management">Zarządzanie kontrolą zmian</li>
+<li data-en="Technical review &amp;amp; expertise">Przegląd techniczny i ekspertyza</li>
+</ul>
+</div><div class="skill-group fade-in"><h3 data-en="Computerised System Validation (CSV)">Walidacja systemów skomputeryzowanych (CSV)</h3><ul class="skill-list"><li data-en="GAMP 5 classification &amp;amp; risk assessment">Klasyfikacja GAMP 5 i ocena ryzyka</li><li data-en="URS / FS and requirements traceability matrix (RTM)">URS / FS i macierz śledzenia wymagań (RTM)</li><li data-en="IQ / OQ / PQ protocols">Protokoły IQ / OQ / PQ</li><li data-en="Audit trail &amp;amp; access control">Audit trail i kontrola dostępu</li><li data-en="Backup / restore">Backup / restore</li><li data-en="Data integrity (ALCOA+)">Integralność danych (ALCOA+)</li><li data-en="EU GMP Annex 11 &amp;amp; 21 CFR Part 11">EU GMP Annex 11 i 21 CFR Part 11</li></ul></div>
+</div>
+</section>
+<!-- CERTIFICATIONS & EDUCATION -->
+<section id="certifications">
+<div class="section-label" data-en="Credentials">Kwalifikacje</div>
+<h2 class="fade-in" data-en="Education &amp;amp; qualifications">Wykształcenie i uprawnienia</h2>
+<br/>
+<div class="cert-grid fade-in">
+<div class="cert-block">
+<h3 data-en="Education">Wykształcenie</h3>
+<div class="cert-item">
+<div class="cert-badge">🎓</div>
+<div class="cert-info">
+<h4 data-en="Master of Science Degree in Construction Engineering Specialty Utilities Systems">Magister inżynier — budownictwo, specjalność: systemy instalacyjne</h4>
+<p data-en="Warsaw University of Technology · 2019">Politechnika Warszawska · 2019</p>
+</div>
+</div>
+<div class="cert-item">
+<div class="cert-badge">📘</div>
+<div class="cert-info">
+<h4 data-en="Engineer Degree in Heating, Cooling, Ventilation, and Gas Industry">Inżynier — ogrzewnictwo, chłodnictwo, wentylacja i gazownictwo</h4>
+<p data-en="Warsaw University of Technology · 2019">Politechnika Warszawska · 2019</p>
+</div>
+</div>
+<div class="cert-item">
+<div class="cert-badge">🌐</div>
+<div class="cert-info">
+<h4 data-en="ISPE Member">Członek ISPE</h4>
+<p data-en="International Society for Pharmaceutical Engineering">International Society for Pharmaceutical Engineering</p>
+</div>
+</div>
+<br/><br/>
+<div class="cert-block">
+<h3 data-en="Licenses">Uprawnienia</h3>
+<div class="cert-item">
+<div class="cert-badge">🎓</div>
+<div class="cert-info">
+<h4 data-en="F-Gases">F-gazy</h4>
+<p data-en="Operational license of fluorinated gas systems.">Uprawnienia do obsługi systemów z fluorowanymi gazami cieplarnianymi.</p>
+</div>
+</div>
+<div class="cert-item">
+<div class="cert-badge">📋</div>
+<div class="cert-info">
+<h4 data-en="SEP cat. G1/G2/G3">SEP kat. G1/G2/G3</h4>
+<p data-en="Supervisor License of Electricity, Heat, Gas equipment, and installations.">Uprawnienia dozorowe: urządzenia i instalacje elektryczne, cieplne i gazowe.</p>
+</div>
+</div>
+<div class="cert-item">
+<div class="cert-badge">⚗️</div>
+<div class="cert-info">
+<h4 data-en="ICH Q9 Quality Risk Management">ICH Q9 — zarządzanie ryzykiem jakości</h4>
+<p data-en="PDA Training · 2020">Szkolenie PDA · 2020</p>
+</div>
+</div>
+<div class="cert-item">
+<div class="cert-badge">🏭</div>
+<div class="cert-info">
+<h4 data-en="EU GMP Annex 1 Sterile Manufacture">EU GMP Aneks 1 — wytwarzanie produktów sterylnych</h4>
+<p data-en="Industry Training · 2020">Szkolenie branżowe · 2020</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- INDUSTRIES -->
+<section id="industries">
+<div class="section-label" data-en="Sectors">Branże</div>
+<h2 class="fade-in" data-en="Industries I've worked in.">Branże, w których pracowałam.</h2>
+<br/>
+<div class="industry-grid">
+<div class="industry-card fade-in">
+<div class="industry-icon">💊</div>
+<h3 data-en="Pharmaceutical">Farmacja</h3>
+<p data-en="Solid dose, sterile injectables, API manufacturing, OSD facilities.">Formy stałe, iniekcje sterylne, produkcja API, zakłady OSD.</p>
+</div>
+<div class="industry-card fade-in">
+<div class="industry-icon">🧬</div>
+<h3 data-en="Biotechnology">Biotechnologia</h3>
+<p data-en="Biologics, cell &amp;amp; gene therapy, fermentation, fill-finish operations.">Produkty biologiczne, terapie komórkowe i genowe, fermentacja, operacje fill-finish.</p>
+</div>
+<div class="industry-card fade-in">
+<div class="industry-icon">🌡️</div>
+<h3 data-en="HVAC &amp;amp; Cleanrooms">HVAC i pomieszczenia czyste</h3>
+<p data-en="ISO 5–8 classified environments, controlled areas, containment suites.">Środowiska klasyfikowane ISO 5–8, strefy kontrolowane, pomieszczenia z konteneryzacją.</p>
+</div>
+<div class="industry-card fade-in">
+<div class="industry-icon">🏥</div>
+<h3 data-en="Medical Devices">Wyroby medyczne</h3>
+<p data-en="FDA 21 CFR Part 820, ISO 13485, design &amp;amp; process validation.">FDA 21 CFR Part 820, ISO 13485, walidacja projektu i procesów.</p>
+</div>
+<div class="industry-card fade-in">
+<div class="industry-icon">🧪</div>
+<h3 data-en="Contract Manufacturing">Wytwarzanie kontraktowe</h3>
+<p data-en="CMO/CDMO environments, multi-product facilities, tech transfer support.">Środowiska CMO/CDMO, zakłady wieloproduktowe, wsparcie transferu technologii.</p>
+</div>
+<div class="industry-card fade-in">
+<div class="industry-icon">🔬</div>
+<h3 data-en="Research &amp;amp; Development">Badania i rozwój</h3>
+<p data-en="Early-phase facilities, lab qualification, scale-up to commercial.">Obiekty wczesnych faz, kwalifikacja laboratoriów, skalowanie do produkcji komercyjnej.</p>
+</div>
+</div>
+</section>
+<!-- CTA -->
+<div class="cta-band fade-in">
+<h2 data-en="Ready to work together?">Gotowa do współpracy?</h2>
+<a class="btn" data-en="Get in Touch" href="index.html#contact">Skontaktuj się</a>
+</div>
+<!-- FOOTER -->
+ <footer>
+<p data-i18n="common.footer">© 2026 K8 Validate · Katarzyna Szkodzińska. Wszelkie prawa zastrzeżone.</p>
+<p class="foot-links"><a data-i18n="common.nav.akademia" href="akademia.html">Akademia Walidacji</a><a href="https://www.linkedin.com/in/katarzyna-szkodzi%C5%84ska-644b66b4/" rel="noopener" target="_blank">LinkedIn</a><a data-i18n="common.privacy" href="polityka-prywatnosci.html">Polityka prywatności</a><a data-i18n="common.nav.contact" href="index.html#contact">Kontakt</a></p>
+</footer>
 
-  <!-- NAV -->
-  <nav id="main-nav">
-    <div class="nav-logo">Katarzyna Szkodzińska // Validation & Qualification Expert</div>
-    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    <ul id="nav-links">
-       <li><a href="index.html"          onclick="closeMenu()">Home</a></li>
-      <li><a href="/about"               onclick="closeMenu()">About</a></li>
-      <li><a href="index.html#expertise"   onclick="closeMenu()">Expertise</a></li>
-      <li><a href="index.html#experience" onclick="closeMenu()">Experience</a></li>
-      <li><a href="/casestudies"   onclick="closeMenu()">Case Studies</a></li>
-      <li><a href="index.html#contact"    onclick="closeMenu()">Contact</a></li>
-    </ul>
-  </nav>
 
-  <!-- PAGE HERO -->
-  <div class="page-hero">
-    <div class="hero-grid-bg"></div>
-    <div class="page-hero-content">
-      <a href="index.html" class="back-link">Back to Home</a>
-      <div class="hero-tag">About Me</div>
-      <h1>The woman<br>behind the <em>protocols.</em></h1>
-    </div>
-  </div>
-
-  <!-- BIO -->
-  <section id="bio">
-    <div class="section-label">Background</div>
-    <div class="bio-layout">
-
-      <div class="bio-sidebar fade-in">
-        <div class="bio-photo">
-          <div class="bio-photo-placeholder">
-            <img src="assets/k8_portrait.jpg" alt="portrait" style="max-width: 100%; height: auto;">
-
-          </div>
-        </div>
-        <div class="bio-sidebar-info">
-          <div class="bio-info-item">
-            <span class="bio-info-label">Based in</span>
-            <span class="bio-info-value">Warsaw, Poland</span>
-          </div>
-          <div class="bio-info-item">
-            <span class="bio-info-label">Available for</span>
-            <span class="bio-info-value">Hybrid & Remote</span>
-          </div>
-          <div class="bio-info-item">
-            <span class="bio-info-label">Languages</span>
-            <span class="bio-info-value">English, Polish</span>
-          </div>
-          <div class="bio-info-item">
-            <span class="bio-info-label">Experience</span>
-            <span class="bio-info-value">7+ Years</span>
-          </div>
-          <div class="bio-info-item">
-            <span class="bio-info-label">Contact</span>
-            <span class="bio-info-value">katarzyna.szkodzinska11@gmail.com</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="bio-body fade-in">
-        <h2>A career built on getting it right the first time.</h2>
-
-        <p>I am a Validation and Qualification Expert with over 7 years of experience in pharmaceutical and medical device industries, 
-          supporting projects across Europe, the United States, and Asia.</p>
-
-<p>I specialize in the full lifecycle of validation and qualification activities — from system design and commissioning through DQ, IQ, OQ, PQ, 
-        and requalification — ensuring compliance with GMP requirements and industry standards.</p>
-
-<p>My expertise includes facility utilities (HVAC, BMS, FMS), equipment qualification, and advanced process validation, particularly in isolator
-  systems and H₂O₂ bio-decontamination. I apply a risk-based approach (ICH Q9) to develop robust and efficient validation strategies. </p>
-
-<p>I have worked with leading organizations such as Thermo Fisher Scientific, Novo Nordisk, Lonza, and Polpharma, delivering projects in complex, 
-  highly regulated environments.</p>
-
-<p>My background also includes design and construction engineering, giving me a strong understanding of the full system lifecycle — from concept 
-  and installation to commissioning and qualification. </p>
-
-<p> I am passionate about delivering practical, compliant, and risk-based solutions that ensure systems are not only validated, but also reliable and audit-ready.</p>
-    
-        <br>
-        <img src="assets/k8_dym.jpg" alt="dym" style="max-width: 100%; height: auto;">
-        <a href="index.html#contact" class="btn">Work with me</a><br>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills">
-    <div class="section-label">Key Competencies</div>
-    <h2 class="fade-in">What I bring to the table.</h2>
-    <br>
-    <div class="skills-grid">
-
-      <div class="skill-group fade-in">
-        <h3>Validation Strategy & Lifecycle (CQV)</h3>
-        <ul class="skill-list">
-          <li>FAT / SAT / DQ / IQ / OQ / PQ execution & cordination </li>
-          <li>Validation strategy development &amp; planning</li>
-          <li>Risk-based approach (ICH Q9)</li>
-          <li>Requalification &amp; lifecycle management</li>
-          <li>Validation Master Plan (VMP) authoring</li>
-          <li>Process Performance Qualification (PPQ)</li>
-        </ul>
-      </div>
-
-      <div class="skill-group fade-in">
-        <h3>HVAC &amp; Utilities</h3>
-        <ul class="skill-list">
-          <li>ISO 14644 Cleanroom qualification</li>
-          <li>HVAC qualification & performance testing</li>
-          <li>Cleanroom classification &amp; enviromental monitoring</li>
-          <li>Pressure differential mapping</li>
-          <li>Airflow visualisation (smoke studies)</li>
-          <li>UDAFfication</li>
-          <li>HEPA filter integrity testing</li>
-          <li>Temperature &amp; humidity mapping (unif qualiormity)</li>
-          <li>Warehouse &amp; Storage qualification</li>
-        </ul>
-      </div>
-
-      <div class="skill-group fade-in">
-        <h3>GMP Compliance &amp; Risk Management</h3>
-        <ul class="skill-list">
-          <li>FDA 21 CFR Parts 210, 211, 820</li>
-          <li>EU GMP Annex 1, 11, 15</li>
-          <li>ICH Q8, Q9, Q10 guidelines</li>
-          <li>Risk Assesment (ICH9, FMEA)</li>
-          <li>Pre-inspection gap assessments</li>
-          <li>Deviation management &amp; CAPA</li>
-          <li>Change control &amp; Impact Assessment</li>
-        </ul>
-      </div>
-
-      <div class="skill-group fade-in">
-        <h3> Validation Documentation &amp; QMS</h3>
-        <ul class="skill-list">
-          <li> Validation Protocol &amp; report authoring</li>
-          <li>SOP development &amp; lifcycle management revision</li>
-          <li>Risk assessment (FMEA, HACCP)</li>
-          <li>Electronic quality management systems (eQMS)</li>
-          <li>Change control management</li>
-          <li>Technical review &amp; expertise </li>
-        </ul>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- CERTIFICATIONS & EDUCATION -->
-  <section id="certifications">
-    <div class="section-label">Credentials</div>
-    <h2 class="fade-in">Education &amp; qualifications</h2>
-    <br>
-    <div class="cert-grid fade-in">
-
-      <div class="cert-block">
-        <h3>Education</h3>
-
-        <div class="cert-item">
-          <div class="cert-badge">🎓</div>
-          <div class="cert-info">
-            <h4>Master of Science Degree in Construction Engineering Specialty Utilities Systems</h4>
-            <p>Warsaw University of Technology · 2019</p>
-          </div>
-        </div>
-
-        <div class="cert-item">
-          <div class="cert-badge">📘</div>
-          <div class="cert-info">
-            <h4> Engineer Degree in Heating, Cooling, Ventilation, and Gas Industry</h4>
-            <p>Warsaw University of Technology · 2019</p>
-          </div>
-        </div>
-
-        <div class="cert-item">
-          <div class="cert-badge">🌐</div>
-          <div class="cert-info">
-            <h4>ISPE Member</h4>
-            <p>International Society for Pharmaceutical Engineering</p>
-          </div>
-        </div>
-        <br><br>
-      <div class="cert-block">
-        <h3>Licenses</h3>
-
-        <div class="cert-item">
-          <div class="cert-badge">🎓</div>
-          <div class="cert-info">
-            <h4>F-Gases</h4>
-            <p>Operational license of fluorinated gas systems.</p>
-          </div>
-        </div>
-
-        <div class="cert-item">
-          <div class="cert-badge">📋</div>
-          <div class="cert-info">
-            <h4>SEP cat. G1/G2/G3</h4>
-            <p>Supervisor License of Electricity, Heat, Gas equipment, and installations.</p>
-          </div>
-        </div>
-
-        <div class="cert-item">
-          <div class="cert-badge">⚗️</div>
-          <div class="cert-info">
-            <h4>ICH Q9 Quality Risk Management</h4>
-            <p>PDA Training · 2020</p>
-          </div>
-        </div>
-
-        <div class="cert-item">
-          <div class="cert-badge">🏭</div>
-          <div class="cert-info">
-            <h4>EU GMP Annex 1 Sterile Manufacture</h4>
-            <p>Industry Training · 2020</p>
-          </div>
-        </div>
-
-      </div>
-
-      
-
-      </div>
-    </div>
-  </section>
-
-  <!-- INDUSTRIES -->
-  <section id="industries">
-    <div class="section-label">Sectors</div>
-    <h2 class="fade-in">Industries I've worked in.</h2>
-    <br>
-    <div class="industry-grid">
-
-      <div class="industry-card fade-in">
-        <div class="industry-icon">💊</div>
-        <h3>Pharmaceutical</h3>
-        <p>Solid dose, sterile injectables, API manufacturing, OSD facilities.</p>
-      </div>
-
-      <div class="industry-card fade-in">
-        <div class="industry-icon">🧬</div>
-        <h3>Biotechnology</h3>
-        <p>Biologics, cell &amp; gene therapy, fermentation, fill-finish operations.</p>
-      </div>
-
-      <div class="industry-card fade-in">
-        <div class="industry-icon">🌡️</div>
-        <h3>HVAC &amp; Cleanrooms</h3>
-        <p>ISO 5–8 classified environments, controlled areas, containment suites.</p>
-      </div>
-
-      <div class="industry-card fade-in">
-        <div class="industry-icon">🏥</div>
-        <h3>Medical Devices</h3>
-        <p>FDA 21 CFR Part 820, ISO 13485, design &amp; process validation.</p>
-      </div>
-
-      <div class="industry-card fade-in">
-        <div class="industry-icon">🧪</div>
-        <h3>Contract Manufacturing</h3>
-        <p>CMO/CDMO environments, multi-product facilities, tech transfer support.</p>
-      </div>
-
-      <div class="industry-card fade-in">
-        <div class="industry-icon">🔬</div>
-        <h3>Research &amp; Development</h3>
-        <p>Early-phase facilities, lab qualification, scale-up to commercial.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <div class="cta-band fade-in">
-    <h2>Ready to work together?</h2>
-    <a href="index.html#contact" class="btn">Get in Touch</a>
-  </div>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2026 Katarzyna Szkodzińska K8 Validate. All rights reserved.</p>
- 
-  </footer>
-
-  <script>
-    // ── Hamburger menu ──
-    const toggle = document.getElementById('nav-toggle');
-    const nav    = document.getElementById('main-nav');
-    const links  = document.getElementById('nav-links');
-
-    toggle.addEventListener('click', () => {
-      nav.classList.toggle('open');
-      links.classList.toggle('open');
-    });
-
-    function closeMenu() {
-      nav.classList.remove('open');
-      links.classList.remove('open');
-    }
-
-    // ── Fade-in on scroll ──
+<script src="assets/i18n.js?v=6"></script>
+<script src="akademia.js?v=6"></script>
+<script>
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(el => {
-        if (el.isIntersecting) el.target.classList.add('visible');
-      });
+      entries.forEach(el => { if (el.isIntersecting) el.target.classList.add('visible'); });
     }, { threshold: 0.1 });
-
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
   </script>
-
 </body>
 </html>

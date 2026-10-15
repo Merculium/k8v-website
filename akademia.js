@@ -46,6 +46,10 @@
       if (el.dataset.pl === undefined) el.dataset.pl = el.innerHTML;
       el.innerHTML = en ? el.dataset.en : el.dataset.pl;
     });
+    document.querySelectorAll('[data-en-alt]').forEach(function (el) {
+      if (el.dataset.plAlt === undefined) el.dataset.plAlt = el.getAttribute('alt') || '';
+      el.setAttribute('alt', en ? el.dataset.enAlt : el.dataset.plAlt);
+    });
     var close = document.querySelector('.dlg-close');
     if (close) close.setAttribute('aria-label', en ? 'Close' : 'Zamknij');
     if (dlg && dlg.open && current) fillDialog(current);

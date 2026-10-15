@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Case Studies — K8 Validate</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" href="assets/favicon.png">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title data-en="Case Studies — K8 Validate">Case Studies — K8 Validate</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=DM+Mono:wght@300;400;500&amp;family=DM+Sans:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="style.css?v=6" rel="stylesheet"/>
+<link href="assets/favicon.png" rel="icon" type="image/png"/>
+<style>
 
     /* ── PAGE HERO ── */
     .page-hero {
@@ -313,232 +313,243 @@
 
       .cta-band .btn { width: 100%; text-align: center; }
     }
-  </style>
+  
+    .more-case-card.proj { opacity: 1; border-top: 2px solid var(--accent); }
+    .more-cases.alt { background: var(--navy); border-top: 1px solid var(--rule); }
+    .more-cases > .lead { color: var(--muted); max-width: 640px; margin-top: 1rem; }
+    .acad-links { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto; align-items: center; }
+    .acad-links .lbl { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); width: 100%; }
+    .acad-links a { font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.04em; color: var(--accent); border: 1px solid var(--rule); padding: 0.25rem 0.6rem; text-decoration: none; transition: background 0.2s; }
+    .acad-links a:hover { background: color-mix(in srgb, var(--accent) 14%, transparent); }
+</style>
 </head>
 <body>
+<!-- NAV -->
+ <nav id="main-nav">
+<a aria-label="K8 Validate" class="nav-logo" href="index.html"><span class="nav-name">K8 VALIDATE</span><span class="nav-role" data-i18n="common.brand_sub">Akademia Walidacji · walidacja i kwalifikacja GMP</span></a>
+<button aria-label="Menu" class="nav-toggle" id="nav-toggle"><span></span><span></span><span></span></button>
+<ul id="nav-links">
+<li class="has-sub">
+<a class="nav-accent" data-i18n="common.nav.akademia" href="akademia.html" onclick="closeMenu()">Akademia Walidacji</a>
+<button aria-expanded="false" aria-label="Rozwiń podstrony Akademii Walidacji" class="sub-toggle" type="button"></button>
+<ul class="submenu">
+<li><a data-i18n="common.nav.akademia_cleanroom" href="akademiacleanroom.html" onclick="closeMenu()">Cleanroom i komory UDAF / BSC</a></li>
+<li><a data-i18n="common.nav.akademia_mapping" href="akademiatermostatyki.html" onclick="closeMenu()">Mapowanie temperatury</a></li>
+</ul>
+</li>
+<li><a class="active" data-i18n="common.nav.casestudies" href="/casestudies" onclick="closeMenu()">Case Studies</a></li>
+<li><a data-i18n="common.nav.about" href="/about" onclick="closeMenu()">O mnie</a></li>
+<li><a data-i18n="common.nav.experience" href="index.html#experience" onclick="closeMenu()">Doświadczenie</a></li>
+<li><a data-i18n="common.nav.contact" href="index.html#contact" onclick="closeMenu()">Kontakt</a></li>
+<li><button aria-label="Zmień język / Switch language" class="lang-toggle" id="lang-toggle" type="button">EN</button></li>
+</ul>
+</nav>
+<!-- PAGE HERO -->
+<div class="page-hero">
+<div class="hero-grid-bg"></div>
+<div class="page-hero-content">
+<a class="back-link" data-en="Back to Home" href="index.html">Wróć na stronę główną</a>
+<div class="hero-tag" data-en="Case Studies">Case Studies</div>
+<h1 data-en="Work that&lt;br/&gt;&lt;em&gt;held up.&lt;/em&gt;">Praca, która<br/><em>wytrzymała próbę.</em></h1>
+<p data-en="A selection of projects across pharmaceutical manufacturing, isolator systems, and international facility builds. Client names are not disclosed.">Wybór projektów z obszaru produkcji farmaceutycznej, systemów izolatorowych i międzynarodowych inwestycji. Nazw klientów nie ujawniam.</p>
+</div>
+</div>
+<!-- CASE STUDY 01 -->
+<div class="case-study">
+<aside class="cs-sidebar fade-in">
+<div class="cs-meta-block">
+<span class="cs-meta-label" data-en="Client">Klient</span>
+<span class="cs-meta-value" data-en="Pharmaceutical manufacturer">Producent farmaceutyczny</span>
+</div>
+<div class="cs-divider"></div>
+<div class="cs-meta-block">
+<span class="cs-meta-label" data-en="Locations">Lokalizacje</span>
+<span class="cs-meta-value" data-en="USA · Italy · China">USA · Włochy · Chiny</span>
+</div>
+<div class="cs-divider"></div>
+<div class="cs-meta-block">
+<span class="cs-meta-label" data-en="Focus">Zakres</span>
+<span class="cs-meta-value" data-en="Isolator bio-decontamination cycle development &amp;amp; validation">Rozwój i walidacja cykli biodekontaminacji izolatorów</span>
+</div>
+<div class="cs-divider"></div>
+<div class="cs-tags">
+<span class="tag">H₂O₂</span>
+<span class="tag" data-en="Isolators">Izolatory</span>
+<span class="tag" data-en="Aseptic">Aseptyka</span>
+<span class="tag" data-en="BI Studies">Badania BI</span>
+<span class="tag">FAT / SAT</span>
+<span class="tag" data-en="Multi-site">Wiele lokalizacji</span>
+</div>
+</aside>
+<div class="cs-body fade-in">
+<div class="cs-kicker" data-en="Case Study 01">Case Study 01</div>
+<h2 data-en="H₂O₂ Bio-Decontamination Cycle Development for Isolator Systems">Rozwój cykli biodekontaminacji H₂O₂ dla systemów izolatorowych</h2>
+<h3 data-en="The Situation">Sytuacja</h3>
+<p data-en="The client was commissioning and qualifying isolator systems across three continents - each site with its own layout, environmental baseline, and local GMP expectations. The brief was straightforward on paper: develop and validate H₂O₂ bio-decontamination cycles that would work reliably across all of them. In practice, that's where things get interesting.">Klient uruchamiał i kwalifikował systemy izolatorowe na trzech kontynentach — każda lokalizacja miała własny układ, własne warunki środowiskowe i lokalne oczekiwania GMP. Na papierze zadanie było proste: opracować i zwalidować cykle biodekontaminacji H₂O₂, które będą niezawodnie działać wszędzie. W praktyce właśnie tu zaczyna się najciekawsza część.</p>
+<p data-en="Isolators aren't flat rooms. They have corners, nested equipment, shadow zones, and internal geometries that make uniform vapour distribution genuinely difficult. The question wasn't just whether a cycle &lt;em&gt;could&lt;/em&gt; achieve the required log reduction - it was whether it would do so consistently, across different units, under varying ambient conditions, without needing a different protocol for every site.">Izolatory to nie płaskie pomieszczenia. Mają narożniki, zagnieżdżone urządzenia, strefy cienia i wewnętrzną geometrię, które utrudniają równomierne rozprowadzenie pary. Pytanie nie brzmiało tylko, czy cykl <em>może</em> osiągnąć wymaganą redukcję logarytmiczną — chodziło o to, czy zrobi to konsekwentnie, na różnych jednostkach i przy zmiennych warunkach otoczenia, bez konieczności tworzenia innego protokołu dla każdej lokalizacji.</p>
+<blockquote data-en="Passing qualification is the minimum. The real objective was cycles robust enough that requalification two years later would be routine, not a rescue mission.">Zaliczenie kwalifikacji to minimum. Prawdziwym celem były cykle na tyle odporne, żeby rekwalifikacja po dwóch latach była rutyną, a nie akcją ratunkową.</blockquote>
+<h3 data-en="What the Work Actually Involved">Czego faktycznie wymagała praca</h3>
+<p data-en="Before writing a single protocol, I started with &lt;strong&gt;risk assessments&lt;/strong&gt; on each isolator configuration - mapping internal geometry, airflow patterns, and equipment placement to identify where H₂O₂ vapour was least likely to reach effective concentration. These became the worst-case locations for biological indicator placement, which is the foundation everything else sits on. Get that wrong and the whole qualification is built on a bad assumption.">Zanim napisałam pierwszy protokół, zaczęłam od <strong>ocen ryzyka</strong> dla każdej konfiguracji izolatora — mapowałam geometrię wnętrza, przepływy powietrza i rozmieszczenie wyposażenia, by wskazać miejsca, w których para H₂O₂ najprawdopodobniej nie osiągnie skutecznego stężenia. Te miejsca stały się lokalizacjami worst case dla wskaźników biologicznych, a to fundament, na którym opiera się cała reszta. Jeśli się tu pomylisz, cała kwalifikacja stoi na błędnym założeniu.</p>
+<p data-en="From there, cycle parameters - concentration, exposure time, humidity conditioning, aeration — were developed and iterated against actual BI results and temperature mapping data. Not all sites behaved the same way; ambient humidity in particular had a measurable effect on cycle performance in some locations, which required site-specific adjustments within an agreed parameter range rather than entirely different cycles.">Następnie parametry cyklu — stężenie, czas ekspozycji, kondycjonowanie wilgotności, aeracja — opracowywałam i dopracowywałam na podstawie rzeczywistych wyników BI i danych z mapowania temperatury. Nie wszystkie lokalizacje zachowywały się tak samo; zwłaszcza wilgotność otoczenia miała w niektórych miejscach mierzalny wpływ na skuteczność cyklu, co wymagało korekt specyficznych dla lokalizacji w uzgodnionym zakresie parametrów, a nie zupełnie odmiennych cykli.</p>
+<p data-en="I supported &lt;strong&gt;FAT activities at the manufacturer&lt;/strong&gt; before the units shipped, then followed through to SAT and qualification on-site. Where deviations occurred — and they did, as they always do in complex multi-site programmes - I led the investigation, documented the root cause, and implemented the corrective action. Nothing left open.">Wspierałam <strong>FAT u producenta</strong> przed wysyłką jednostek, a następnie SAT i kwalifikację na miejscu. Gdy pojawiały się odchylenia — a w złożonych programach wielolokalizacyjnych zawsze się pojawiają — prowadziłam postępowanie wyjaśniające, dokumentowałam przyczynę źródłową i wdrażałam działanie korygujące. Nic nie zostawało otwarte.</p>
+<h3 data-en="The Harder Parts">Najtrudniejsze</h3>
+<p data-en='The most technically demanding aspect was managing &lt;strong&gt;variability between sites&lt;/strong&gt; without fragmenting the validation approach. Three different countries means three different regulatory environments, three sets of site QA expectations, and in some cases three different interpretations of what "worst-case" means. Keeping the core methodology consistent while accommodating legitimate local differences required a lot of alignment work up front - and a clear validation master plan that all parties had actually read.'>Najbardziej wymagające technicznie było zarządzanie <strong>zmiennością między lokalizacjami</strong> bez rozbijania podejścia walidacyjnego. Trzy kraje to trzy środowiska regulacyjne, trzy zestawy oczekiwań lokalnych działów QA, a czasem trzy różne interpretacje tego, czym jest „worst case”. Utrzymanie spójnej metodyki przy uwzględnieniu uzasadnionych różnic lokalnych wymagało dużo pracy uzgodnieniowej na początku — i jasnego planu głównego walidacji (VMP), który wszystkie strony faktycznie przeczytały.</p>
+<p data-en="Working across time zones on a live qualification programme is its own kind of challenge. When an unexpected BI failure appears at a site you're not physically present at, clear documentation and pre-agreed decision trees matter enormously. We had both.">Praca w różnych strefach czasowych przy trwającym programie kwalifikacji to osobne wyzwanie. Gdy w lokalizacji, w której nie ma Cię fizycznie, pojawia się nieoczekiwany wynik niezgodny BI, ogromne znaczenie mają czytelna dokumentacja i wcześniej uzgodnione drzewa decyzyjne. Mieliśmy jedno i drugie.</p>
+<h3 data-en="Outcomes">Efekty</h3>
+<div class="cs-results">
+<div class="cs-result-item">
+<div class="cs-result-number">3</div>
+<div class="cs-result-label" data-en="International sites qualified">Zakwalifikowane lokalizacje międzynarodowe</div>
+</div>
+<div class="cs-result-item">
+<div class="cs-result-number">≥6</div>
+<div class="cs-result-label" data-en="Log reduction achieved on all BIs">Redukcja log na wszystkich BI</div>
+</div>
+<div class="cs-result-item">
+<div class="cs-result-number">0</div>
+<div class="cs-result-label" data-en="Open deviations at project close">Otwartych odchyleń na zakończenie projektu</div>
+</div>
+<div class="cs-result-item">
+<div class="cs-result-number">✓</div>
+<div class="cs-result-label" data-en="Cycles approved for routine use">Cykle zatwierdzone do rutynowego użycia</div>
+</div>
+</div>
+<p data-en="All three sites completed qualification with cycles approved for routine use. The requalification programme was designed into the lifecycle plan from the start, so ongoing compliance doesn't depend on repeating the full development exercise - just running a defined reduced protocol against the established worst-case positions.">Wszystkie trzy lokalizacje zakończyły kwalifikację, a cykle zostały zatwierdzone do rutynowego użycia. Program rekwalifikacji zaprojektowano w planie cyklu życia od samego początku, więc dalsza zgodność nie wymaga powtarzania całego procesu rozwojowego — wystarczy zdefiniowany, skrócony protokół wykonywany w ustalonych pozycjach worst case.</p>
+<p data-en="More broadly, the project demonstrated that a &lt;strong&gt;risk-based, documentation-first approach&lt;/strong&gt; is what makes multi-site validation manageable. When your worst-case rationale is solid and your deviations are investigated properly, the regulatory story writes itself.">Szerzej: projekt pokazał, że to <strong>podejście oparte na ryzyku i dokumentacji w pierwszej kolejności</strong> sprawia, że walidacja wielolokalizacyjna jest do ogarnięcia. Gdy uzasadnienie worst case jest solidne, a odchylenia badane należycie, historia dla organu regulacyjnego pisze się sama.</p>
+</div>
+</div>
+<!-- MORE CASES -->
+<section class="more-cases">
+<div class="section-label" data-en="More projects">Kolejne projekty</div>
+<h2 class="fade-in" data-en="Other projects from my experience">Inne projekty z mojego doświadczenia</h2>
+<div class="more-cases-grid">
+<div class="more-case-card proj fade-in">
+<span class="coming-soon">P-02</span>
+<h3 data-en="A common requalification standard across two sites">Wspólny standard rekwalifikacji w dwóch zakładach</h3>
+<p data-en="One methodology, one set of protocols and justified RQ frequencies for HVAC, cleanrooms and temperature-controlled equipment.">Jedna metodologia, jeden zestaw protokołów i uzasadnione częstotliwości RQ dla HVAC, pomieszczeń czystych i urządzeń o kontrolowanej temperaturze.</p>
+</div>
+<div class="more-case-card proj fade-in">
+<span class="coming-soon">P-03</span>
+<h3 data-en="HVAC, BMS and cleanroom in an API plant project">HVAC, BMS i cleanroom w projekcie zakładu API</h3>
+<p data-en="Work Package Owner role: design review, supplier selection, contractor coordination, compliance with EU GMP Annex 1 (2022).">Rola Work Package Owner: przegląd projektu, wybór dostawców, koordynacja wykonawców, zgodność z EU GMP Annex 1 (2022).</p>
+</div>
+<div class="more-case-card proj fade-in">
+<span class="coming-soon">P-04</span>
+<h3 data-en="Cleanroom requalification during an FDA inspection">Rekwalifikacja cleanroomu w trakcie inspekcji FDA</h3>
+<p data-en="Two-stage requalification, preparing the team for talks with the inspector, justification of deviations.">Rekwalifikacja dwuetapowa, przygotowanie zespołu do rozmów z inspektorem, uzasadnienie odchyleń.</p>
+</div>
+<div class="more-case-card proj fade-in">
+<span class="coming-soon">P-05</span>
+<h3 data-en="Process validation during the transition to IVDR">Walidacja procesów przy przejściu na IVDR</h3>
+<p data-en="Validation of equipment and processes (IQ / OQ / PQ) for about 300 class C devices.">Walidacja urządzeń i procesów (IQ / OQ / PQ) dla ok. 300 wyrobów klasy C.</p>
+</div>
+<div class="more-case-card proj fade-in">
+<span class="coming-soon">P-06</span>
+<h3 data-en="Computerised system validation per GAMP 5">Walidacja systemu skomputeryzowanego wg GAMP 5</h3>
+<p data-en="GAMP 5 category 3: URS, RTM, IQ, OQ + PQ, Annex 11 requirements (audit trail, access control, backup, time synchronisation).">GAMP 5 kat. 3: URS, RTM, IQ, OQ + PQ, wymagania Annex 11 (audit trail, kontrola dostępu, backup, synchronizacja czasu).</p>
+</div>
+<div class="more-case-card proj fade-in">
+<span class="coming-soon">P-08</span>
+<h3 data-en="Pressure cascades in multi-chamber isolators">Kaskady ciśnień w izolatorach wielokomorowych</h3>
+<p data-en="An isolator divided into chambers at different pressures: the control works one day and not the next — 40 Pa in both chambers, yet smoke passes through the sealing plate; the sensor shows 25 Pa while the gloves are inflated as at 80 Pa.">Izolator podzielony na komory o różnych ciśnieniach: regulacja raz działa, raz nie — 40 Pa w obu komorach, a dym przechodzi przez płytę uszczelniającą; czujnik pokazuje 25 Pa, a rękawice są napompowane jak przy 80 Pa.</p>
+</div>
+<div class="more-case-card proj fade-in">
+<span class="coming-soon">P-07</span>
+<h3 data-en="ISO 9001 / ISO 27001 quality management system">System zarządzania jakością ISO 9001 / ISO 27001</h3>
+<p data-en="Building a QMS for clients from the pharmaceutical industry.">Budowa QMS dla klientów z branży farmaceutycznej.</p>
+</div>
+</div>
+</section>
+<section class="more-cases alt">
+<div class="section-label" data-en="Cases from the Academy">Przypadki z Akademii</div>
+<h2 class="fade-in" data-en="Stories from the Validation Academy courses">Historie z kursów Akademii Walidacji</h2>
+<div class="more-cases-grid">
+<div class="more-case-card proj fade-in">
+<span class="coming-soon">A-01</span>
+<h3 data-en="Biological indicator positive three times in a row">Bioindykator dodatni trzy razy z rzędu</h3>
+<div class="acad-links"><span class="lbl" data-en="Discussed in the course:">Omawiamy w kursie:</span><a data-en="Course 3 · Isolators" href="akademia.html#kurs-3">Kurs 3 · Izolatory</a></div>
+</div>
+<div class="more-case-card proj fade-in">
+<span class="coming-soon">A-02</span>
+<h3 data-en="Isolator without FAT">Izolator bez FAT</h3>
+<div class="acad-links"><span class="lbl" data-en="Discussed in the course:">Omawiamy w kursie:</span><a data-en="Course 3 · Isolators" href="akademia.html#kurs-3">Kurs 3 · Izolatory</a></div>
+</div>
+<div class="more-case-card proj fade-in">
+<span class="coming-soon">A-03</span>
+<h3 data-en="Interlocks worked at the factory, but not on site">Interlocki działały w fabryce, ale nie na miejscu</h3>
+<div class="acad-links"><span class="lbl" data-en="Discussed in the course:">Omawiamy w kursie:</span><a data-en="Course 3 · Isolators" href="akademia.html#kurs-3">Kurs 3 · Izolatory</a></div>
+</div>
+<div class="more-case-card proj fade-in">
+<span class="coming-soon">A-04</span>
+<h3 data-en="“ΔP is within limits, so the filter is leak-tight”">„ΔP jest w normie, więc filtr jest szczelny”</h3>
+<div class="acad-links"><span class="lbl" data-en="Discussed in the course:">Omawiamy w kursie:</span><a data-en="E2 · Class II BSC Exhaust HEPA Filter" href="akademiacleanroom.html#e2">E2 · Filtr wyciągowy BSC klasy II</a><a data-en="Course 2 · UDAF / Class II BSC" href="akademia.html#kurs-2">Kurs 2 · Komory UDAF / BSC</a><a data-en="GMP Detective" href="akademiacleanroom.html#gd">GMP Detective</a></div>
+</div>
+<div class="more-case-card proj fade-in">
+<span class="coming-soon">A-05</span>
+<h3 data-en="Downflow 0.29 m/s — and production is tomorrow">Downflow 0,29 m/s — a produkcja jutro</h3>
+<div class="acad-links"><span class="lbl" data-en="Discussed in the course:">Omawiamy w kursie:</span><a data-en="22 Case Studies" href="akademiacleanroom.html#cs">22 Case Studies</a><a data-en="D1 · UDAF Requalification" href="akademiacleanroom.html#d1">D1 · Rekwalifikacja UDAF</a></div>
+</div>
+<div class="more-case-card proj fade-in">
+<span class="coming-soon">A-06</span>
+<h3 data-en="18° angle against a ≤ 14° criterion">Kąt 18° przy kryterium ≤ 14°</h3>
+<div class="acad-links"><span class="lbl" data-en="Discussed in the course:">Omawiamy w kursie:</span><a data-en="22 Case Studies" href="akademiacleanroom.html#cs">22 Case Studies</a><a data-en="A3 · Airflow Visualization in UDAF / Class II BSC" href="akademiacleanroom.html#a3">A3 · Wizualizacja przepływu UDAF / BSC</a></div>
+</div>
+<div class="more-case-card proj fade-in">
+<span class="coming-soon">A-07</span>
+<h3 data-en="Door ajar and one point out of limit">Uchylone drzwi i jeden punkt poza limitem</h3>
+<div class="acad-links"><span class="lbl" data-en="Discussed in the course:">Omawiamy w kursie:</span><a data-en="Course 1 · Cleanroom" href="akademia.html#kurs-1">Kurs 1 · Cleanroom</a><a data-en="B1 · Airborne Particle Classification (ISO 14644-1)" href="akademiacleanroom.html#b1">B1 · Klasyfikacja cząstek ISO 14644-1</a><a data-en="22 Case Studies" href="akademiacleanroom.html#cs">22 Case Studies</a></div>
+</div>
+<div class="more-case-card proj fade-in">
+<span class="coming-soon">A-08</span>
+<h3 data-en="Microbiology arrives 12 days after release">Mikrobiologia przychodzi 12 dni po zwolnieniu</h3>
+<div class="acad-links"><span class="lbl" data-en="Discussed in the course:">Omawiamy w kursie:</span><a data-en="Course 1 · Cleanroom" href="akademia.html#kurs-1">Kurs 1 · Cleanroom</a><a data-en="22 Case Studies" href="akademiacleanroom.html#cs">22 Case Studies</a></div>
+</div>
+<div class="more-case-card proj fade-in">
+<span class="coming-soon">A-09</span>
+<h3 data-en="Mould in a Grade C requalification">Pleśń w rekwalifikacji klasy C</h3>
+<div class="acad-links"><span class="lbl" data-en="Discussed in the course:">Omawiamy w kursie:</span><a data-en="D2 · Cleanroom Requalification" href="akademiacleanroom.html#d2">D2 · Rekwalifikacja cleanroomu</a><a data-en="Course 1 · Cleanroom" href="akademia.html#kurs-1">Kurs 1 · Cleanroom</a></div>
+</div>
+<div class="more-case-card proj fade-in">
+<span class="coming-soon">A-10</span>
+<h3 data-en="Refrigerator after relocation to another room">Lodówka po przeniesieniu do innego pokoju</h3>
+<div class="acad-links"><span class="lbl" data-en="Discussed in the course:">Omawiamy w kursie:</span><a data-en="MK5 · Requalification After Relocation, Failure or Repair" href="akademiatermostatyki.html#mk5">MK5 · Rekwalifikacja po przeniesieniu, awarii lub naprawie</a><a data-en="Course 4 · Temperature Mapping" href="akademia.html#kurs-4">Kurs 4 · Mapowanie temperatury</a></div>
+</div>
+<div class="more-case-card proj fade-in">
+<span class="coming-soon">A-11</span>
+<h3 data-en="The hot spot moved by one rack">Hot spot przesunął się o jeden regał</h3>
+<div class="acad-links"><span class="lbl" data-en="Discussed in the course:">Omawiamy w kursie:</span><a data-en="MK6 · From Data to Decision: Mapping Analysis and Report" href="akademiatermostatyki.html#mk6">MK6 · Od danych do decyzji: analiza mapowania i raport</a><a data-en="Course 4 · Temperature Mapping" href="akademia.html#kurs-4">Kurs 4 · Mapowanie temperatury</a></div>
+</div>
+<div class="more-case-card proj fade-in">
+<span class="coming-soon">A-12</span>
+<h3 data-en="110 deviations and “operator retrained” as CAPA">110 dewiacji i „operator retrained” jako CAPA</h3>
+<div class="acad-links"><span class="lbl" data-en="Discussed in the course:">Omawiamy w kursie:</span><a data-en="GMP Detective" href="akademiacleanroom.html#gd">GMP Detective</a><a data-en="22 Case Studies" href="akademiacleanroom.html#cs">22 Case Studies</a></div>
+</div>
+<div class="more-case-card proj fade-in">
+<span class="coming-soon">A-13</span>
+<h3 data-en="Both chambers show 40 Pa, yet smoke crosses the sealing plate">Obie komory pokazują 40 Pa, a dym przechodzi przez płytę uszczelniającą</h3>
+<div class="acad-links"><span class="lbl" data-en="Discussed in the course:">Omawiamy w kursie:</span><a data-en="Course 3 · Isolators" href="akademia.html#kurs-3">Kurs 3 · Izolatory</a></div>
+</div>
+</div>
+</section>
+<!-- CTA -->
+<div class="cta-band fade-in">
+<h2 data-en="Have a similar project?">Masz podobny projekt?</h2>
+<a class="btn" data-en="Get in Touch" href="index.html#contact">Skontaktuj się</a>
+</div>
+<!-- FOOTER -->
+ <footer>
+<p data-i18n="common.footer">© 2026 K8 Validate · Katarzyna Szkodzińska. Wszelkie prawa zastrzeżone.</p>
+<p class="foot-links"><a data-i18n="common.nav.akademia" href="akademia.html">Akademia Walidacji</a><a href="https://www.linkedin.com/in/katarzyna-szkodzi%C5%84ska-644b66b4/" rel="noopener" target="_blank">LinkedIn</a><a data-i18n="common.privacy" href="polityka-prywatnosci.html">Polityka prywatności</a><a data-i18n="common.nav.contact" href="index.html#contact">Kontakt</a></p>
+</footer>
 
-  <!-- NAV -->
-  <nav id="main-nav">
-    <div class="nav-logo">Katarzyna Szkodzińska // Validation & Qualification Expert</div>
-    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    <ul id="nav-links">
-      <li><a href="index.html"          onclick="closeMenu()">Home</a></li>
-      <li><a href="/about"      onclick="closeMenu()">About</a></li>
-      <li><a href="index.html#services"   onclick="closeMenu()">Services</a></li>
-      <li><a href="index.html#experience" onclick="closeMenu()">Experience</a></li>
-      <li><a href="/casestudies"   onclick="closeMenu()">Case Studies</a></li>
-      <li><a href="#contact"    onclick="closeMenu()">Contact</a></li>
-    </ul>
-  </nav>
 
-  <!-- PAGE HERO -->
-  <div class="page-hero">
-    <div class="hero-grid-bg"></div>
-    <div class="page-hero-content">
-      <a href="index.html" class="back-link">Back to Home</a>
-      <div class="hero-tag">Case Studies</div>
-      <h1>Work that<br><em>held up.</em></h1>
-      <p>A selection of projects across pharmaceutical manufacturing, isolator systems, and international facility builds. Names shared with permission where applicable.</p>
-    </div>
-  </div>
-
-  <!-- CASE STUDY 01 -->
-  <div class="case-study">
-
-    <aside class="cs-sidebar fade-in">
-      <div class="cs-meta-block">
-        <span class="cs-meta-label">Client</span>
-        <span class="cs-meta-value">TFS</span>
-      </div>
-      <div class="cs-divider"></div>
-      <div class="cs-meta-block">
-        <span class="cs-meta-label">Locations</span>
-        <span class="cs-meta-value">USA · Italy · China</span>
-      </div>
-      <div class="cs-divider"></div>
-      <div class="cs-meta-block">
-        <span class="cs-meta-label">Focus</span>
-        <span class="cs-meta-value">Isolator bio-decontamination cycle development &amp; validation</span>
-      </div>
-      <div class="cs-divider"></div>
-      <div class="cs-tags">
-        <span class="tag">H₂O₂</span>
-        <span class="tag">Isolators</span>
-        <span class="tag">Aseptic</span>
-        <span class="tag">BI Studies</span>
-        <span class="tag">FAT / SAT</span>
-        <span class="tag">Multi-site</span>
-      </div>
-    </aside>
-
-    <div class="cs-body fade-in">
-
-      <div class="cs-kicker">Case Study 01</div>
-      <h2>H₂O₂ Bio-Decontamination Cycle Development for Isolator Systems</h2>
-
-      <h3>The Situation</h3>
-      <p>
-        TFS was commissioning and qualifying isolator systems across three continents -
-        each site with its own layout, environmental baseline, and local GMP expectations. The brief was
-        straightforward on paper: develop and validate H₂O₂ bio-decontamination cycles that would work
-        reliably across all of them. In practice, that's where things get interesting.
-      </p>
-      <p>
-        Isolators aren't flat rooms. They have corners, nested equipment, shadow zones, and internal
-        geometries that make uniform vapour distribution genuinely difficult. The question wasn't just
-        whether a cycle <em>could</em> achieve the required log reduction - it was whether it would do so
-        consistently, across different units, under varying ambient conditions, without needing a different
-        protocol for every site.
-      </p>
-
-      <blockquote>
-        Passing qualification is the minimum. The real objective was cycles robust enough that requalification two years 
-        later would be routine, not a rescue mission.
-      </blockquote>
-
-      <h3>What the Work Actually Involved</h3>
-      <p>
-        Before writing a single protocol, I started with <strong>risk assessments</strong> on each isolator
-        configuration - mapping internal geometry, airflow patterns, and equipment placement to identify
-        where H₂O₂ vapour was least likely to reach effective concentration. These became the worst-case
-        locations for biological indicator placement, which is the foundation everything else sits on.
-        Get that wrong and the whole qualification is built on a bad assumption.
-      </p>
-      <p>
-        From there, cycle parameters - concentration, exposure time, humidity conditioning, aeration —
-        were developed and iterated against actual BI results and temperature mapping data. Not all
-        sites behaved the same way; ambient humidity in particular had a measurable effect on cycle
-        performance in some locations, which required site-specific adjustments within an agreed
-        parameter range rather than entirely different cycles.
-      </p>
-      <p>
-        I supported <strong>FAT activities at the manufacturer</strong> before the units shipped,
-        then followed through to SAT and qualification on-site. Where deviations occurred — and they
-        did, as they always do in complex multi-site programmes - I led the investigation, documented
-        the root cause, and implemented the corrective action. Nothing left open.
-      </p>
-
-      <h3>The Harder Parts</h3>
-      <p>
-        The most technically demanding aspect was managing <strong>variability between sites</strong>
-        without fragmenting the validation approach. Three different countries means three different
-        regulatory environments, three sets of site QA expectations, and in some cases three different
-        interpretations of what "worst-case" means. Keeping the core methodology consistent while
-        accommodating legitimate local differences required a lot of alignment work up front -
-        and a clear validation master plan that all parties had actually read.
-      </p>
-      <p>
-        Working across time zones on a live qualification programme is its own kind of challenge.
-        When an unexpected BI failure appears at a site you're not physically present at,
-        clear documentation and pre-agreed decision trees matter enormously. We had both.
-      </p>
-
-      <h3>Outcomes</h3>
-
-      <div class="cs-results">
-        <div class="cs-result-item">
-          <div class="cs-result-number">3</div>
-          <div class="cs-result-label">International sites qualified</div>
-        </div>
-        <div class="cs-result-item">
-          <div class="cs-result-number">≥6</div>
-          <div class="cs-result-label">Log reduction achieved on all BIs</div>
-        </div>
-        <div class="cs-result-item">
-          <div class="cs-result-number">0</div>
-          <div class="cs-result-label">Open deviations at project close</div>
-        </div>
-        <div class="cs-result-item">
-          <div class="cs-result-number">✓</div>
-          <div class="cs-result-label">Cycles approved for routine use</div>
-        </div>
-      </div>
-
-      <p>
-        All three sites completed qualification with cycles approved for routine use.
-        The requalification programme was designed into the lifecycle plan from the start,
-        so ongoing compliance doesn't depend on repeating the full development exercise -
-        just running a defined reduced protocol against the established worst-case positions.
-      </p>
-      <p>
-        More broadly, the project demonstrated that a <strong>risk-based, documentation-first
-        approach</strong> is what makes multi-site validation manageable. When your worst-case
-        rationale is solid and your deviations are investigated properly, the regulatory
-        story writes itself.
-      </p>
-
-    </div>
-  </div>
-
-  <!-- MORE CASES -->
-  <section class="more-cases">
-    <div class="section-label">More Work</div>
-    <h2 class="fade-in">More case studies coming.</h2>
-    <div class="more-cases-grid">
-
-      <div class="more-case-card fade-in">
-        <span class="coming-soon">Coming Soon</span>
-        <h3>Cross-Site HVAC Requalification Standardisation</h3>
-        <p>Designing a unified requalification framework across two manufacturing sites in Poland - 
-          covering HVAC, cleanrooms, and thermostatic equipment that had historically been qualified in isolation from each other.</p>
-      </div>
-
-      <div class="more-case-card fade-in">
-        <span class="coming-soon">Coming Soon</span>
-        <h3>Cleanroom & HVAC Design for API Manufacturing</h3>
-        <p>Contributing to the design, risk assessment, and commissioning of cleanroom and HVAC systems for a 
-          large-scale API facility buildout - from supplier qualification through FAT/SAT and handover.</p>
-      </div>
-
-      <div class="more-case-card fade-in">
-        <span class="coming-soon">Coming Soon</span>
-        <h3>ISO 9001 & ISO 27001 QMS Implementation</h3>
-        <p>Building and implementing quality management systems from the ground up for pharmaceutical clients in Poland - 
-          covering documentation architecture, process mapping, and compliance alignment across both quality and information security standards.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <div class="cta-band fade-in">
-    <h2>Have a similar project?</h2>
-    <a href="index.html#contact" class="btn">Get in Touch</a>
-  </div>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2026 Katarzyna Szkodzińska K8 Validate. All rights reserved.</p>
-    <p></p>
-  </footer>
-
-  <script>
-    const toggle = document.getElementById('nav-toggle');
-    const nav    = document.getElementById('main-nav');
-    const links  = document.getElementById('nav-links');
-
-    toggle.addEventListener('click', () => {
-      nav.classList.toggle('open');
-      links.classList.toggle('open');
-    });
-
-    function closeMenu() {
-      nav.classList.remove('open');
-      links.classList.remove('open');
-    }
-
+<script src="assets/i18n.js?v=6"></script>
+<script src="akademia.js?v=6"></script>
+<script>
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(el => {
-        if (el.isIntersecting) el.target.classList.add('visible');
-      });
+      entries.forEach(el => { if (el.isIntersecting) el.target.classList.add('visible'); });
     }, { threshold: 0.1 });
-
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
   </script>
-
 </body>
 </html>
