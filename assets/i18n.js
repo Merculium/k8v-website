@@ -158,10 +158,13 @@ const translations = {
         "formMessage": "Wiadomość",
         "formMessagePlaceholder": "Opowiedz mi o swoim projekcie...",
         "sendBtn": "Wyślij wiadomość",
-        "privacyNote": "Administratorem Twoich danych jest Katarzyna Szkodzińska (K8 Validate). Dane z formularza wykorzystam wyłącznie do odpowiedzi na Twoje zapytanie. Szczegóły: <a href=\"polityka-prywatnosci.html\">Polityka prywatności</a>.",
+        "privacyNote": "Administratorem Twoich danych jest Katarzyna Szkodzińska (K8 Validate). Dane z formularza (przesyłane przez usługę Web3Forms) wykorzystam wyłącznie do odpowiedzi na Twoje zapytanie. Szczegóły: <a href=\"polityka-prywatnosci.html\">Polityka prywatności</a>.",
         "alertFill": "Proszę wypełnić imię, e-mail i wiadomość.",
         "subjectPrefix": "Zapytanie od ",
-        "subjectCourse": "Kurs: "
+        "subjectCourse": "Kurs: ",
+        "sending": "Wysyłanie…",
+        "statusOk": "Dziękuję! Wiadomość została wysłana — odpowiem najszybciej, jak to możliwe.",
+        "statusErr": "Nie udało się wysłać wiadomości. Spróbuj ponownie lub napisz bezpośrednio na contact@k8validate.com."
       }
     }
   },
@@ -311,10 +314,13 @@ const translations = {
         "formMessage": "Message",
         "formMessagePlaceholder": "Tell me about your project...",
         "sendBtn": "Send message",
-        "privacyNote": "The controller of your data is Katarzyna Szkodzińska (K8 Validate). I will use the form data only to reply to your enquiry. Details: <a href=\"polityka-prywatnosci.html\">Privacy Policy</a>.",
+        "privacyNote": "The controller of your data is Katarzyna Szkodzińska (K8 Validate). I will use the form data (sent via the Web3Forms service) only to reply to your enquiry. Details: <a href=\"polityka-prywatnosci.html\">Privacy Policy</a>.",
         "alertFill": "Please fill in name, email and message.",
         "subjectPrefix": "Enquiry from ",
-        "subjectCourse": "Course: "
+        "subjectCourse": "Course: ",
+        "sending": "Sending…",
+        "statusOk": "Thank you! Your message has been sent — I will reply as soon as possible.",
+        "statusErr": "The message could not be sent. Please try again or write directly to contact@k8validate.com."
       }
     }
   }
