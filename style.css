@@ -845,3 +845,9 @@ select:focus { border-color: var(--accent); }
   .hero-badges { font-size: 0.68rem; }
   #hero { min-height: 0; }
 }
+
+/* ---- Contact form status ---- */
+.form-status { min-height: 1.2em; margin: 0; font-size: 0.9rem; line-height: 1.5; }
+.form-status.ok { color: #1f7a4d; font-weight: 600; }
+.form-status.err { color: #b3261e; font-weight: 600; }
+#send-btn:disabled { opacity: .6; cursor: progress; }
